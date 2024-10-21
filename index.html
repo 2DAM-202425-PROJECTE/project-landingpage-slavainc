@@ -7,6 +7,22 @@
   <link href="style.css" rel="stylesheet">
   <script type="module" src="main.js"></script>
 </head>
+<section class="relative bg-blue-400 text-white py-10 md:py-20 overflow-hidden px-4 md:px-0">
+  <!-- Fons amb video -->
+  <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover opacity-40 z-0">
+    <source src="/contingut/fons.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay per llegirho millor -->
+  <div class="absolute inset-0 bg-gradient-to-t from-purple-300 via-gray-600 to-transparent opacity-70 z-0"></div>
+  <!-- Secció de contingut -->
+  <div class="relative z-10 text-center">
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-lg">Slava Inc.</h1>
+    <p class="text-base md:text-lg mb-6 drop-shadow-md">Connecta amb empreses de neteja professionals que ofereixen serveis de qualitat, adaptats a les teves necessitats. Amb només uns clics, podràs contractar netejadors fiables i ben valorats a la teva zona</p>
+    <a href="#" class="bg-white text-purple-600 py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105">Contracta</a>
+    <a href="#" class="bg-white text-purple-600 py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold hover:bg-gray-200 transition duration-300 ease-in-out transform hover:scale-105">Més Info!</a>
+  </div>
+</section>
 <body>
 </body>
 </html>
