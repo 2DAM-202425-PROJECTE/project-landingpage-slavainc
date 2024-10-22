@@ -3,10 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title></title>
+  <title>Slava Inc.</title>
+  <link rel="icon" href="contingut/logo.webp" type="image/x-icon"> <!-- Favicon link -->
   <link href="style.css" rel="stylesheet">
   <script type="module" src="main.js"></script>
 </head>
 <body>
+
+<!-- HERO SECTION START -->
+<section class="relative bg-gradient-to-b from-blue-500 to-blue-400 text-white py-10 md:py-20 overflow-hidden px-4 md:px-0">
+  <!-- Fons amb vídeo amb efecte borros -->
+  <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover opacity-30 z-0">
+    <source src="/contingut/fons.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay per llegir-ho millor -->
+  <div class="absolute inset-0 bg-gradient-to-t from-purple-400 to-transparent opacity-80 z-0"></div>
+  <!-- Contenidor per al text i el vídeo -->
+  <div class="relative z-10 flex flex-col md:flex-row items-center justify-between">
+    <!-- Secció de contingut (esquerra) -->
+    <div class="flex items-center justify-center w-full md:w-1/2 h-full px-6 md:px-12 mb-4 md:mb-0">
+      <div class="text-left">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Slava Inc.</h1>
+        <p class="text-lg md:text-xl mb-6 drop-shadow-md">Connecta amb empreses de neteja professionals que ofereixen serveis de qualitat, adaptats a les teves necessitats. Amb només uns clics, podràs contractar netejadors fiables i ben valorats a la teva zona.</p>
+        <!-- Botons amb animació augmentada -->
+        <div class="space-x-4">
+          <a href="#" class="animated-btn bg-white text-purple-600 py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white">Contracta</a>
+          <a href="#" class="animated-btn bg-white text-purple-600 py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-transparent hover:text-white">Més Info!</a>
+        </div>
+      </div>
+    </div>
+    <!-- Secció de vídeo (dreta) -->
+    <div class="flex items-center justify-center w-full md:w-1/2 h-full px-6 md:px-12 mt-4 md:mt-0">
+      <div class="glow w-full mr-8"> <!-- Afegit marge a la dreta -->
+        <iframe width="100%" height="375" src="https://www.youtube.com/embed/fyI410zm2_A"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HERO SECTION FINISH -->
+
 </body>
 </html>
