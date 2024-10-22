@@ -1,12 +1,12 @@
 {
-  "name": "slavainc",
+  "name": "project-landingpage-slavainc",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/slavainc/",
-    "preview": "vite preview --base=/slavainc/"
+    "build": "vite build --base=/project-landingpage-slavainc/",
+    "preview": "vite preview --base=/project-landingpage-slavainc/"
   },
   "devDependencies": {
     "alpinejs": "^3.14.3",
