@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Efecte de brillar */
+.glow {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.6s ease-in-out;
+}
+/* Efecte de brillar al pasar ratoli damunt */
+.glow:hover {
+    box-shadow: none;
+}
