@@ -16,3 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// JavaScript per fer l'animació d'entrada de les cartes
+document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+    window.addEventListener('scroll', function () {
+        const triggerBottom = window.innerHeight * 0.9; /* Millor visibilitat */
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                card.classList.add('visible');
+            } else {
+                card.classList.remove('visible');
+            }
+        });
+    });
+});
