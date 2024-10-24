@@ -11,6 +11,66 @@
 
 </head>
 <body>
+<!-- HEADER SECTION START -->
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#" class="flex items-center space-x-2">
+      <img src="public/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+      <span class="text-3xl font-bold text-purple-600">Slava INC</span>
+    </a>
+
+    <!-- Botó del menú hamburguer -->
+    <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <nav id="navbar" class="hidden md:flex flex-1 justify-center">
+      <ul class="flex space-x-6 text-gray-600 font-bold"> <!-- Espai entre les opcions de la llista de navegació -->
+        <li><a href="#" class="hover:text-purple-600">Inici</a></li>
+        <li><a href="#" class="hover:text-purple-600">Serveis</a></li>
+        <li><a href="#" class="hover:text-purple-600">Preus</a></li>
+        <li><a href="#" class="hover:text-purple-600">CTA</a></li>
+        <li><a href="#" class="hover:text-purple-600">FAQ</a></li>
+        <li><a href="#" class="hover:text-purple-600">Contacte</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botons d'Inici de Sessió i Registrar-se -->
+    <div class="hidden font-bold md:flex space-x-2 mt-1"> <!-- Ajustament de marges per a millorar l'espai -->
+      <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+        Inici de Sessió
+      </a>
+      <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-purple-600 rounded-full hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
+        Registrar-se
+      </a>
+    </div>
+  </div>
+
+  <!-- Menú desplegable per mòbil -->
+  <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
+    <ul class="flex flex-col space-y-2 p-4">
+      <li><a href="#" class="block hover:text-purple-600">Inici</a></li>
+      <li><a href="#" class="block hover:text-purple-600">Serveis</a></li>
+      <li><a href="#" class="block hover:text-purple-600">Preus</a></li>
+      <li><a href="#" class="block hover:text-purple-600">CTA</a></li>
+      <li><a href="#" class="block hover:text-purple-600">FAQ</a></li>
+      <li><a href="#" class="block hover:text-purple-600">Contacte</a></li>
+      <li>
+        <a href="#" class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
+          Inici de Sessió
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block text-white bg-purple-600 rounded-full px-4 py-2 hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
+          Registrar-se
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+<!-- HEADER SECTION FINISH -->
 
 
 
@@ -47,6 +107,7 @@
   </div>
 </section>
 <!-- HERO SECTION FINISH -->
+
 
 <!-- Features SECTION START -->
 <div class="bg-white py-24 sm:py-32">
@@ -142,6 +203,47 @@
 <!-- Features SECTION FINISH -->
 
 
+
+<!-- PREUS SECTION START -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold text-gray-800 mb-12">Preus</h2>
+    <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+
+      <!-- Pla Basic -->
+      <div class="card card-shadow border border-blue-300 bg-blue-100 p-10 max-w-md w-full transition-transform duration-700 ease-in-out rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-4 text-gray-800">Pla Basic</h3>
+        <p class="text-5xl font-bold text-blue-600 mb-6">20€<span class="text-lg text-gray-500">/ mes</span></p>
+        <ul class="text-left space-y-4 mb-8 text-lg text-gray-700">
+          <li class="text-green-500">✔️ Registre d'Empreses i Gestió de Treballadors</li>
+          <li class="text-green-500">✔️ Perfil de Netejador amb Xat en Temps Real</li>
+          <li class="text-green-500">✔️ Sistema de Contractació i Pagaments Integrats</li>
+          <li class="text-green-500">✔️ Calendari i Gestió de Cites</li>
+          <li class="text-red-500">❌ Valoracions i Comentaris</li>
+          <li class="text-red-500">❌ Informe i Anàlisi</li>
+        </ul>
+        <a href="#" class="btn block bg-blue-600 text-white py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-transform duration-300">Contracta ara</a>
+      </div>
+
+      <!-- Pla Premium -->
+      <div class="card card-shadow border border-blue-300 bg-blue-100 p-10 max-w-md w-full transition-transform duration-700 ease-in-out rounded-lg shadow-lg">
+        <h3 class="text-3xl font-semibold mb-4 text-gray-800">Pla Premium</h3>
+        <p class="text-5xl font-bold text-blue-600 mb-6">50€<span class="text-lg text-gray-500">/ mes</span></p>
+        <ul class="text-left space-y-4 mb-8 text-lg text-gray-700">
+          <li class="text-green-500">✔️ Registre d'Empreses i Gestió de Treballadors</li>
+          <li class="text-green-500">✔️ Perfil de Netejador amb Xat en Temps Real</li>
+          <li class="text-green-500">✔️ Sistema de Contractació i Pagaments Integrats</li>
+          <li class="text-green-500">✔️ Calendari i Gestió de Cites</li>
+          <li class="text-green-500">✔️ Valoracions i Comentaris</li>
+          <li class="text-green-500">✔️ Informe i Anàlisi</li>
+        </ul>
+        <a href="#" class="btn block bg-blue-600 text-white py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-transform duration-300">Contracta ara</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- PREUS SECTION FINISH -->
 
 
 </body>
