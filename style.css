@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Efecte de brillar */
+.glow {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    transition: box-shadow 0.6s ease-in-out;
+}
+/* Efecte de brillar al pasar ratoli damunt */
+.glow:hover {
+    box-shadow: none;
+}
+/* Estil personalitzat per les cartes i l'animació */
+.card {
+    transform: translateY(100px); /* Lliurament inicial desplaçada */
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+.card:hover {
+    transform: scale(1.08); /* Augmenta la mida quan passa el ratolí */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Ombratge suau més ampli */
+}
+.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* Fons amb degradat */
+body {
+    background: linear-gradient(to bottom, #9b4de3, #fff); /* purple-400 fins a blanc */
+}
+
+/* Ombra suau sota les cartes */
+.card-shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombra suau per a un efecte flotant */
+    border-radius: 15px; /* Afegeix cantonades arrodonides */
+}
+/* Suavitat a les transicions dels botons */
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transicions més fluïdes */
+}
+.btn:hover {
+    transform: translateY(-4px); /* Llevant lleuger del botó en hover */
+    background-color: #4a3c7d; /* Canvi a un to més profund de color en hover */
+}
