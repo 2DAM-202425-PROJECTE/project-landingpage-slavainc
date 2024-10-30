@@ -25,11 +25,6 @@
     transform: translateY(0);
     opacity: 1;
 }
-/* Fons amb degradat */
-body {
-    background: linear-gradient(to bottom, #9b4de3, #fff); /* purple-400 fins a blanc */
-    font-family: 'Poppins', sans-serif; /* Font de text */
-}
 
 /* Ombra suau sota les cartes */
 .card-shadow {
@@ -43,4 +38,7 @@ body {
 .btn:hover {
     transform: translateY(-4px); /* Llevant lleuger del botó en hover */
     background-color: #4a3c7d; /* Canvi a un to més profund de color en hover */
+}
+.animated-btn {
+    transition: all 0.4s ease-in-out;
 }
