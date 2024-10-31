@@ -16,6 +16,11 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "emailjs-com": "^3.2.0"
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "nodemailer": "^6.9.16"
   }
 }
