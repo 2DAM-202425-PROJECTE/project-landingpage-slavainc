@@ -4,22 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Slava Inc.</title>
-  <link rel="icon" href="/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+  <link rel="icon" href="contingut/logo.webp" type="image/x-icon"> <!-- Favicon link -->
   <link href="style.css" rel="stylesheet">
   <script type="module" src="main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 <!-- HEADER SECTION START -->
 <header class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-2 flex justify-between items-center"> <!-- Decreased py from 4 to 2 -->
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a href="#" class="flex items-center space-x-2">
-      <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
-      <span class="text-3xl font-bold text-purple-600">Slava INC</span>
+      <img src="public/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+      <span class="text-4xl md:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
     </a>
 
     <!-- Botó del menú hamburguer -->
@@ -30,22 +28,22 @@
     </button>
 
     <nav id="navbar" class="hidden md:flex flex-1 justify-center">
-      <ul class="flex space-x-6 text-gray-600 font-bold">
-        <li><a href="#" class="hover:text-purple-600">Inici</a></li>
-        <li><a href="#" class="hover:text-purple-600">Serveis</a></li>
-        <li><a href="#" class="hover:text-purple-600">Preus</a></li>
-        <li><a href="#" class="hover:text-purple-600">CTA</a></li>
-        <li><a href="#" class="hover:text-purple-600">FAQ</a></li>
-        <li><a href="#" class="hover:text-purple-600">Contacte</a></li>
+      <ul class="flex space-x-6 text-gray-600 font-bold"> <!-- Espai entre les opcions de la llista de navegació -->
+        <li><a href="#" class="hover:text-[#1f7275]">Inici</a></li>
+        <li><a href="#" class="hover:text-[#1f7275]">Serveis</a></li>
+        <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
+        <li><a href="#" class="hover:text-[#1f7275]">CTA</a></li>
+        <li><a href="#" class="hover:text-[#1f7275]">FAQ</a></li>
+        <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
       </ul>
     </nav>
 
     <!-- Botons d'Inici de Sessió i Registrar-se -->
-    <div class="hidden font-bold md:flex space-x-2 mt-1">
+    <div class="hidden font-bold md:flex space-x-2 mt-1"> <!-- Ajustament de marges per a millorar l'espai -->
       <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
         Inici de Sessió
       </a>
-      <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-purple-600 rounded-full hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
+      <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
         Registrar-se
       </a>
     </div>
@@ -54,19 +52,19 @@
   <!-- Menú desplegable per mòbil -->
   <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
     <ul class="flex flex-col space-y-2 p-4">
-      <li><a href="#" class="block hover:text-purple-600">Inici</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Serveis</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Preus</a></li>
-      <li><a href="#" class="block hover:text-purple-600">CTA</a></li>
-      <li><a href="#" class="block hover:text-purple-600">FAQ</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Contacte</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">Inici</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">Serveis</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">Preus</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">CTA</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">FAQ</a></li>
+      <li><a href="#" class="block hover:text-[#1f7275]">Contacte</a></li>
       <li>
         <a href="#" class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
           Inici de Sessió
         </a>
       </li>
       <li>
-        <a href="#" class="block text-white bg-purple-600 rounded-full px-4 py-2 hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
+        <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
           Registrar-se
         </a>
       </li>
@@ -74,6 +72,8 @@
   </div>
 </header>
 <!-- HEADER SECTION FINISH -->
+
+
 
 <!-- HERO SECTION START -->
 <section class="relative bg-white text-black py-0 md:py-60 overflow-hidden px-12 md:px-24">
@@ -109,6 +109,7 @@
   </div>
 </section>
 <!-- HERO SECTION FINISH -->
+
 
 <!-- Features SECTION START -->
 <div class="bg-white py-24 sm:py-32">
@@ -241,76 +242,121 @@
 </section>
 <!-- PREUS SECTION FINISH -->
 
+
+<!-- FAQ SECTION START -->
+<section id="preguntes" class="scroll-mt-20 py-20" data-aos="fade-up">
+  <div class="container mx-auto">
+    <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
+    <div class="space-y-4">
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
+          <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+        </div>
+        <p class="text-gray-700 hidden">Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
+          <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+        </div>
+        <p class="text-gray-700 hidden">Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
+          <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+        </div>
+        <p class="text-gray-700 hidden">Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
+          <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+        </div>
+        <p class="text-gray-700 hidden">Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
+          <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
+          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+        </div>
+        <p class="text-gray-700 hidden">El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ SECTION FINISH -->
+
 <!-- FOOTER SECTION -->
 <footer class="bg-gray-900" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+    <div class="xl:grid xl:grid-cols-4 xl:gap-8">
       <div class="space-y-8">
-        <img class="h-20 rounded-lg" src="./logo.webp" alt="Slava Inc.">
-        <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue mes fàcil que mai :D</p>
+        <img class="h-20 rounded-lg" src="./public/logo.webp" alt="Slava Inc.">
+        <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue més fàcil que mai :D</p>
         <div class="flex space-x-6">
           <!-- Social media icons -->
         </div>
       </div>
-      <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-1 md:gap-8">
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a>
-              </li>
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a>
-              </li>
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a>
-              </li>
-            </ul>
-          </div>
+
+      <!-- Suport, Company, Legal -->
+      <div class="col-span-2 mt-16 grid grid-cols-3 gap-8 xl:mt-0">
+        <div>
+          <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
+          <ul role="list" class="mt-6 space-y-4">
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a></li>
+          </ul>
         </div>
         <div>
           <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
           <ul role="list" class="mt-6 space-y-4">
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Qui som</a>
-            </li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Qui som</a></li>
           </ul>
         </div>
-        <div class="mt-10 md:mt-0">
+        <div>
           <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
           <ul role="list" class="mt-6 space-y-4">
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a>
-            </li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
+            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Newsletter Section -->
+      <div class="mt-10 xl:mt-0">
+        <h3 class="text-sm font-semibold leading-6 text-white">Newsletter</h3>
+        <p class="text-sm text-gray-300 mt-4 mb-6">Subscriu-te per rebre les últimes novetats i ofertes!</p>
+        <form id="contactForm">
+          <div class="mb-4">
+            <label for="email" class="sr-only">Correu electrònic:</label>
+            <input type="email" id="email" name="user_email" class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Correu electrònic" required>
+          </div>
+          <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Subscriure</button>
+        </form>
+      </div>
     </div>
+
     <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
       <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
     </div>
   </div>
 </footer>
-<!-- FOOTER SECTION -->
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </body>
 </html>
+
