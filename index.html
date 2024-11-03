@@ -1,33 +1,37 @@
 <!doctype html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Slava Inc.</title>
-  <link rel="icon" href="/logo.webp" type="image/x-icon"> <!-- Favicon link -->
-  <link href="style.css" rel="stylesheet">
-  <script type="module" src="main.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Slava Inc.</title>
+    <link rel="icon" href="/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+    <link href="style.css" rel="stylesheet">
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER SECTION START -->
 <header class="bg-white shadow-md">
+
   <div class="container mx-auto px-6 py-2 flex justify-between items-center"> <!-- Decreased py from 4 to 2 -->
     <a href="#" class="flex items-center space-x-2">
       <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
       <span class="text-3xl font-bold text-purple-600">Slava INC</span>
     </a>
 
-    <!-- Botó del menú hamburguer -->
-    <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
+        <!-- Botó del menú hamburguer -->
+        <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
 
     <nav id="navbar" class="hidden md:flex flex-1 justify-center">
       <ul class="flex space-x-6 text-gray-600 font-bold">
@@ -48,32 +52,35 @@
       <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-white bg-purple-600 rounded-full hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
         Registrar-se
       </a>
-    </div>
-  </div>
 
-  <!-- Menú desplegable per mòbil -->
-  <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
-    <ul class="flex flex-col space-y-2 p-4">
-      <li><a href="#" class="block hover:text-purple-600">Inici</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Serveis</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Preus</a></li>
-      <li><a href="#" class="block hover:text-purple-600">CTA</a></li>
-      <li><a href="#" class="block hover:text-purple-600">FAQ</a></li>
-      <li><a href="#" class="block hover:text-purple-600">Contacte</a></li>
-      <li>
-        <a href="#" class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
-          Inici de Sessió
-        </a>
-      </li>
-      <li>
-        <a href="#" class="block text-white bg-purple-600 rounded-full px-4 py-2 hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
-          Registrar-se
-        </a>
-      </li>
-    </ul>
-  </div>
+    </div>
+
+    <!-- Menú desplegable per mòbil -->
+    <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
+        <ul class="flex flex-col space-y-2 p-4">
+            <li><a href="#" class="block hover:text-purple-600">Inici</a></li>
+            <li><a href="#" class="block hover:text-purple-600">Serveis</a></li>
+            <li><a href="#" class="block hover:text-purple-600">Preus</a></li>
+            <li><a href="#" class="block hover:text-purple-600">CTA</a></li>
+            <li><a href="#" class="block hover:text-purple-600">FAQ</a></li>
+            <li><a href="#" class="block hover:text-purple-600">Contacte</a></li>
+            <li>
+                <a href="#"
+                   class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
+                    Inici de Sessió
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                   class="block text-white bg-purple-600 rounded-full px-4 py-2 hover:bg-purple-700 shadow-lg hover:shadow-xl transition duration-200 ease-in-out">
+                    Registrar-se
+                </a>
+            </li>
+        </ul>
+    </div>
 </header>
 <!-- HEADER SECTION FINISH -->
+
 
 <!-- HERO SECTION START -->
 <section class="relative bg-white text-black py-0 md:py-60 overflow-hidden px-12 md:px-24">
@@ -106,27 +113,33 @@
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
 </section>
 <!-- HERO SECTION FINISH -->
 
 <!-- Features SECTION START -->
 <div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl sm:text-center">
-      <h2 class="text-base font-semibold leading-7 text-indigo-600">Tot el que Necessites per Mantenir la Teva Llar Brillant
-      </h2>
-      <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-5xl">Neteja a la teva mida</p>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Amb la nostra plataforma, pots contractar netejadors professionals que s'adapten a les teves necessitats i preferències</p>
-    </div>
-  </div>
-  <div class="relative overflow-hidden pt-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/ce1e64ed1cb39a718b070960c86e0db2.jpg" alt="App screenshot" class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432" height="1442">
-      <div class="relative" aria-hidden="true">
-        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"></div>
-      </div>
+        <div class="mx-auto max-w-2xl sm:text-center">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">Tot el que Necessites per Mantenir la Teva
+                Llar Brillant
+            </h2>
+            <p class="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-balance sm:text-5xl">
+                Neteja a la teva mida</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Amb la nostra plataforma, pots contractar netejadors
+                professionals que s'adapten a les teves necessitats i preferències</p>
+        </div>
     </div>
+    <div class="relative overflow-hidden pt-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <img src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/ce1e64ed1cb39a718b070960c86e0db2.jpg"
+                 alt="App screenshot" class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432"
+                 height="1442">
+            <div class="relative" aria-hidden="true">
+                <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]"></div>
+            </div>
+        </div>
+    </div>
+
   </div>
   <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -140,67 +153,131 @@
       </div>
       <div class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24">
 
-        <!-- Funcionalitat 1 -->
-        <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
-            <i class="fa-solid fa-users text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Registre d'Empreses i Gestió de Treballadors</h3>
-          <p class="mt-5 text-base text-gray-600">Facilita el registre d'empreses i gestiona els treballadors de manera eficaç amb opcions per a l'assignació de tasques.</p>
+                <!-- Funcionalitat 1 -->
+                <div class="md:p-8 lg:p-14 flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center">
+                        <i class="fa-solid fa-users text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Registre d'Empreses i Gestió de Treballadors</h3>
+                    <p class="mt-5 text-base text-gray-600">Facilita el registre d'empreses i gestiona els treballadors
+                        de manera eficaç amb opcions per a l'assignació de tasques.</p>
+                </div>
+
+                <!-- Funcionalitat 2 -->
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center">
+                        <i class="fa-solid fa-user-friends text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Perfil de Netejador</h3>
+                    <p class="mt-5 text-base text-gray-600">Crea perfils per a cada netejador amb informació detallada
+                        per a una millor selecció i gestió.</p>
+                </div>
+
+                <!-- Funcionalitat 3 -->
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
+                        <i class="fa-solid fa-calendar-alt text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Calendari i Gestió de Cites</h3>
+                    <p class="mt-5 text-base text-gray-600">Organitza les teves cites i programes de treball amb un
+                        calendari integrat que recorda les properes tasques i cites amb els clients.</p>
+                </div>
+
+                <!-- Funcionalitat 4 -->
+                <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
+                        <i class="fa-solid fa-credit-card text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Pagaments Integrats</h3>
+                    <p class="mt-5 text-base text-gray-600">Gestiona pagaments de manera segura amb un sistema de
+                        pagaments integrat. Accepta pagaments amb targeta, transferències bancàries i més.</p>
+                </div>
+
+                <!-- Funcionalitat 5 -->
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-green-200 flex justify-center items-center">
+                        <i class="fa-solid fa-star text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Valoracions i Comentaris</h3>
+                    <p class="mt-5 text-base text-gray-600">Fomenta la confiança amb un sistema de valoracions i
+                        comentaris que permeten als clients deixar les seves opinions. Millora els teus serveis
+                        basant-te en les valoracions!</p>
+                </div>
+
+                <!-- Funcionalitat 6 -->
+                <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
+                    <div class="w-14 h-14 rounded-full bg-blue-200 flex justify-center items-center">
+                        <i class="fa-solid fa-chart-line text-3xl text-gray-900"></i>
+                    </div>
+                    <h3 class="mt-12 text-xl font-bold text-gray-900">Informes i Anàlisi</h3>
+                    <p class="mt-5 text-base text-gray-600">Accedeix a informes detallats sobre la teva activitat,
+                        incloent contractacions, valoracions i ingressos. Prendre decisions informades mai ha estat tan
+                        fàcil!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Features SECTION FINISH -->
+<!-- CTA SECTION START -->
+<section class="bg-white">
+  <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
+    <div class="flex justify-center xl:w-1/2">
+      <div class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full border-4 border-[#1f7275] flex items-center justify-center shadow-lg">
+        <img class="h-full w-full rounded-full object-cover"
+             src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+             alt="Una persona sosteniendo un teléfono móvil con la aplicación abierta">
+      </div>
+    </div>
+
+
+    <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
+      <h2 class="text-3xl font-bold tracking-tight text-black xl:text-4xl text-center xl:text-left">
+        Descarga nuestra aplicación móvil gratuita
+      </h2>
+
+      <p class="block max-w-2xl mt-4 text-lg text-black text-center xl:text-left">
+        Disfruta de una experiencia única en tu teléfono con nuestra app. Descubre funciones exclusivas y mantente conectado con las últimas novedades.
+      </p>
+
+      <div class="mt-6 sm:-mx-2">
+        <div class="inline-flex w-full overflow-hidden rounded-lg shadow-lg sm:w-auto sm:mx-2">
+          <a href="#"
+             class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white bg-[#1f7275] hover:bg-[#01a0a6] transition duration-300 ease-in-out">
+            <svg class="w-6 h-6 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M407,0H105C47.103,0,0,47.103,0,105v302c0,57.897,47.103,105,105,105h302c57.897,0,105-47.103,105-105V105C512,47.103,464.897,0,407,0z M482,407c0,41.355-33.645,75-75,75H105c-41.355,0-75-33.645-75-75V105c0-41.355,33.645-75,75-75h302c41.355,0,75,33.645,75,75V407z"/>
+              <path d="M305.646,123.531c-1.729-6.45-5.865-11.842-11.648-15.18c-11.936-6.892-27.256-2.789-34.15,9.151L256,124.166l-3.848-6.665c-6.893-11.937-22.212-16.042-34.15-9.151h-0.001c-11.938,6.893-16.042,22.212-9.15,34.151l18.281,31.664L159.678,291H110.5c-13.785,0-25,11.215-25,25c0,13.785,11.215,25,25,25h189.86l-28.868-50h-54.079l85.735-148.498C306.487,136.719,307.375,129.981,305.646,123.531z"/>
+              <path d="M401.5,291h-49.178l-55.907-96.834l-28.867,50l86.804,150.348c3.339,5.784,8.729,9.921,15.181,11.65c2.154,0.577,4.339,0.863,6.511,0.863c4.332,0,8.608-1.136,12.461-3.361c11.938-6.893,16.042-22.213,9.149-34.15L381.189,341H401.5c13.785,0,25-11.215,25-25C426.5,302.215,415.285,291,401.5,291z"/>
+              <path d="M119.264,361l-4.917,8.516c-6.892,11.938-2.787,27.258,9.151,34.15c3.927,2.267,8.219,3.345,12.458,3.344c8.646,0,17.067-4.484,21.693-12.495L176.999,361H119.264z"/>
+            </svg>
+            <span class="mx-2">
+                            Obtener en la App Store
+                        </span>
+          </a>
         </div>
 
-        <!-- Funcionalitat 2 -->
-        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-teal-200 flex justify-center items-center">
-            <i class="fa-solid fa-user-friends text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Perfil de Netejador</h3>
-          <p class="mt-5 text-base text-gray-600">Crea perfils per a cada netejador amb informació detallada per a una millor selecció i gestió.</p>
-        </div>
-
-        <!-- Funcionalitat 3 -->
-        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center">
-            <i class="fa-solid fa-calendar-alt text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Calendari i Gestió de Cites</h3>
-          <p class="mt-5 text-base text-gray-600">Organitza les teves cites i programes de treball amb un calendari integrat que recorda les properes tasques i cites amb els clients.</p>
-        </div>
-
-        <!-- Funcionalitat 4 -->
-        <div class="md:p-8 lg:p-14 md:border-t md:border-gray-200 flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center">
-            <i class="fa-solid fa-credit-card text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Pagaments Integrats</h3>
-          <p class="mt-5 text-base text-gray-600">Gestiona pagaments de manera segura amb un sistema de pagaments integrat. Accepta pagaments amb targeta, transferències bancàries i més.</p>
-        </div>
-
-        <!-- Funcionalitat 5 -->
-        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-green-200 flex justify-center items-center">
-            <i class="fa-solid fa-star text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Valoracions i Comentaris</h3>
-          <p class="mt-5 text-base text-gray-600">Fomenta la confiança amb un sistema de valoracions i comentaris que permeten als clients deixar les seves opinions. Millora els teus serveis basant-te en les valoracions!</p>
-        </div>
-
-        <!-- Funcionalitat 6 -->
-        <div class="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t flex flex-col justify-center items-center">
-          <div class="w-14 h-14 rounded-full bg-blue-200 flex justify-center items-center">
-            <i class="fa-solid fa-chart-line text-3xl text-gray-900"></i>
-          </div>
-          <h3 class="mt-12 text-xl font-bold text-gray-900">Informes i Anàlisi</h3>
-          <p class="mt-5 text-base text-gray-600">Accedeix a informes detallats sobre la teva activitat, incloent contractacions, valoracions i ingressos. Prendre decisions informades mai ha estat tan fàcil!</p>
+        <div class="inline-flex w-full mt-4 overflow-hidden rounded-lg shadow-lg sm:w-auto sm:mx-2 sm:mt-0">
+          <a href="#"
+             class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-white bg-[#01a0a6] hover:bg-[#1f7275] transition duration-300 ease-in-out">
+            <svg class="w-6 h-6 mx-2 fill-current" viewBox="-28 0 512 512.00075" xmlns="http://www.w3.org/2000/svg">
+              <path d="m432.320312 215.121094-361.515624-208.722656c-14.777344-8.53125-32.421876-8.53125-47.203126 0-.121093.070312-.230468.148437-.351562.21875-.210938.125-.421875.253906-.628906.390624-14.175782 8.636719-22.621094 23.59375-22.621094 40.269532v417.445312c0 17.066406 8.824219 32.347656 23.601562 40.878906 7.390626 4.265626 15.496094 6.398438 23.601563 6.398438s16.214844-2.132812 23.601563-6.398438l361.519531-208.722656c14.777343-8.53125 23.601562-23.8125 23.601562-40.878906s-8.824219-32.347656-23.605469-40.878906zm-401.941406 253.152344c-.21875-1.097657-.351562-2.273438-.351562-3.550782v-417.445312c0-2.246094.378906-4.203125.984375-5.90625l204.324219 213.121094zm43.824219-425.242188 234.21875 135.226562-52.285156 54.539063zm-6.480469 429.679688 188.410156-196.527344 54.152344 56.484375zm349.585938-201.835938-80.25 46.332031-60.125-62.714843 58.261718-60.773438 82.113282 47.40625c7.75 4.476562 8.589844 11.894531 8.589844 14.875s-.839844 10.398438-8.589844 14.875zm0 0"/>
+            </svg>
+            <span class="mx-2">
+                            Obtener en Google Play
+                        </span>
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- CTA SECTION FINISH -->
 
-</div>
-<!-- Features SECTION FINISH -->
 
 <!-- PREUS SECTION START -->
+
 <section class="relative py-16 bg-white text-black overflow-hidden px-12 md:px-24">
   <div class="absolute inset-0 bg-gradient-to-t from-[#54D2FA] to-transparent opacity-80 z-0"></div>
   <div class="relative z-10 container mx-auto text-center">
@@ -236,80 +313,81 @@
         </ul>
         <a href="#" class="animated-btn block text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-3 rounded-full text-lg font-semibold shadow-lg transition-transform duration-300 hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Contracta ara</a>
       </div>
+
     </div>
-  </div>
 </section>
 <!-- PREUS SECTION FINISH -->
 
 <!-- FOOTER SECTION -->
 <footer class="bg-gray-900" aria-labelledby="footer-heading">
-  <h2 id="footer-heading" class="sr-only">Footer</h2>
-  <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-      <div class="space-y-8">
-        <img class="h-20 rounded-lg" src="./logo.webp" alt="Slava Inc.">
-        <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue mes fàcil que mai :D</p>
-        <div class="flex space-x-6">
-          <!-- Social media icons -->
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-8">
+                <img class="h-20 rounded-lg" src="./logo.webp" alt="Slava Inc.">
+                <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue mes fàcil que mai :D</p>
+                <div class="flex space-x-6">
+                    <!-- Social media icons -->
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
+                <div class="md:grid md:grid-cols-1 md:gap-8">
+                    <div class="mt-10 md:mt-0">
+                        <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
+                        <ul role="list" class="mt-6 space-y-4">
+                            <li>
+                                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport
+                                    telemàtic</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Qui som</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10 md:mt-0">
+                    <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
-        <div class="md:grid md:grid-cols-1 md:gap-8">
-          <div class="mt-10 md:mt-0">
-            <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
-            <ul role="list" class="mt-6 space-y-4">
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a>
-              </li>
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a>
-              </li>
-              <li>
-                <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a>
-              </li>
-            </ul>
-          </div>
+        <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+            <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
         </div>
-        <div>
-          <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
-          <ul role="list" class="mt-6 space-y-4">
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Qui som</a>
-            </li>
-          </ul>
-        </div>
-        <div class="mt-10 md:mt-0">
-          <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
-          <ul role="list" class="mt-6 space-y-4">
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a>
-            </li>
-            <li>
-              <a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-      <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
-    </div>
-  </div>
 </footer>
 <!-- FOOTER SECTION -->
 </body>
