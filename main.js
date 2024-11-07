@@ -54,21 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
-    document.querySelectorAll('[data-toggle]').forEach(item => {
-        item.addEventListener('click', () => {
-            const content = item.nextElementSibling; // El següent element (la resposta)
-            const icon = item.querySelector('.toggle-icon'); // L'ícona + o -
-
-            if (content.classList.contains('max-h-0')) {
-                content.classList.remove('max-h-0'); // Mostrar resposta
-                icon.textContent = '-'; // Canviar símbol a -
-            } else {
-                content.classList.add('max-h-0'); // Ocultar resposta
-                icon.textContent = '+'; // Canviar símbol a +
-            }
-        });
-    });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -107,17 +92,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.querySelectorAll('[data-toggle]').forEach(item => {
-    item.addEventListener('click', () => {
-        const content = item.nextElementSibling; // El següent element (la resposta)
-        const icon = item.querySelector('.toggle-icon'); // L'ícona + o -
+// Selecciona tots els elements que tenen l'atribut data-toggle
+document.querySelectorAll("[data-toggle]").forEach(item => {
+    // Afegeix un event listener per gestionar el clic
+    item.addEventListener("click", function() {
+        // Selecciona el paràgraf amb el text de la resposta (el proper element <p> després de l'element actual)
+        const answer = item.nextElementSibling;
+        const icon = item.querySelector(".toggle-icon");
 
-        if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden'); // Mostrar resposta
-            icon.textContent = '-'; // Canviar símbol a -
+        // Alterna la visibilitat de la resposta
+        answer.classList.toggle("hidden");
+
+        // Canvia el símbol de + a - o viceversa
+        if (answer.classList.contains("hidden")) {
+            icon.textContent = "+";
         } else {
-            content.classList.add('hidden'); // Ocultar resposta
-            icon.textContent = '+'; // Canviar símbol a +
+            icon.textContent = "-";
         }
     });
 });
