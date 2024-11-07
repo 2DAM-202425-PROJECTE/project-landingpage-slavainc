@@ -18,62 +18,62 @@
 
 <!-- HEADER SECTION START -->
 <header class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#" class="flex items-center space-x-2">
-      <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
-      <span class="text-4xl md:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
-    </a>
-
-    <!-- Botó del menú hamburguer -->
-    <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-
-    <nav id="navbar" class="hidden md:flex flex-1 justify-center">
-      <ul class="flex space-x-6 text-gray-600 font-bold"> <!-- Espai entre les opcions de la llista de navegació -->
-        <li><a href="#" class="hover:text-[#1f7275]">Inici</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Serveis</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">CTA</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">FAQ</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
-      </ul>
-    </nav>
-
-    <!-- Botons d'Inici de Sessió i Registrar-se -->
-    <div class="hidden font-bold md:flex space-x-2 mt-1"> <!-- Ajustament de marges per a millorar l'espai -->
-      <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
-        Inici de Sessió
-      </a>
-      <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-        Registrar-se
-      </a>
-    </div>
-
-  <!-- Menú desplegable per mòbil -->
-  <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
-    <ul class="flex flex-col space-y-2 p-4">
-      <li><a href="#" class="block hover:text-[#1f7275]">Inici</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Serveis</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Preus</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">CTA</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">FAQ</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Contacte</a></li>
-      <li>
-        <a href="#" class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
-          Inici de Sessió
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-2">
+            <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+            <span class="text-4xl lgm:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
         </a>
-      </li>
-      <li>
-        <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-          Registrar-se
-        </a>
-      </li>
-    </ul>
 
-  </div>
+        <!-- Botó del menú hamburguesa (mòbil) -->
+        <button id="menu-toggle" class="lgm:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Menú de navegació (escriptori) -->
+        <nav id="navbar" class="hidden lgm:flex flex-1 justify-center">
+            <ul class="flex space-x-6 text-gray-600 font-bold">
+                <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-[#1f7275]">Contacte</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botons d'Inici de Sessió i Registrar-se -->
+        <div class="hidden font-bold lgm:flex space-x-2 mt-1">
+            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                Inici de Sessió
+            </a>
+            <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                Registrar-se
+            </a>
+        </div>
+
+        <!-- Menú desplegable per mòbil -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-4 top-16 w-48 rounded-lg z-20 overflow-auto max-h-[70vh]">
+            <ul class="flex flex-col space-y-5 p-4">
+                <li><a href="#hero" class="block hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#features" class="block hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#cta" class="block hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#prices" class="block hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#faq" class="block hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="#contact" class="block hover:text-[#1f7275]">Contacte</a></li>
+                <li>
+                    <a href="#" class="text-black bg-gray-200 rounded-full px-4 py-2 mb-3 hover:bg-gray-300 transition duration-200">
+                        Inici de Sessió
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                        Registrar-se
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
 <!-- HEADER SECTION FINISH -->
