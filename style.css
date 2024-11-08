@@ -45,3 +45,44 @@
 .animated-btn {
     transition: all 0.4s ease-in-out;
 }
+
+/* CTA SECTION CSS START */
+/* From Uiverse.io by kamehame-ha */
+
+.downloadsCTA .downloadCTA:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/* Difuminar els altres botons quan es passa per damunt d’un */
+/* CTA SECTION CSS START */
+.downloadsCTA .downloadCTA {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+}
+
+/* Cuando un botón está en hover, se resalta */
+/* CTA SECTION CSS START */
+/* CTA SECTION CSS START */
+.downloadsCTA {
+    display: flex;
+    gap: 1rem;
+}
+
+.downloadsCTA .downloadCTA {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+/* Cuando un botón está en hover, se resalta */
+.downloadsCTA .downloadCTA:hover {
+    filter: brightness(0.85);
+    transform: scale(1.05);
+}
+
+/* Difumina los otros botones cuando uno está en hover, pero solo los botones que no tienen hover */
+
+/* CTA SECTION CSS FINISH */
+/* CTA SECTION CSS FINISH */
+
+/* CTA SECTION CSS FINISH */
