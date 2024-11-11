@@ -111,3 +111,76 @@ document.querySelectorAll("[data-toggle]").forEach(item => {
         }
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicializa EmailJS con tu Public Key
+    emailjs.init("OBqXgrR0fs5ostHMu");
+
+    // Selecciona el formulario y añade un manejador de eventos para el envío
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();  // Evita el comportamiento predeterminado de envío del formulario
+
+        const userEmail = document.getElementById("email").value;
+
+        // Muestra mensaje de estado
+        let statusMessage = document.getElementById("statusMessage");
+        if (!statusMessage) {
+            statusMessage = document.createElement("p");
+            statusMessage.id = "statusMessage";
+            document.getElementById("contactForm").appendChild(statusMessage);
+        }
+        statusMessage.textContent = "Enviant subscripció...";
+        statusMessage.style.color = "gray";
+
+        // Envía el correo de bienvenida al usuario
+        emailjs.send("service_bfmkhjk", "template_wigev16", { user_email: userEmail })
+            .then(
+                function (response) {
+                    statusMessage.textContent = "Subscripció exitosa!";
+                    statusMessage.style.color = "green";
+
+                    // Envía el correo de notificación al administrador
+                    return emailjs.send("service_bfmkhjk", "template_k0siyva", { user_email: userEmail });
+                }
+            )
+            .then(
+                function (response) {
+                    console.log("Notificación enviada al administrador:", response);
+                },
+                function (error) {
+                    console.error("Error al notificar al administrador:", error);
+                    statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                    statusMessage.style.color = "red";
+                }
+            )
+            .then(() => {
+                // Guarda el correo en Google Sheets
+                console.log("Guardando el correo en Google Sheets...");
+                return fetch("https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec", {  // Reemplaza "URL_DEL_WEB_APP" con la URL de tu Web App
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: new URLSearchParams({ email: userEmail })
+                });
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    console.log("Correo guardado en Google Sheets");
+                } else {
+                    console.error("Error al guardar en Google Sheets:", data);
+                }
+            })
+            .catch(function (error) {
+                console.error("Error en el proceso:", error);
+                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                statusMessage.style.color = "red";
+            });
+
+        // Limpia el campo de entrada después del envío
+        this.reset();
+    });
+});
