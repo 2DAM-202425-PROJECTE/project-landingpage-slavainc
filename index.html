@@ -17,14 +17,17 @@
 
 </head>
 <body>
-
 <!-- HEADER SECTION START -->
 <header class="bg-white shadow-md">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#" class="flex items-center space-x-2">
-      <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
-      <span class="text-4xl md:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
-    </a>
+      <a href="#" class="flex items-center space-x-2">
+          <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+          <button class="custom-button" data-text="SLAVA Inc">
+              <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+              <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+          </button>
+      </a>
+
 
     <!-- Botó del menú hamburguer -->
     <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
@@ -79,7 +82,7 @@
     </div>
 </header>
 <!-- HEADER SECTION FINISH -->
-
+<!-- Cookie Section START -->
 <section id="cookie-banner" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]" style="display: none;">
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
 
@@ -103,7 +106,7 @@
         </button>
     </div>
 </section>
-
+<!-- Cookie Section FINISH -->
 <!-- HERO SECTION START -->
 <section class="relative bg-white text-black py-12 md:py-60 overflow-hidden px-6 sm:px-12 md:px-24">
     <div class="absolute inset-0 z-0"></div>
@@ -410,15 +413,19 @@
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-4 xl:gap-8">
-      <div class="space-y-8">
-        <img class="h-20 rounded-lg" src="/logo.webp" alt="Slava Inc.">
-        <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue més fàcil que mai :D</p>
-        <div class="flex space-x-6">
-          <!-- Social media icons -->
+        <div class="button-container">
+            <button class="brutalist-button openai button-1">
+                <div class="openai-logo">
+                    <img src="./logo_transparent.png" alt="Logo" class="openai-icon" />
+                </div>
+                <div class="button-text">
+                    <span>SLAVA Inc.</span>
+                </div>
+            </button>
         </div>
-      </div>
 
-      <!-- Suport, Company, Legal -->
+
+        <!-- Suport, Company, Legal -->
       <div class="col-span-2 mt-16 grid grid-cols-3 gap-8 xl:mt-0">
         <div>
           <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
