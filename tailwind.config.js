@@ -8,6 +8,9 @@ export default {
       colors: {
         'custom-footer': '#242148',
       },
+      screens: {
+        'lgm': '1000px', // Nom del punt de trencament personalitzat
+      },
     },
   },
   plugins: [],
