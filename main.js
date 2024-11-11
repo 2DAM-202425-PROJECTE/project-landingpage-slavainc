@@ -54,21 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-
-    document.querySelectorAll('[data-toggle]').forEach(item => {
-        item.addEventListener('click', () => {
-            const content = item.nextElementSibling; // El següent element (la resposta)
-            const icon = item.querySelector('.toggle-icon'); // L'ícona + o -
-
-            if (content.classList.contains('max-h-0')) {
-                content.classList.remove('max-h-0'); // Mostrar resposta
-                icon.textContent = '-'; // Canviar símbol a -
-            } else {
-                content.classList.add('max-h-0'); // Ocultar resposta
-                icon.textContent = '+'; // Canviar símbol a +
-            }
-        });
-    });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -107,17 +92,55 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.querySelectorAll('[data-toggle]').forEach(item => {
-    item.addEventListener('click', () => {
-        const content = item.nextElementSibling; // El següent element (la resposta)
-        const icon = item.querySelector('.toggle-icon'); // L'ícona + o -
 
-        if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden'); // Mostrar resposta
-            icon.textContent = '-'; // Canviar símbol a -
-        } else {
-            content.classList.add('hidden'); // Ocultar resposta
-            icon.textContent = '+'; // Canviar símbol a +
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicializa EmailJS con tu Public Key
+    emailjs.init("OBqXgrR0fs5ostHMu");
+
+    // Selecciona el formulario y añade un manejador de eventos para el envío
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+        event.preventDefault();  // Evita el comportamiento predeterminado de envío del formulario
+
+        const userEmail = document.getElementById("email").value;
+
+        // Muestra mensaje de estado
+        let statusMessage = document.getElementById("statusMessage");
+        if (!statusMessage) {
+            statusMessage = document.createElement("p");
+            statusMessage.id = "statusMessage";
+            document.getElementById("contactForm").appendChild(statusMessage);
         }
+        statusMessage.textContent = "Enviant subscripció...";
+        statusMessage.style.color = "gray";
+
+        // Envía el correo de bienvenida al usuario
+        emailjs.send("service_bfmkhjk", "template_wigev16", { user_email: userEmail })
+            .then(
+                function (response) {
+                    statusMessage.textContent = "Subscripció exitosa!";
+                    statusMessage.style.color = "green";
+
+                    // Envía el correo de notificación al administrador
+                    return emailjs.send("service_bfmkhjk", "template_k0siyva", { user_email: userEmail });
+                }
+            )
+            .then(
+                function (response) {
+                    console.log("Notificación enviada al administrador:", response);
+                },
+                function (error) {
+                    console.error("Error al notificar al administrador:", error);
+                    statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                    statusMessage.style.color = "red";
+                }
+            )
+            .catch(function (error) {
+                console.error("Error en el envío:", error);
+                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                statusMessage.style.color = "red";
+            });
+
+        // Limpia el campo de entrada después del envío
+        this.reset();
     });
 });

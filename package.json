@@ -16,6 +16,9 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "emailjs-com": "^3.2.0"
+    "emailjs-com": "^3.2.0",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security",
+    "nodemailer": "^6.9.16"
   }
 }
