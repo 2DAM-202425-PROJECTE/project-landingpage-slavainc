@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Privacitat</title>
+    <link rel="icon" href="/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+    <link href="style.css" rel="stylesheet">
+    <script type="module" src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- HEADER SECTION START -->
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/index.html" class="flex items-center space-x-2">
+            <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+            <span class="text-4xl lgm:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
+        </a>
+
+        <!-- Botó del menú hamburguesa (mòbil) -->
+        <button id="menu-toggle" class="lgm:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Menú de navegació (escriptori) -->
+        <nav id="navbar" class="hidden lgm:flex flex-1 justify-center">
+            <ul class="flex space-x-6 text-gray-600 font-bold">
+                <li><a href="/project-landingpage-slavainc/#hero" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/project-landingpage-slavainc/#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="/project-landingpage-slavainc/#cta" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="/project-landingpage-slavainc/#prices" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="/project-landingpage-slavainc/#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="/project-landingpage-slavainc/#contact" class="hover:text-[#1f7275]">Contacte</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botons d'Inici de Sessió i Registrar-se -->
+        <div class="hidden font-bold lgm:flex space-x-2 mt-1">
+            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                Inici de Sessió
+            </a>
+            <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                Registrar-se
+            </a>
+        </div>
+
+        <!-- Menú desplegable per mòbil -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-4 top-16 w-48 rounded-lg z-20 overflow-auto max-h-[70vh]">
+            <ul class="flex flex-col space-y-5 p-4">
+                <li><a href="/project-landingpage-slavainc/#hero" class="block hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/project-landingpage-slavainc/#features" class="block hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="/project-landingpage-slavainc/#cta" class="block hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="/project-landingpage-slavainc/#prices" class="block hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="/project-landingpage-slavainc/#faq" class="block hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="/project-landingpage-slavainc/#contact" class="block hover:text-[#1f7275]">Contacte</a></li>
+                <li>
+                    <a href="#" class="text-black bg-gray-200 rounded-full px-4 py-2 mb-3 hover:bg-gray-300 transition duration-200">
+                        Inici de Sessió
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                        Registrar-se
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- HEADER SECTION FINISH -->
+
+<!-- Privacy Policy Section -->
+<section id="privacy-policy" class="scroll-mt-20 py-20 bg-gray-50">
+    <div class="container mx-auto px-6 sm:px-8 md:px-10 lg:px-12">
+        <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Política de Privacitat</h3>
+
+        <div class="space-y-6">
+            <!-- Introduction Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Introducció</h4>
+                <p class="text-gray-700">La teva privacitat és important per a nosaltres. Aquesta política de privacitat explica com recollim, utilitzem, compartim i protegim la teva informació personal quan utilitzes els nostres serveis.</p>
+            </div>
+
+            <!-- Information Collection Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Quina informació recollim?</h4>
+                <p class="text-gray-700">Recollim informació personal quan t'inscrius al nostre servei, omples formularis, et poses en contacte amb nosaltres o interactues amb la nostra pàgina web. Aquesta informació pot incloure, entre altres, el teu nom, adreça de correu electrònic i qualsevol altra informació necessària per a processar la teva sol·licitud.</p>
+            </div>
+
+            <!-- How We Use Your Information -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Com utilitzem la teva informació?</h4>
+                <p class="text-gray-700">La informació que recollim s'utilitza per a proporcionar-te els nostres serveis, comunicar-nos amb tu, i millorar la nostra pàgina web. També podem utilitzar la teva informació per a enviar-te actualitzacions, ofertes o informació relacionada amb els nostres serveis que considerem que poden ser del teu interès.</p>
+            </div>
+
+            <!-- Data Sharing Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Com compartim la teva informació?</h4>
+                <p class="text-gray-700">No compartim la teva informació personal amb tercers, excepte quan sigui necessari per a proporcionar-te els nostres serveis o quan sigui requerit per la llei. Podem utilitzar serveis de tercers per a processar les dades o per a la gestió dels nostres serveis, però aquests estan subjectes a acords de confidencialitat.</p>
+            </div>
+
+            <!-- Data Security Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Com protegim la teva informació?</h4>
+                <p class="text-gray-700">Prèviament prenem mesures de seguretat adequades per protegir la teva informació personal. Això inclou l'ús de xifratge de dades, controls d'accés i altres mesures tècniques i físiques per evitar l'accés no autoritzat a les teves dades.</p>
+            </div>
+
+            <!-- Cookies Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Ús de Cookies</h4>
+                <p class="text-gray-700">Utilitzem cookies per millorar l'experiència de l'usuari al nostre lloc web. Les cookies són petits fitxers que es guarden al teu dispositiu quan visites el nostre lloc web. Les cookies ens ajuden a personalitzar la teva experiència i a analitzar l'ús de la nostra pàgina.</p>
+            </div>
+
+            <!-- Your Rights Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Quins són els teus drets?</h4>
+                <p class="text-gray-700">Tens el dret d'accedir, rectificar o suprimir les teves dades personals en qualsevol moment. Si vols exercir aquests drets o tens qualsevol pregunta sobre la nostra política de privacitat, no dubtis a posar-te en contacte amb nosaltres a través de la nostra pàgina de contacte.</p>
+            </div>
+
+            <!-- Changes to This Policy Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Canvis a aquesta política</h4>
+                <p class="text-gray-700">Podem actualitzar aquesta política de privacitat periòdicament. T'informarem de qualsevol canvi mitjançant una actualització de la data d'entrada en vigor al final d'aquesta pàgina.</p>
+            </div>
+
+            <!-- Contact Information Section -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Contacte</h4>
+                <p class="text-gray-700">Si tens qualsevol pregunta sobre aquesta política de privacitat, si us plau, contacta'ns a través del nostre correu electrònic: <a href="mailto:info@teuwebsite.com" class="text-blue-600 hover:underline">info@teuwebsite.com</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Privacy Policy Section End -->
+
+<!-- FOOTER SECTION -->
+<footer class="bg-gray-900" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+        <div class="xl:grid xl:grid-cols-4 xl:gap-8">
+            <div class="space-y-8">
+                <img class="h-20 rounded-lg" src="/logo.webp" alt="Slava Inc.">
+                <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue més fàcil que mai :D</p>
+                <div class="flex space-x-6">
+                    <!-- Social media icons -->
+                </div>
+            </div>
+
+            <!-- Suport, Company, Legal -->
+            <div class="col-span-2 mt-16 grid grid-cols-3 gap-8 xl:mt-0">
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Qui som</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
+                    <ul role="list" class="mt-6 space-y-4">
+                        <li><a href="termes.html" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
+                        <li><a href="privacitat.html" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
+                        <li><a href="avis_legal.html" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="mt-10 xl:mt-0">
+                <h3 class="text-sm font-semibold leading-6 text-white">Newsletter</h3>
+                <p class="text-sm text-gray-300 mt-4 mb-6">Subscriu-te per rebre les últimes novetats i ofertes!</p>
+                <form id="contactForm">
+                    <div class="mb-4">
+                        <label for="email" class="sr-only">Correu electrònic:</label>
+                        <input type="email" id="email" name="user_email" class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Correu electrònic" required>
+                    </div>
+                    <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Subscriure</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+            <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
