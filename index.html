@@ -18,62 +18,62 @@
 
 <!-- HEADER SECTION START -->
 <header class="bg-white shadow-md">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#" class="flex items-center space-x-2">
-      <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
-      <span class="text-4xl md:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
-    </a>
-
-    <!-- Botó del menú hamburguer -->
-    <button id="menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-
-    <nav id="navbar" class="hidden md:flex flex-1 justify-center">
-      <ul class="flex space-x-6 text-gray-600 font-bold"> <!-- Espai entre les opcions de la llista de navegació -->
-        <li><a href="#" class="hover:text-[#1f7275]">Inici</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Serveis</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">CTA</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">FAQ</a></li>
-        <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
-      </ul>
-    </nav>
-
-    <!-- Botons d'Inici de Sessió i Registrar-se -->
-    <div class="hidden font-bold md:flex space-x-2 mt-1"> <!-- Ajustament de marges per a millorar l'espai -->
-      <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
-        Inici de Sessió
-      </a>
-      <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-        Registrar-se
-      </a>
-    </div>
-
-  <!-- Menú desplegable per mòbil -->
-  <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-0 mt-2 w-48 rounded-lg z-20">
-    <ul class="flex flex-col space-y-2 p-4">
-      <li><a href="#" class="block hover:text-[#1f7275]">Inici</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Serveis</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Preus</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">CTA</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">FAQ</a></li>
-      <li><a href="#" class="block hover:text-[#1f7275]">Contacte</a></li>
-      <li>
-        <a href="#" class="block text-black bg-gray-200 rounded-full px-4 py-2 hover:bg-gray-300 transition duration-200">
-          Inici de Sessió
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/index.html" class="flex items-center space-x-2">
+            <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+            <span class="text-4xl lgm:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
         </a>
-      </li>
-      <li>
-        <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-          Registrar-se
-        </a>
-      </li>
-    </ul>
 
-  </div>
+        <!-- Botó del menú hamburguesa (mòbil) -->
+        <button id="menu-toggle" class="lgm:hidden text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Menú de navegació (escriptori) -->
+        <nav id="navbar" class="hidden lgm:flex flex-1 justify-center">
+            <ul class="flex space-x-6 text-gray-600 font-bold">
+                <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-[#1f7275]">Contacte</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botons d'Inici de Sessió i Registrar-se -->
+        <div class="hidden font-bold lgm:flex space-x-2 mt-1">
+            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                Inici de Sessió
+            </a>
+            <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                Registrar-se
+            </a>
+        </div>
+
+        <!-- Menú desplegable per mòbil -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-4 top-16 w-48 rounded-lg z-20 overflow-auto max-h-[70vh]">
+            <ul class="flex flex-col space-y-5 p-4">
+                <li><a href="#hero" class="block hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#features" class="block hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#cta" class="block hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#prices" class="block hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#faq" class="block hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="#contact" class="block hover:text-[#1f7275]">Contacte</a></li>
+                <li>
+                    <a href="#" class="text-black bg-gray-200 rounded-full px-4 py-2 mb-3 hover:bg-gray-300 transition duration-200">
+                        Inici de Sessió
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                        Registrar-se
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
 <!-- HEADER SECTION FINISH -->
@@ -81,7 +81,7 @@
 <!-- HERO SECTION START -->
 <section class="relative bg-white text-black py-12 md:py-60 overflow-hidden px-6 sm:px-12 md:px-24">
     <div id="container" class="absolute top-0 left-0 w-full h-full">
-        <!-- Particle animation will go here -->
+        <!-- Animacio particles -->
     </div>
     <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between">
         <div class="flex items-center justify-center w-full lg:w-1/2 h-full px-6 sm:px-12 md:px-24 mb-6 lg:mb-0">
@@ -90,7 +90,7 @@
                 <p class="text-base sm:text-lg md:text-xl mb-6 drop-shadow-md">
                     Connecta amb empreses de neteja professionals que ofereixen serveis de qualitat, adaptats a les teves necessitats. Amb només uns clics, podràs contractar netejadors fiables i ben valorats a la teva zona.
                 </p>
-                <!-- Rating Section -->
+                <!-- Seccio de puntuacio -->
                 <div class="flex items-center justify-center lg:justify-start landing-header-review mb-6">
                     <span class="text-base sm:text-lg font-bold mr-2 sm:mr-4">Avg. rating</span>
                     <div class="flex stars-container">
@@ -99,8 +99,7 @@
                     <span class="text-lg font-bold ml-2">4.0</span>
                     <span class="text-xs sm:text-sm ml-2">13050 reviews</span>
                 </div>
-
-                <!-- Buttons -->
+                <!-- Botons -->
                 <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center lg:justify-start">
                     <a href="#"
                        class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-6 sm:py-3 sm:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275] whitespace-nowrap">Contracta</a>
@@ -109,8 +108,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Right Video Block -->
+        <!-- Video -->
         <div class="flex items-center justify-center w-full lg:w-1/2 h-full px-6 md:px-12 mt-6 lg:mt-0 lg:order-1">
             <div class="relative w-full h-0" style="padding-bottom: 56.25%;">
                 <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/fyI410zm2_A"
@@ -124,7 +122,7 @@
 <!-- HERO SECTION FINISH -->
 
 <!-- Features SECTION START -->
-<div class="relative py-24 sm:py-32">
+<div id="features" class="relative py-24 sm:py-32">
     <!-- Fondo con opacidad y degradado rápido -->
     <div class="absolute inset-0"></div>
 
@@ -233,7 +231,7 @@
 <!-- Features SECTION FINISH -->
 
 <!-- CTA SECTION START -->
-<section class="bg-white">
+<section id="cta" class="bg-white">
   <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
     <div class="flex justify-center xl:w-1/2">
       <div class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full border-4 border-[#1f7275] flex items-center justify-center shadow-lg">
@@ -286,7 +284,7 @@
 <!-- Features SECTION FINISH -->
 
 <!-- PREUS SECTION START -->
-<section class="relative py-16 bg-white text-black overflow-hidden px-12 md:px-24">
+<section id="prices" class="relative py-16 bg-white text-black overflow-hidden px-12 md:px-24">
   <div class="absolute inset-0 bg-white opacity-80 z-0"></div>
   <div class="relative z-10 container mx-auto text-center">
     <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-12 drop-shadow-lg">PREUS</h2>
@@ -328,51 +326,51 @@
 <!-- PREUS SECTION FINISH -->
 
 <!-- FAQ SECTION START -->
-<section id="preguntes" class="scroll-mt-20 py-20" data-aos="fade-up">
-  <div class="container mx-auto">
-    <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
-    <div class="space-y-4">
-      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
-          <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
-          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
-        </div>
-        <p class="text-gray-700 hidden">Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.</p>
-      </div>
+<section id="faq" class="scroll-mt-20 py-20" data-aos="fade-up">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
+        <div class="space-y-4">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
+                    <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
+                </div>
+                <p class="text-gray-700 hidden">Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.</p>
+            </div>
 
-      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
-          <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
-          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
-        </div>
-        <p class="text-gray-700 hidden">Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.</p>
-      </div>
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
+                    <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
+                </div>
+                <p class="text-gray-700 hidden">Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.</p>
+            </div>
 
-      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
-          <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
-          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
-        </div>
-        <p class="text-gray-700 hidden">Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.</p>
-      </div>
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
+                    <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
+                </div>
+                <p class="text-gray-700 hidden">Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.</p>
+            </div>
 
-      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
-          <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
-          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
-        </div>
-        <p class="text-gray-700 hidden">Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.</p>
-      </div>
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
+                    <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
+                </div>
+                <p class="text-gray-700 hidden">Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.</p>
+            </div>
 
-      <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-        <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
-          <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
-          <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span> <!-- Afegeix la classe toggle-icon -->
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
+                    <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
+                </div>
+                <p class="text-gray-700 hidden">El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.</p>
+            </div>
         </div>
-        <p class="text-gray-700 hidden">El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.</p>
-      </div>
     </div>
-  </div>
 </section>
 <!-- FAQ SECTION FINISH -->
 
@@ -412,15 +410,15 @@
         <div>
           <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
           <ul role="list" class="mt-6 space-y-4">
-            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
-            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
-            <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
+            <li><a href="termes.html" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
+            <li><a href="privacitat.html" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
+            <li><a href="avis_legal.html" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Newsletter Section -->
-      <div class="mt-10 xl:mt-0">
+      <div id="contact" class="mt-10 xl:mt-0">
         <h3 class="text-sm font-semibold leading-6 text-white">Newsletter</h3>
         <p class="text-sm text-gray-300 mt-4 mb-6">Subscriu-te per rebre les últimes novetats i ofertes!</p>
         <form id="contactForm">
