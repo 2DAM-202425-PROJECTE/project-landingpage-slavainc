@@ -40,3 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Team Section
+// Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
+const cards = document.querySelectorAll(".card-tap");
+
+cards.forEach(card => {
+    card.addEventListener("click", function() {
+        // Afegir o eliminar la classe per girar la targeta
+        card.classList.toggle("rotate-180");
+    });
+});
+// Team Section
