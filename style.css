@@ -46,7 +46,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-/* LOGO CSS START */
+/* LOGO CSS START FOOTER */
 .button-container {
     display: flex;
     justify-content: center;
@@ -229,10 +229,10 @@
 .brutalist-button:active .button-text {
     transform: scale(0.95);
 }
-/* LOGO CSS FINISH */
+/* LOGO CSS FINISH FOOTER*/
 
 
-     /* === removing default button style ===*/
+/* LOGO CSS HEADER START */
  .custom-button {
      margin: 0;
      height: auto;
@@ -242,23 +242,19 @@
      cursor: pointer;
      display: inline-flex;
      align-items: center;
+     --border-right: 6px;
+     --text-stroke-color: rgba(0, 0, 0, 1);
+     --animation-color: #1f7275;
+     --fs-size: 2em;
+     letter-spacing: 3px;
+     text-decoration: none;
+     font-size: var(--fs-size);
+     position: relative;
+     text-transform: uppercase;
+     color: black;
+     -webkit-text-stroke: 1px var(--text-stroke-color);
  }
 
-/* button styling */
-.custom-button {
-    --border-right: 6px;
-    --text-stroke-color: rgba(0, 0, 0, 1); /* Negre per defecte */
-    --animation-color: #1f7275;
-    --fs-size: 2em;
-    letter-spacing: 3px;
-    text-decoration: none;
-    font-size: var(--fs-size);
-    font-family: "Arial";
-    position: relative;
-    text-transform: uppercase;
-    color: black; /* Color negre per defecte */
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-}
 
 /* text displayed on hover */
 .custom-hover-text {
@@ -271,7 +267,7 @@
     border-right: var(--border-right) solid var(--animation-color);
     overflow: hidden;
     transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color); /* Color de la ratlla al passar el ratolí */
+    -webkit-text-stroke: 1px var(--animation-color);
 }
 
 /* hover effect */
@@ -284,3 +280,4 @@
 .actual-text, .custom-hover-text {
     white-space: nowrap; /* Ensure no line breaks */
 }
+/* LOGO CSS HEADER FINISH */
