@@ -116,16 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // Event listener per fer aparèixer la fletxa en fer scroll
-    if (scrollToTop) {
-        window.addEventListener('scroll', toggleScrollToTopButton);
-
-        // Funció per tornar a dalt
-        scrollToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -164,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
 // Selecciona tots els elements que tenen l'atribut data-toggle
 document.querySelectorAll("[data-toggle]").forEach(item => {
     // Afegeix un event listener per gestionar el clic
@@ -172,14 +163,16 @@ document.querySelectorAll("[data-toggle]").forEach(item => {
         const answer = item.nextElementSibling;
         const icon = item.querySelector(".toggle-icon");
 
-        // Alterna la visibilitat de la resposta
-        answer.classList.toggle("hidden");
+        // Alterna la visibilitat de la resposta amb una animació suau
+        answer.classList.toggle("open");
 
-        // Canvia el símbol de + a - o viceversa
-        if (answer.classList.contains("hidden")) {
-            icon.textContent = "+";
-        } else {
+        // Alterna el símbol de + a - o viceversa
+        if (answer.classList.contains("open")) {
             icon.textContent = "-";
+            icon.style.transform = "rotate(180deg)"; // Rotació de 180º quan es desplega
+        } else {
+            icon.textContent = "+";
+            icon.style.transform = "rotate(0deg)"; // Torna a l'estat original (sense rotació)
         }
     });
 });
