@@ -100,3 +100,166 @@
 }
 /* Difumina los otros botones cuando uno está en hover, pero solo los botones que no tienen hover */
 /* CTA SECTION CSS FINISH */
+
+/* PRICE SECTION START */
+/* General Card Styling */
+.card {
+    background-color: #1b1b1b; /* Dark background */
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%; /* Ensure cards take full width on small screens */
+    height: 100%; /* Allow cards to expand evenly */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure equal height by spacing content */
+    align-items: center;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    margin: 0 0 20px 0; /* Reduce margin on small screens */
+    overflow: hidden;
+}
+
+/* Ensure cards have equal height */
+#prices .card {
+    height: 100%;
+}
+
+/* Desktop-specific adjustments (for larger screens) */
+@media (min-width: 1024px) {
+    #prices .card {
+        max-width: 450px; /* Make cards wider */
+        padding: 40px; /* Add more padding */
+    }
+
+    /* Header and pricing text for larger screen */
+    .card-header h3 {
+        font-size: 32px; /* Larger font size */
+    }
+
+    .card-header p {
+        font-size: 40px; /* Larger price font */
+    }
+
+    /* Features Section for larger screen */
+    .card ul li {
+        font-size: 18px; /* Bigger text for features */
+    }
+
+    /* Button size */
+    .card .animated-btn {
+        font-size: 16px; /* Larger button text */
+        padding: 15px 25px; /* Increase button size */
+    }
+}
+
+
+/* Container adjustments for consistent spacing */
+#prices {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px; /* Add spacing between cards in all views */
+}
+
+.container {
+    text-align: center;
+}
+
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #4fb7b3; /* Lighter teal for "Pla Basic" and "Pla Premium" */
+}
+
+.card-header p {
+    font-size: 28px;
+    font-weight: 600;
+    color: #4fb7b3; /* Lighter teal for price text */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.card-header p .text-lg {
+    color: #fff;
+}
+
+/* Features Section */
+.card ul {
+    padding-left: 20px;
+    width: 100%;
+}
+
+.card ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Button */
+.card .animated-btn {
+    border: none;
+    font-size: 14px;
+    background: linear-gradient(45deg, transparent, #1f7275 40%, #1f7275, #1f7275 60%, transparent);
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    background-size: 200%;
+    background-position: 0% 0%;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-position 0.8s ease-in-out, transform 0.8s ease-in-out; /* Slower transition */
+    width: 100%;
+    text-align: center; /* Center text inside button */
+}
+
+.card .animated-btn:hover {
+    background-position: 100% 0;
+    transform: translateY(-4px); /* Optional hover effect */
+}
+
+/* Bubbles and Glow Effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -15%; /* Adjusted for better placement */
+    left: 50%;
+    transform: translateX(-50%);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #1f7275;
+    filter: blur(60px);
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.4);
+    z-index: -1; /* Ensure it stays behind the card content */
+    transition: all 0.3s ease;
+}
+
+.card:hover::before {
+    transform: translateX(-50%) scale(1.6); /* Bubble scaling effect */
+}
+
+/* Middle glow effect on hover */
+.card:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Glow animation */
+@keyframes glowing {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+    100% { opacity: 0.2; }
+}
+/* PRICE SECTION FINISH */
