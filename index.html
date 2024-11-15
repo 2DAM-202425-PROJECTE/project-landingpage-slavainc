@@ -14,71 +14,114 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="cookies.js"></script>
 </head>
+
 <body>
-
 <!-- HEADER SECTION START -->
-<header class="bg-white shadow-md">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="flex items-center space-x-2">
-            <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
-            <span class="text-4xl lgm:text-4xl font-bold text-[#1f7275]">Slava Inc</span>
-        </a>
 
-        <!-- Botó del menú hamburguesa (mòbil) -->
-        <button id="menu-toggle" class="lgm:hidden text-gray-600 focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
-
-        <!-- Menú de navegació (escriptori) -->
-        <nav id="navbar" class="hidden lgm:flex flex-1 justify-center">
-            <ul class="flex space-x-6 text-gray-600 font-bold">
-                <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
-                <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
-                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
-                <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
-                <li><a href="#contact" class="hover:text-[#1f7275]">Contacte</a></li>
+<header class="bg-white lg:static fixed top-0 w-full z-30   " x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex w-full justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="lg:hidden ">
+                <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation links (desktop) -->
+            <ul class="hidden lg:flex space-x-8 text-black font-bold">
+                <li><a href="#" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
             </ul>
-        </nav>
-
-        <!-- Botons d'Inici de Sessió i Registrar-se -->
-        <div class="hidden font-bold lgm:flex space-x-2 mt-1">
-            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
-                Inici de Sessió
-            </a>
-            <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-                Registrar-se
-            </a>
+            <!-- Buttons (desktop) -->
+            <div class="hidden lg:flex space-x-2 font-bold">
+                <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                    Iniciar sesión
+                </a>
+                <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-4 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                    Registrarse
+                </a>
+            </div>
         </div>
+    </nav>
 
-        <!-- Menú desplegable per mòbil -->
-        <div id="mobile-menu" class="hidden bg-white shadow-md absolute right-4 top-16 w-48 rounded-lg z-20 overflow-auto max-h-[70vh]">
-            <ul class="flex flex-col space-y-5 p-4">
-                <li><a href="#hero" class="block hover:text-[#1f7275]">Inici</a></li>
-                <li><a href="#features" class="block hover:text-[#1f7275]">Serveis</a></li>
-                <li><a href="#cta" class="block hover:text-[#1f7275]">CTA</a></li>
-                <li><a href="#prices" class="block hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#faq" class="block hover:text-[#1f7275]">FAQ</a></li>
-                <li><a href="#contact" class="block hover:text-[#1f7275]">Contacte</a></li>
-                <li>
-                    <a href="#" class="text-black bg-gray-200 rounded-full px-4 py-2 mb-3 hover:bg-gray-300 transition duration-200">
-                        Inici de Sessió
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
-                        Registrar-se
-                    </a>
-                </li>
-            </ul>
+    <!-- Mobile menu, show/hide based on menuOpen state -->
+    <div x-show="menuOpen" @click.away="menuOpen=false" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop -->
+        <div class="fixed inset-0 z-10 bg-black opacity-50"></div>
+        <div class="fixed inset-y-0 left-0 z-20 w-full bg-white px-6 py-6">
+            <div class="flex w-full items-center justify-between">
+                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+            <div class="flex items-center justify-between">
+                <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            </div>
+            <div class="mt-6 space-y-2">
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
+            </div>
+            <div class="mt-6 space-y-4">
+                <a href="#" class="block text-lg text-gray-900">Iniciar sesión</a>
+                <a href="#" class="block text-lg text-[#1f7275] font-semibold">Registrarse</a>
+            </div>
+
         </div>
     </div>
 </header>
 <!-- HEADER SECTION FINISH -->
+<!-- Cookie Section START -->
+<section id="cookie-banner" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]" style="display: none;">
+    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
 
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor experiència al nostre lloc web. <a href="#" class="text-blue-500 hover:underline">Llegeix la política de cookies</a>.</p>
+
+    <div class="flex items-center justify-stretch mt-4 gap-x-4 shrink-0">
+        <button id="acceptar" class="text-xs bg-green-600 font-medium rounded-lg hover:bg-green-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Acceptar
+        </button>
+
+        <button id="rebutjar" class="text-xs bg-red-600 font-medium rounded-lg hover:bg-red-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Rebutjar
+        </button>
+
+        <button id="tancar" class="text-xs border border-gray-300 text-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Tancar
+        </button>
+    </div>
+</section>
+<!-- Cookie Section FINISH -->
 <!-- HERO SECTION START -->
 <section class="relative bg-white text-black py-12 md:py-60 overflow-hidden px-6 sm:px-12 md:px-24">
     <div id="container" class="absolute top-0 left-0 w-full h-full">
@@ -386,15 +429,19 @@
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-4 xl:gap-8">
-      <div class="space-y-8">
-        <img class="h-20 rounded-lg" src="/logo.webp" alt="Slava Inc.">
-        <p class="text-sm leading-6 text-gray-300">Fem que la neteja sigue més fàcil que mai :D</p>
-        <div class="flex space-x-6">
-          <!-- Social media icons -->
+        <div class="button-container">
+            <button class="brutalist-button openai button-1">
+                <div class="openai-logo">
+                    <img src="./logo_transparent.png" alt="Logo" class="openai-icon" />
+                </div>
+                <div class="button-text">
+                    <span>SLAVA Inc.</span>
+                </div>
+            </button>
         </div>
-      </div>
 
-      <!-- Suport, Company, Legal -->
+
+        <!-- Suport, Company, Legal -->
       <div class="col-span-2 mt-16 grid grid-cols-3 gap-8 xl:mt-0">
         <div>
           <h3 class="text-sm font-semibold leading-6 text-white">Suport</h3>
