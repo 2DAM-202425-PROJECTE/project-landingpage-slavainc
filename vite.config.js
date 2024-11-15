@@ -7,9 +7,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                termes: resolve(__dirname, 'termes.html'),
-                privacitat: resolve(__dirname, 'privacitat.html'),
-                avis_legal: resolve(__dirname, 'avis_legal.html'),
+                termes: resolve(__dirname, 'pages/termes.html'),
+                privacitat: resolve(__dirname, 'pages/privacitat.html'),
+                avis_legal: resolve(__dirname, 'pages/avis_legal.html'),
             },
         },
     },
