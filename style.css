@@ -163,10 +163,6 @@
     gap: 24px; /* Add spacing between cards in all views */
 }
 
-.container {
-    text-align: center;
-}
-
 .card-header {
     width: 100%;
     display: flex;
