@@ -9,7 +9,6 @@ function setCookie(name, value) {
 if (!document.cookie.includes("cookieConsent=")) {
     document.getElementById("cookie-banner").style.display = "block";
 }
-
 // Acceptar cookies
 document.getElementById("acceptar").onclick = function() {
     setCookie("cookieConsent", "accepted");
@@ -21,11 +20,6 @@ document.getElementById("rebutjar").onclick = function() {
     setCookie("cookieConsent", "rejected");
     document.getElementById("cookie-banner").style.display = "none";
 };
-// Opció de preferències
-document.getElementById("preferencies").onclick = function() {
-    alert("Hola");
-};
-
 // Tancar el banner sense guardar cap canvi
 document.getElementById("tancar").onclick = function() {
     document.getElementById("cookie-banner").style.display = "none";
