@@ -591,6 +591,5 @@
 
 .rotate-180 {
     transform: rotateY(180deg);
-    transition: transform 0.6s;
 }
 /* TEAM SECTION */

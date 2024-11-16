@@ -209,13 +209,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // TEAM SECTION
-// Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
-const cards = document.querySelectorAll(".card-tap");
+    // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
+    const cardo = document.getElementById("cardo");
+    const cardm = document.getElementById("cardm");
+    const cardh = document.getElementById("cardh");
+    const cardmr = document.getElementById("cardmr");
 
-cards.forEach(card => {
-    card.addEventListener("click", function() {
+    cardo.addEventListener("click", function() {
         // Afegir o eliminar la classe per girar la targeta
-        card.classList.toggle("rotate-180");
+        cardo.classList.toggle("rotate-180");
     });
-});
+
+    cardm.addEventListener("click", function() {
+        // Afegir o eliminar la classe per girar la targeta
+        cardm.classList.toggle("rotate-180");
+    });
+
+    cardh.addEventListener("click", function() {
+        // Afegir o eliminar la classe per girar la targeta
+        cardh.classList.toggle("rotate-180");
+    });
+
+    cardmr.addEventListener("click", function() {
+        // Afegir o eliminar la classe per girar la targeta
+        cardmr.classList.toggle("rotate-180");
+    });
 // TEAM SECTION
