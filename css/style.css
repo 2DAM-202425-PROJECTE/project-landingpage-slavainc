@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #227b7f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 1;
+    background-color: transparent;
+}
+/* Scroll Bar */
+
 /* HERO SECTION START */
 #container {
     position: absolute;
