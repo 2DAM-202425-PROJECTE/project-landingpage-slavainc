@@ -10,6 +10,7 @@ export default defineConfig({
                 termes: resolve(__dirname, 'pages/termes.html'),
                 privacitat: resolve(__dirname, 'pages/privacitat.html'),
                 avis_legal: resolve(__dirname, 'pages/avis_legal.html'),
+                contacte: resolve(__dirname, 'pages/contacte.html'),
             },
         },
     },
