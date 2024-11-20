@@ -43,11 +43,13 @@
             </div>
             <!-- Navigation links (desktop) -->
             <ul class="hidden lg:flex space-x-8 text-black font-bold">
-                <li><a href="#" class="hover:text-[#1f7275]">Inici</a></li>
-                <li><a href="/project-landingpage-slavainc/pages/serveis.html" class="hover:text-[#1f7275]">Serveis</a></li>
-                <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#" class="hover:text-[#1f7275]">Novetats</a></li>
-                <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
+                <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
+
             </ul>
             <!-- Buttons (desktop) -->
             <div class="hidden lg:flex space-x-2 font-bold">
@@ -84,12 +86,12 @@
             </div>
             </div>
             <div class="mt-6 space-y-2">
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
-                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
+                <a href="#hero" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="#prices" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
+                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
+                <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
+                <a href="/project-landingpage-slavainc/pages/contacte.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
             </div>
             <div class="mt-6 space-y-4">
                 <a href="#" class="block text-lg text-gray-900">Iniciar sesión</a>
@@ -102,7 +104,7 @@
 <!-- HEADER SECTION FINISH -->
 
 <!-- HERO SECTION START -->
-<section class="relative bg-white text-black py-32 md:py-60 overflow-hidden px-6 sm:px-12 md:px-24">
+<section id="hero" class="relative bg-white text-black py-32 md:py-60 overflow-hidden px-6 sm:px-12 md:px-24">
     <div id="container" class="absolute top-0 left-0 w-full h-full">
         <!-- Animacio particles -->
     </div>
@@ -252,8 +254,9 @@
     </div>
 </section>
 <!-- Features SECTION FINISH -->
+
 <!-- CTA SECTION START -->
-<section class="bg-white">
+<section id="cta" class="bg-white">
     <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
         <div class="flex justify-center xl:w-1/2">
             <div class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full border-4 border-[#1f7275] flex items-center justify-center shadow-lg">
@@ -490,7 +493,7 @@
 </section>
 <!-- FAQ SECTION FINISH -->
 
-<!-- FOOTER SECTION -->
+<!-- FOOTER SECTION START -->
 <footer class="bg-gray-900" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
@@ -538,7 +541,7 @@
       </div>
 
       <!-- Newsletter Section -->
-      <div id="contact" class="mt-10 xl:mt-0">
+      <div class="mt-10 xl:mt-0">
         <h3 class="text-sm font-semibold leading-6 text-white">Newsletter</h3>
         <p class="text-sm text-gray-300 mt-4 mb-6">Subscriu-te per rebre les últimes novetats i ofertes!</p>
         <form id="contactForm">
@@ -556,6 +559,8 @@
     </div>
   </div>
 </footer>
+<!-- FOOTER SECTION START -->
+
 <!-- Cookie Section START -->
 <section id="cookie-banner" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]" style="display: none;">
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>

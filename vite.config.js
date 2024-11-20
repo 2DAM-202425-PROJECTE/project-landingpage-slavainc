@@ -11,6 +11,7 @@ export default defineConfig({
                 privacitat: resolve(__dirname, 'pages/privacitat.html'),
                 avis_legal: resolve(__dirname, 'pages/avis_legal.html'),
                 serveis: resolve(__dirname, 'pages/serveis.html'),
+                contacte: resolve(__dirname, 'pages/contacte.html'),
             },
         },
     },
