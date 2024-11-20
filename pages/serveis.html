@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Serveis</title>
+    <link rel="icon" href="/assets/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+</head>
+<body class="bg-gray-900">
+
+<!-- HEADER SECTION START -->
+
+<header class="bg-white lg:static fixed top-0 w-full z-30   " x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex w-full justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="lg:hidden ">
+                <button @click="menuOpen=true" type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation links (desktop) -->
+            <ul class="hidden lg:flex space-x-8 text-black font-bold">
+                <li><a href="/project-landingpage-slavainc/index.html" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/serveis.html" class="hover:text-[#1f7275]">Serveis</a>
+                </li>
+                <li><a href="#" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">Novetats</a></li>
+                <li><a href="#" class="hover:text-[#1f7275]">Contacte</a></li>
+            </ul>
+            <!-- Buttons (desktop) -->
+            <div class="hidden lg:flex space-x-2 font-bold">
+                <a href="#"
+                   class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                    Iniciar sesión
+                </a>
+                <a href="#"
+                   class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-4 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                    Registrarse
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu, show/hide based on menuOpen state -->
+    <div x-show="menuOpen" @click.away="menuOpen=false" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop -->
+        <div class="fixed inset-0 z-10 bg-black opacity-50"></div>
+        <div class="fixed inset-y-0 left-0 z-20 w-full bg-white px-6 py-6">
+            <div class="flex w-full items-center justify-between">
+                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+                <div class="flex items-center justify-between">
+                    <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-6 space-y-2">
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
+                <a href="#"
+                   class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
+            </div>
+            <div class="mt-6 space-y-4">
+                <a href="#" class="block text-lg text-gray-900">Iniciar sesión</a>
+                <a href="#" class="block text-lg text-[#1f7275] font-semibold">Registrarse</a>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- HEADER SECTION FINISH -->
+
+<!-- Serveis Section Start -->
+<div class="px-4 pt-16 sm:px-6 lg:px-8">
+    <div class="relative isolate">
+        <div class="mx-auto max-w-7xl">
+            <div class="rounded-2xl mx-auto flex flex-col gap-8 bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-8 ring-1 ring-white/10 sm:rounded-xl sm:px-8 sm:py-12 lg:flex-row lg:items-center lg:gap-12">
+                <!-- Image -->
+                <img class="h-64 w-full flex-none rounded-xl object-cover shadow-lg sm:h-72 lg:h-auto lg:max-w-xs" src="/assets/registre-online.png" alt="">
+
+                <!-- Content -->
+                <div class="flex-auto">
+                    <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl">Maximize Your Software Experience</h2>
+                    <p class="mt-4 text-sm text-gray-300 sm:text-base lg:text-lg">
+                        Elevate your business with our software solutions. Simplify workflows and boost productivity with our tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Background Blur Effect -->
+        <div class="absolute inset-x-0 -top-12 -z-10 flex justify-center overflow-hidden blur-3xl" aria-hidden="true">
+            <div class="aspect-[1318/752] w-[40rem] sm:w-[50rem] lg:w-[68rem] bg-gradient-to-r from-gray-700 to-gray-800 opacity-25" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
+        </div>
+    </div>
+
+    <!-- Services Cards -->
+    <div class="py-8 sm:py-12">
+        <div class="relative isolate">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid gap-6 sm:grid-cols-2">
+                    <!-- Card 1 -->
+                    <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
+                        <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/registre-online.png" alt="">
+                        <h3 class="text-xl font-semibold text-white sm:text-2xl">Maximize Your Experience</h3>
+                        <p class="mt-2 text-sm text-gray-300 sm:text-base">
+                            Elevate your business with our software solutions. Simplify workflows and boost productivity with our tools.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
+                        <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/registre-online.png" alt="">
+                        <h3 class="text-xl font-semibold text-white sm:text-2xl">Boost Your Efficiency</h3>
+                        <p class="mt-2 text-sm text-gray-300 sm:text-base">
+                            Our solutions help you streamline your operations and enhance team collaboration for greater success.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative isolate">
+        <div class="mx-auto max-w-7xl">
+            <div class="rounded-2xl mx-auto flex flex-col gap-8 bg-gradient-to-r from-gray-800 to-gray-900 px-6 py-8 ring-1 ring-white/10 sm:rounded-xl sm:px-8 sm:py-12 lg:flex-row lg:items-center lg:gap-12">
+                <!-- Image -->
+                <img class="h-64 w-full flex-none rounded-xl object-cover shadow-lg sm:h-72 lg:h-auto lg:max-w-xs" src="/assets/registre-online.png" alt="">
+
+                <!-- Content -->
+                <div class="flex-auto">
+                    <h2 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl lg:text-4xl">Maximize Your Software Experience</h2>
+                    <p class="mt-4 text-sm text-gray-300 sm:text-base lg:text-lg">
+                        Elevate your business with our software solutions. Simplify workflows and boost productivity with our tools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Background Blur Effect -->
+        <div class="absolute inset-x-0 -top-12 -z-10 flex justify-center overflow-hidden blur-3xl" aria-hidden="true">
+            <div class="aspect-[1318/752] w-[40rem] sm:w-[50rem] lg:w-[68rem] bg-gradient-to-r from-gray-700 to-gray-800 opacity-25" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Cards -->
+<div class="py-8 sm:py-12">
+    <div class="relative isolate">
+        <div class="mx-auto max-w-7xl">
+            <div class="grid gap-6 sm:grid-cols-2">
+                <!-- Card 1 -->
+                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
+                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/registre-online.png" alt="">
+                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Maximize Your Experience</h3>
+                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
+                        Elevate your business with our software solutions. Simplify workflows and boost productivity with our tools.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
+                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/registre-online.png" alt="">
+                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Boost Your Efficiency</h3>
+                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
+                        Our solutions help you streamline your operations and enhance team collaboration for greater success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Serveis Section Finish -->
+<!-- FOOTER SECTION START -->
+
+<!-- Footer SECTION FINISH -->
+</body>
+</html>
