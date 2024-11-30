@@ -112,105 +112,95 @@
 </header>
 <!-- HEADER SECTION FINISH -->
 
-<!-- Serveis Section Start -->
-<div class="px-4 pt-24 sm:pt-32 lg:pt-8 sm:px-6 lg:px-8">
-    <div class="relative isolate">
-        <div class="mx-auto max-w-7xl">
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <!-- Funcionalitat 1: Registre d'Empreses i Gestió de Treballadors -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/registre-online.png" alt="Registre d'empreses i gestió de treballadors">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Registre d'Empreses i Gestió de Treballadors</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Aquesta funcionalitat permet que les empreses de neteja es registrin a la plataforma i gestionin el seu perfil, treballadors i tasques.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Formulari de registre amb validació de dades.</li>
-                        <li>Gestió centralitzada del perfil de l'empresa.</li>
-                        <li>Assignació de tasques i calendarització.</li>
-                        <li>Importació i exportació de dades dels treballadors.</li>
-                    </ul>
+<!-- NOVETATS SECTION START -->
+<section class="py-24" x-data="{ showMore: false, buttonHidden: false }">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">Les nostres últimes actualitzacions</h2>
+        <div class="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244317.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
                 </div>
-
-                <!-- Funcionalitat 2: Perfil de Netejador -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/perfil-netejador.jpg" alt="Perfil de netejador">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Perfil de Netejador</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Cada netejador té un perfil únic amb informació detallada com experiència, certificacions, tarifes i valoracions.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Fotografies i descripcions atractives.</li>
-                        <li>Disponibilitat actualitzada en temps real.</li>
-                        <li>Històric de valoracions i comentaris.</li>
-                        <li>Integració amb funcionalitats de cerca.</li>
-                    </ul>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Gen, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Implementació del sistema de Login i Registre</h4>
+                    <p class="text-gray-500 leading-6 mb-10">El nostre nou sistema de login i registre ja està disponible! Els usuaris poden ara registrar-se i accedir als seus comptes de manera segura amb un procés d'autenticació senzill i ràpid.</p>
                 </div>
-
-                <!-- Funcionalitat 3: Calendari i Gestió de Cites -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/Calendario.webp" alt="Calendari i gestió de cites">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Calendari i Gestió de Cites</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Organitza cites amb un calendari integrat que inclou notificacions i opcions de reprogramació.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Vistes diàries, setmanals i mensuals.</li>
-                        <li>Reprogramació de cites amb notificacions automàtiques.</li>
-                        <li>Bloqueig de franges horàries per indisponibilitat.</li>
-                        <li>Sincronització amb Google Calendar.</li>
-                    </ul>
+            </div>
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244340.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
                 </div>
-
-                <!-- Funcionalitat 4: Pagaments Integrats -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/pagament.jpg" alt="Pagaments integrats">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Pagaments Integrats</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Sistema segur de pagaments amb opcions de targeta, PayPal i transferències bancàries.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Opcions de pagament diverses.</li>
-                        <li>Rebuts digitals automàtics.</li>
-                        <li>Integració amb passarel·les com Stripe.</li>
-                        <li>Pagaments recurrents per serveis continuats.</li>
-                    </ul>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Feb, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Solució de bugs i millores de rendiment</h4>
+                    <p class="text-gray-500 leading-6 mb-10">Hem corregit diversos errors que afectaven l'experiència de l'usuari. A més, hem millorat el rendiment global de la plataforma per a temps de càrrega més ràpids i una navegació més fluida.</p>
                 </div>
-
-                <!-- Funcionalitat 5: Valoracions i Comentaris -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/reviews.jpg" alt="Valoracions i comentaris">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Valoracions i Comentaris</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Els clients poden deixar opinions i puntuacions sobre els serveis rebuts.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Puntuacions de 1 a 5 estrelles.</li>
-                        <li>Comentaris detallats per clients.</li>
-                        <li>Moderació per evitar contingut inapropiat.</li>
-                        <li>Valoracions acumulades al perfil del netejador.</li>
-                    </ul>
+            </div>
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244356.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
                 </div>
-
-                <!-- Funcionalitat 6: Informes i Anàlisi -->
-                <div class="rounded-2xl flex flex-col gap-4 bg-gradient-to-r from-gray-800 to-gray-900 p-6 ring-1 ring-white/10 sm:rounded-xl sm:p-8">
-                    <img class="h-40 w-full rounded-lg object-cover shadow-md sm:h-48" src="/assets/analisi.jpg" alt="Informes i anàlisi">
-                    <h3 class="text-xl font-semibold text-white sm:text-2xl">Informes i Anàlisi</h3>
-                    <p class="mt-2 text-sm text-gray-300 sm:text-base">
-                        Accedeix a estadístiques detallades sobre rendiment i preferències dels clients.
-                    </p>
-                    <ul class="mt-2 text-sm text-gray-400 sm:text-base list-disc pl-5">
-                        <li>Gràfics i taules per visualitzar dades.</li>
-                        <li>Descarrega informes en PDF o Excel.</li>
-                        <li>Filtres avançats per analitzar dades.</li>
-                        <li>Alertes automàtiques per tendències.</li>
-                    </ul>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Mar, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Compatibilitat amb dispositius mòbils i actualitzacions d'app</h4>
+                    <p class="text-gray-500 leading-6 mb-10">Hem llançat actualitzacions per garantir la compatibilitat amb tots els dispositius. La nostra app mòbil ara ofereix una experiència més fluida, adaptant-se a diferents mides de pantalla per a telèfons, tauletes i escriptoris.</p>
                 </div>
             </div>
         </div>
+        <a href="javascript:;" @click="showMore = !showMore; buttonHidden = true"  class="mt-8 cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-gray-900 font-semibold mx-auto transition-all duration-300 hover:bg-gray-100"  x-show="!buttonHidden">Veure totes</a>
+
     </div>
+
+
+<div x-show="showMore">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244059.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
+                </div>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Abr, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Nova funcionalitat de filtres per a la cerca</h4>
+                    <p class="text-gray-500 leading-6 mb-10">Ara pots filtrar els resultats de cerca per categories específiques, millorant l'experiència de l'usuari i permetent una cerca més precisa i ràpida.</p>
+                </div>
+            </div>
+
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244074.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
+                </div>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Maig, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Millores de seguretat amb autenticació de dos factors</h4>
+                    <p class="text-gray-500 leading-6 mb-10">Hem implementat una capa extra de seguretat amb l'autenticació de dos factors per assegurar que els comptes dels usuaris estiguin totalment protegits.</p>
+                </div>
+            </div>
+
+            <div class="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl">
+                <div class="flex items-center">
+                    <img src="https://pagedone.io/asset/uploads/1696244553.png" alt="blogs tailwind section" class="rounded-t-2xl w-full object-cover">
+                </div>
+                <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
+                    <span class="text-indigo-600 font-medium mb-3 block">01 Jun, 2024</span>
+                    <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">Integració amb eines de productivitat externa</h4>
+                    <p class="text-gray-500 leading-6 mb-10">Hem afegit integracions amb diverses eines de productivitat com Google Calendar i Trello, permetent una gestió més eficient de les tasques i esdeveniments.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div x-show="buttonHidden" class="mt-8">
+        <a href="javascript:;" @click="showMore = !showMore; buttonHidden = false"
+           class="cursor-pointer border border-gray-300 shadow-sm rounded-full py-3.5 px-7 w-52 flex justify-center items-center text-gray-900 font-semibold mx-auto transition-all duration-300 hover:bg-gray-100">
+            Veure menys
+        </a>
+    </div>
+
 </div>
-<!-- Serveis Section Finish -->
+</section>
+<!-- NOVETATS SECTION FINISH -->
 
 
 <!-- FOOTER SECTION START -->
@@ -221,7 +211,7 @@
             <div class="button-container">
                 <button class="brutalist-button openai button-1">
                     <div class="openai-logo">
-                        <img src="/assets/logo_transparent.png" alt="Logo" class="openai-icon" />
+                        <img src="/assets/logo_transparent.png" alt="Logo" class="openai-icon"/>
                     </div>
                     <div class="button-text">
                         <span>SLAVA Inc.</span>
@@ -237,13 +227,15 @@
                     <ul role="list" class="mt-6 space-y-4">
                         <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Preus</a></li>
                         <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Documentació</a></li>
-                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Suport telemàtic</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
                     <ul role="list" class="mt-6 space-y-4">
-                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a></li>
+                        <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Sobre nosaltres</a>
+                        </li>
                         <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Blog</a></li>
                         <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Treball</a></li>
                         <li><a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">Premsa</a></li>
@@ -253,9 +245,12 @@
                 <div>
                     <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
                     <ul role="list" class="mt-6 space-y-4">
-                        <li><a href="/project-landingpage-slavainc/pages/termes.html" class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
-                        <li><a href="/project-landingpage-slavainc/pages/privacitat.html" class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
-                        <li><a href="/project-landingpage-slavainc/pages/avis_legal.html" class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/termes.html"
+                               class="text-sm leading-6 text-gray-300 hover:text-white">Termes</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/privacitat.html"
+                               class="text-sm leading-6 text-gray-300 hover:text-white">Privacitat</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/avis_legal.html"
+                               class="text-sm leading-6 text-gray-300 hover:text-white">Avisos legals</a></li>
                     </ul>
                 </div>
             </div>
@@ -267,9 +262,14 @@
                 <form id="contactForm">
                     <div class="mb-4">
                         <label for="email" class="sr-only">Correu electrònic:</label>
-                        <input type="email" id="email" name="user_email" class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Correu electrònic" required>
+                        <input type="email" id="email" name="user_email"
+                               class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500"
+                               placeholder="Correu electrònic" required>
                     </div>
-                    <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Subscriure</button>
+                    <button type="submit"
+                            class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                        Subscriure
+                    </button>
                 </form>
             </div>
         </div>
