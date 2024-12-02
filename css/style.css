@@ -609,3 +609,11 @@
     transform: rotateY(180deg);
 }
 /* TEAM SECTION */
+
+/* LOGIN I REGISTER */
+.input-field-lo-reg input:focus ~ label,
+.input-field-lo-reg input:valid ~ label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}

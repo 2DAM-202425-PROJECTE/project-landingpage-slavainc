@@ -5,21 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .input-field input:focus ~ label,
-        .input-field input:valid ~ label {
-            font-size: 0.8rem;
-            top: 10px;
-            transform: translateY(-120%);
-        }
-    </style>
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 <body class="w-full flex items-center justify-center min-h-screen p-4 text-white bg-black relative">
 <div class="absolute inset-0 bg-cover bg-center z-[-1]" style="background-image: url('https://codetheworld.io/wp-content/uploads/2024/09/hero-bg.jpg');"></div>
 <div class="wrapper w-[490px] rounded-lg p-8 text-center border border-white/50 backdrop-blur-lg">
     <form action="#" class="flex flex-col">
         <h2 class="text-4xl md:text-[40px] font-bold mb-5">Benvingut!</h2>
-        <div class="input-field relative border-b-2 border-gray-400 my-2 md:my-4">
+        <div class="input-field-lo-reg relative border-b-2 border-gray-400 my-2 md:my-4">
             <input
                     type="text"
                     required
@@ -29,7 +22,7 @@
                     class="absolute text-white top-1/2 left-0 transform -translate-y-1/2 text-base md:text-base pointer-events-none transition-all"
             >Escriu el teu nom</label>
         </div>
-        <div class="input-field relative border-b-2 border-gray-400 my-2 md:my-4">
+        <div class="input-field-lo-reg relative border-b-2 border-gray-400 my-2 md:my-4">
             <input
                     type="text"
                     required
@@ -39,7 +32,7 @@
                     class="absolute text-white top-1/2 left-0 transform -translate-y-1/2 text-base md:text-base pointer-events-none transition-all"
             >Escriu el teu correu</label>
         </div>
-        <div class="input-field relative border-b-2 border-gray-400 my-2 md:my-4">
+        <div class="input-field-lo-reg relative border-b-2 border-gray-400 my-2 md:my-4">
             <input
                     type="password"
                     required
@@ -49,7 +42,7 @@
                     class="absolute text-white top-1/2 left-0 transform -translate-y-1/2 text-sm md:text-base pointer-events-none transition-all"
             >Escriu la teva contrasenya</label>
         </div>
-        <div class="input-field relative border-b-2 border-gray-400 my-2 md:my-4">
+        <div class="input-field-lo-reg relative border-b-2 border-gray-400 my-2 md:my-4">
             <input
                     type="password"
                     required
@@ -70,7 +63,7 @@
             Iniciar sessió
         </button>
         <div class="register flex justify-between text-center mt-8 text-white">
-            <a href="../index.html" class="text-gray-300 underline text-xs sm:text-sm md:text-base">← Tornar</a>
+            <a href="/project-landingpage-slavainc/" class="text-gray-300 underline text-xs sm:text-sm md:text-base">← Tornar</a>
             <p class="text-xs sm:text-sm md:text-base">Ja tens compte?
                 <a href="/project-landingpage-slavainc/pages/login.html" class="text-gray-300 underline text-xs sm:text-sm md:text-base">Inicia sessió</a>
             </p>
