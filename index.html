@@ -45,8 +45,8 @@
             <ul class="hidden lg:flex space-x-8 text-black font-bold">
                 <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
                 <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="#cta" class="hover:text-[#1f7275]">Novetats</a></li>
                 <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
                 <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
 
@@ -88,8 +88,8 @@
             <div class="mt-6 space-y-2">
                 <a href="#hero" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
                 <a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Novetats</a>
                 <a href="#prices" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
-                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
                 <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
                 <a href="/project-landingpage-slavainc/pages/contacte.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
             </div>
@@ -351,6 +351,70 @@
 </section>
 <!-- PREUS SECTION FINISH -->
 
+<!-- FAQ SECTION START -->
+<section id="faq" class="scroll-mt-20 py-20" data-aos="fade-up">
+    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
+        <div class="space-y-4">
+            <!-- Pregunta 1 -->
+            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+                    <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
+                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                </div>
+                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
+                    Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.
+                </p>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+                    <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
+                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                </div>
+                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
+                    Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.
+                </p>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+                    <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
+                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                </div>
+                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
+                    Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.
+                </p>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+                    <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
+                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                </div>
+                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
+                    Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.
+                </p>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+                    <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
+                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                </div>
+                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
+                    El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ SECTION FINISH -->
+
 <!-- TEAM SECTION -->
 <section aria-labelledby="contact-heading">
   <div class="bg-gray-100 px-24 py-24 sm:py-24">
@@ -438,60 +502,6 @@
   </div>
 </section>
 <!-- TEAM SECTION -->
-
-<!-- FAQ SECTION START -->
-<section id="faq" class="scroll-mt-20 py-20" data-aos="fade-up">
-    <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-        <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
-        <div class="space-y-4">
-            <!-- Pregunta 1 -->
-            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
-                    <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
-                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
-                </div>
-                <p class="faq-answer text-gray-700">Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.</p>
-            </div>
-
-            <!-- Pregunta 2 -->
-            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
-                    <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
-                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
-                </div>
-                <p class="faq-answer text-gray-700">Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.</p>
-            </div>
-
-            <!-- Pregunta 3 -->
-            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
-                    <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
-                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
-                </div>
-                <p class="faq-answer text-gray-700">Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.</p>
-            </div>
-
-            <!-- Pregunta 4 -->
-            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
-                    <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
-                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
-                </div>
-                <p class="faq-answer text-gray-700">Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.</p>
-            </div>
-
-            <!-- Pregunta 5 -->
-            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
-                    <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
-                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
-                </div>
-                <p class="faq-answer text-gray-700">El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FAQ SECTION FINISH -->
 
 <!-- FOOTER SECTION START -->
 <footer class="bg-gray-900" aria-labelledby="footer-heading">
