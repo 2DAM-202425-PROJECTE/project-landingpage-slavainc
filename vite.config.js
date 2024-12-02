@@ -14,6 +14,7 @@ export default defineConfig({
                 contacte: resolve(__dirname, 'pages/contacte.html'),
                 login: resolve(__dirname, 'pages/login.html'),
                 register: resolve(__dirname, 'pages/register.html'),
+                preus: resolve(__dirname, 'pages/preus.html'),
             },
         },
     },
