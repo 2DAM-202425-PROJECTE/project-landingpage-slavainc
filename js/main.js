@@ -184,55 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Inicialitza EmailJS amb el teu Public Key
-    emailjs.init("bIKPnY1CSSjaAi1Cg");
-
-    // Selecciona el formulari de contacte i afegeix el manejador d'esdeveniments
-    document.getElementById("contactFormNew").addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita el comportament predeterminat del formulari
-
-        // Recollir les dades del formulari
-        const userName = document.getElementById("contact_name").value;
-        const userEmail = document.getElementById("contact_email").value;
-        const message = document.getElementById("contact_message").value;
-
-        // Mostra missatge de progrés
-        let statusMessage = document.getElementById("contactStatusMessage");
-        if (!statusMessage) {
-            statusMessage = document.createElement("p");
-            statusMessage.id = "contactStatusMessage";
-            document.getElementById("contactFormNew").appendChild(statusMessage);
-        }
-        statusMessage.textContent = "Enviant missatge...";
-        statusMessage.style.color = "gray";
-
-        // Envia el missatge amb EmailJS
-        emailjs.send("service_ooptksk", "template_1q05rkf", {
-            to_name: "Mr. Romero",
-            from_name: userName,
-            user_email: userEmail,
-            message: message
-        })
-            .then(
-                function (response) {
-                    statusMessage.textContent = "Missatge enviat amb èxit!";
-                    statusMessage.style.color = "green";
-                    console.log("Missatge enviat:", response);
-                },
-                function (error) {
-                    statusMessage.textContent = "Error al enviar el missatge. Torna-ho a intentar més tard.";
-                    statusMessage.style.color = "red";
-                    console.error("Error al enviar el missatge:", error);
-                }
-            );
-
-        // Neteja els camps del formulari després d'enviar
-        this.reset();
-    });
-});
-
-
 // TEAM SECTION
     // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
     const cardo = document.getElementById("cardo");
