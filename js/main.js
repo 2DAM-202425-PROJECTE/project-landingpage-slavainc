@@ -113,30 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Selecciona tots els elements que tenen l'atribut data-toggle
-document.querySelectorAll("[data-toggle]").forEach(item => {
-    // Afegeix un event listener per gestionar el clic
-    item.addEventListener("click", function() {
-        // Selecciona el paràgraf amb el text de la resposta (el proper element <p> després de l'element actual)
-        const answer = item.nextElementSibling;
-        const icon = item.querySelector(".toggle-icon");
-
-        // Alterna la visibilitat de la resposta amb una animació suau
-        answer.classList.toggle("open");
-
-        // Alterna el símbol de + a - o viceversa
-        if (answer.classList.contains("open")) {
-            icon.textContent = "-";
-            icon.style.transform = "rotate(180deg)"; // Rotació de 180º quan es desplega
-        } else {
-            icon.textContent = "+";
-            icon.style.transform = "rotate(0deg)"; // Torna a l'estat original (sense rotació)
-        }
-    });
-});
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Inicializa EmailJS con tu Public Key
     emailjs.init("OBqXgrR0fs5ostHMu");
@@ -207,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
         this.reset();
     });
 });
+
 // TEAM SECTION
     // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
     const cardo = document.getElementById("cardo");

@@ -511,7 +511,6 @@
 /* PRICE SECTION FINISH */
 
 /* FAQ SECTION START */
-/* Estil per ocultar respostes amb transició d'alçada */
 .faq-answer {
     overflow: hidden;
     max-height: 0;
@@ -519,11 +518,11 @@
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* Quan l'element està visible, estenem la seva alçada */
 .faq-answer.open {
-    max-height: 200px; /* Ajusta aquest valor per a la longitud màxima de la resposta */
+    max-height: 200px;
     opacity: 1;
 }
+
 
 /* Estil per a l'animació del signe + i - */
 .toggle-icon {
