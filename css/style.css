@@ -246,7 +246,6 @@
     max-height: 60px;
 }
 
-/* Animation for the OpenAI logo */
 @keyframes spin-and-zoom {
     0% {
         transform: rotate(0deg) scale(1);
