@@ -207,7 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
         this.reset();
     });
 });
-
 // TEAM SECTION
     // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
     const cardo = document.getElementById("cardo");
