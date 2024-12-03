@@ -380,7 +380,7 @@
 /* Desktop-specific adjustments (for larger screens) */
 @media (min-width: 1024px) {
     #prices .card {
-        max-width: 450px; /* Make cards wider */
+        max-width: 550px; /* Make cards wider */
         padding: 40px; /* Add more padding */
     }
 
@@ -424,13 +424,13 @@
 
 .card-header h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 38px;
     font-weight: 700;
     color: #4fb7b3; /* Lighter teal for "Pla Basic" and "Pla Premium" */
 }
 
 .card-header p {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 600;
     color: #4fb7b3; /* Lighter teal for price text */
     position: absolute;
@@ -450,7 +450,7 @@
 
 .card ul li {
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
 }
 

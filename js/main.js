@@ -99,19 +99,24 @@ document.addEventListener("DOMContentLoaded", function() {
 // JavaScript per fer l'animació d'entrada de les cartes
 document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
-    window.addEventListener('scroll', function () {
-        const triggerBottom = window.innerHeight * 0.9; /* Millor visibilitat */
+
+    // Funció per verificar la visibilitat de les cartes
+    function checkCardsVisibility() {
+        const triggerBottom = window.innerHeight * 0.9; // Ajusta la visibilitat
         cards.forEach(card => {
             const cardTop = card.getBoundingClientRect().top;
             if (cardTop < triggerBottom) {
                 card.classList.add('visible');
-            } else {
-                card.classList.remove('visible');
             }
         });
-    });
-});
+    }
 
+    // Comprova la visibilitat de les cartes un cop carregada la pàgina
+    checkCardsVisibility();
+
+    // També comprova en cada desplaçament per assegurar que es mantenen visibles
+    window.addEventListener('scroll', checkCardsVisibility);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     // Inicializa EmailJS con tu Public Key
