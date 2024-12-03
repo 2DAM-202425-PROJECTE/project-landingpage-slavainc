@@ -246,7 +246,6 @@
     max-height: 60px;
 }
 
-/* Animation for the OpenAI logo */
 @keyframes spin-and-zoom {
     0% {
         transform: rotate(0deg) scale(1);
@@ -512,7 +511,6 @@
 /* PRICE SECTION FINISH */
 
 /* FAQ SECTION START */
-/* Estil per ocultar respostes amb transició d'alçada */
 .faq-answer {
     overflow: hidden;
     max-height: 0;
@@ -520,11 +518,11 @@
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-/* Quan l'element està visible, estenem la seva alçada */
 .faq-answer.open {
-    max-height: 200px; /* Ajusta aquest valor per a la longitud màxima de la resposta */
+    max-height: 200px;
     opacity: 1;
 }
+
 
 /* Estil per a l'animació del signe + i - */
 .toggle-icon {
@@ -609,3 +607,11 @@
     transform: rotateY(180deg);
 }
 /* TEAM SECTION */
+
+/* LOGIN I REGISTER */
+.input-field-lo-reg input:focus ~ label,
+.input-field-lo-reg input:valid ~ label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
