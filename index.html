@@ -16,13 +16,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
     <script type="module" src="js/cookies.js"></script>
-    <script type="module" src="js/include.js" defer></script>
-
 </head>
 
 <body>
 <!-- HEADER SECTION START -->
-<div id="header-placeholder"></div>
+<header class="bg-white lg:static top-0 w-full z-30" x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex w-full justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <a href="/project-landingpage-slavainc/" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="lg:hidden ">
+                <button @click="menuOpen=true" type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Navigation links (desktop) -->
+            <ul class="hidden lg:flex space-x-8 text-black font-bold">
+                <li><a href="/project-landingpage-slavainc/" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/project-landingpage-slavainc/#features" class="hover:text-[#1f7275]">Serveis</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/novetats.html" class="hover:text-[#1f7275]">Novetats</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/preus.html" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/equip.html" class="hover:text-[#1f7275]">Equips</a></li>
+                <li><a href="/project-landingpage-slavainc/#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
+            </ul>
+            <!-- Buttons (desktop) -->
+            <div class="hidden lg:flex space-x-2 font-bold">
+                <a href="/project-landingpage-slavainc/pages/login.html"
+                   class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                    Iniciar sesión
+                </a>
+                <a href="/project-landingpage-slavainc/pages/register.html"
+                   class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-4 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                    Registrarse
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile menu, show/hide based on menuOpen state -->
+    <div x-show="menuOpen" @click.away="menuOpen=false" class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop -->
+        <div class="fixed inset-0 z-10 bg-black opacity-50"></div>
+        <div class="fixed inset-y-0 left-0 z-20 w-full bg-white px-6 py-6">
+            <div class="flex w-full items-center justify-between">
+                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                    <button class="custom-button" data-text="SLAVA Inc">
+                        <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
+                        <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
+                    </button>
+                </a>
+                <div class="flex items-center justify-between">
+                    <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-6 space-y-2">
+                <a href="/project-landingpage-slavainc/" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="/project-landingpage-slavainc/#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="/project-landingpage-slavainc/#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Novetats</a>
+                <a href="/project-landingpage-slavainc/pages/preus.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
+                <a href="/project-landingpage-slavainc/pages/equip.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Equips</a>
+                <a href="/project-landingpage-slavainc/#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
+                <a href="/project-landingpage-slavainc/pages/contacte.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
+            </div>
+            <div class="mt-6 space-y-4">
+                <a href="/project-landingpage-slavainc/pages/login.html" class="block text-lg text-gray-900">Iniciar sesión</a>
+                <a href="/project-landingpage-slavainc/pages/register.html" class="block text-lg text-[#1f7275] font-semibold">Registrarse</a>
+            </div>
+        </div>
+    </div>
+</header>
 <!-- HEADER SECTION FINISH -->
 
 <!-- HERO SECTION START -->
@@ -345,7 +429,88 @@
 <!-- FAQ SECTION FINISH -->
 
 <!-- FOOTER SECTION START -->
-<div id="footer-placeholder"></div>
+<footer class="bg-gray-900 mt-16" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-16">
+        <div class="flex display-flex pb-8">
+            <div class="button-container pr-16">
+                <button class="brutalist-button openai button-1">
+                    <div class="openai-logo">
+                        <img src="/assets/logo_transparent.png" alt="Logo" class="openai-icon"/>
+                    </div>
+                    <div class="button-text">
+                        <span>SLAVA Inc.</span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="lg:flex lg:items-center lg:justify-between w-full grow">
+                <div>
+                    <h3 class="text-sm/6 font-semibold text-white">Suscribeix-te a la nostra Newsletter</h3>
+                    <p class="mt-2 text-sm/6 text-gray-300">Subscriu-te per rebre les últimes novetats i ofertes!</p>
+                </div>
+                <form class="mt-6 sm:flex sm:max-w-md lg:mt-0" id="contactForm">
+                    <label for="email" class="sr-only">Email address</label>
+                    <input type="email" name="user_email" id="email" autocomplete="email" required class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Enter your email">
+                    <div class="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
+                        <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="hidden sm:block sm:bg-gray-500 sm:p-[0.5px] sm:rounded">
+        </div>
+
+        <div class="sm:mt-4 lg:mt-8 xl:flex xl:justify-between xl:items-center space-y-8 lg:space-y-0">
+            <div class="flex items-center justify-center">
+                <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
+            </div>
+            <!-- Suport, Company, Legal -->
+            <div class="col-span-2 grid grid-cols-1 gap-8 xl:mt-0">
+                <div>
+                    <ul role="list" class="flex justify-center space-x-4">
+                        <li><a href="/project-landingpage-slavainc/pages/termes.html"
+                               class="text-md text-[13px] sm:text-base text-gray-300 hover:text-white text-center">Termes</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/privacitat.html"
+                               class="text-md text-[13px] sm:text-base text-gray-300 hover:text-white">Privacitat</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/avis_legal.html"
+                               class="text-md text-[13px] sm:text-base text-gray-300 hover:text-white text-center">Avisos legals</a></li>
+                        <li><a href="/project-landingpage-slavainc/pages/cookies.html"
+                               class="text-md text-[13px] sm:text-base text-gray-300 hover:text-white">Politica de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center gap-x-10">
+                <a href="https://www.facebook.com/profile.php?id=61569425117395" class="text-gray-400 hover:text-gray-300">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/_slava_inc/" class="text-gray-400 hover:text-gray-300">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <a href="https://x.com/slava_inc_m13" class="text-gray-400 hover:text-gray-300">
+                    <span class="sr-only">X</span>
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@SlavaInc-m7f" class="text-gray-400 hover:text-gray-300">
+                    <span class="sr-only">YouTube</span>
+                    <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 <!-- FOOTER SECTION FINISH -->
 
 <!-- Cookie Section START -->

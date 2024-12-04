@@ -6,8 +6,6 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                header: resolve(__dirname, 'layouts/header.html'),
-                footer: resolve(__dirname, 'layouts/footer.html'),
                 main: resolve(__dirname, 'index.html'),
                 termes: resolve(__dirname, 'pages/termes.html'),
                 privacitat: resolve(__dirname, 'pages/privacitat.html'),
