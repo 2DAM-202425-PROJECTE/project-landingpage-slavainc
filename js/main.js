@@ -3,121 +3,136 @@ window.Alpine = Alpine
 Alpine.start()
 
 // HERO SECTION JS PARTICLES START
+// Array per emmagatzemar les partícules
 var particles = [];
-var heroSection = document.querySelector("section"); // Get Hero Section
-var heroHeight = heroSection.offsetHeight; // Height of the Hero section
-var heroWidth = heroSection.offsetWidth; // Width of the Hero section
 
+// Seleccionem la secció "Hero"
+var heroSection = document.querySelector("section"); // Obté la secció Hero
+var heroHeight = heroSection.offsetHeight; // Alçada de la secció Hero
+var heroWidth = heroSection.offsetWidth; // Amplada de la secció Hero
+
+// Funció per afegir una nova partícula
 function addParticle() {
-    var size = Math.random() * 50 + 100; // Random size between 50 and 150px
+    var size = Math.random() * 50 + 100; // Mida aleatòria entre 50 i 150 px
     particles.push({
-        // Generate x and y so particles stay fully within bounds
+        // Es generen les coordenades x i y perquè les partícules es mantinguin dins dels límits
         x: Math.random() * (heroWidth - size) / heroWidth,
         y: Math.random() * (heroHeight - size) / heroHeight,
-        xVel: (Math.random() - 0.5) * 0.2,
-        yVel: (Math.random() - 0.5) * 0.2,
-        size: size,
-        color: "hsl(" + (Math.random() * 80 + 180) + ", 60%, 50%)",
-        blur: Math.random() * 10 + 5,
-        opacity: Math.random() * 0.2 + 0.1
+        xVel: (Math.random() - 0.5) * 0.2, // Velocitat aleatòria en x
+        yVel: (Math.random() - 0.5) * 0.2, // Velocitat aleatòria en y
+        size: size, // Assigna la mida calculada
+        color: "hsl(" + (Math.random() * 80 + 180) + ", 60%, 50%)", // Color aleatori
+        blur: Math.random() * 10 + 5, // Quantitat de desenfocament
+        opacity: Math.random() * 0.2 + 0.1 // Opacitat aleatòria
     });
 }
 
+// Funció per renderitzar les partícules
 function render() {
-    var elem = document.getElementById("container");
-    elem.innerHTML = "";
+    var elem = document.getElementById("container"); // Contenidor de les partícules
+    elem.innerHTML = ""; // Neteja el contingut existent
 
     for (let i = 0; i < particles.length; i++) {
+        // Crea un nou element per a cada partícula
         var newParticle = "<div class='blob' style='width:" + particles[i].size + "px; height:" + particles[i].size + "px; top:" + particles[i].y * heroHeight + "px; left:" + particles[i].x * heroWidth + "px; background:" + particles[i].color + "; filter: blur(" + particles[i].blur + "px); opacity:" + particles[i].opacity + ";'></div>";
-        elem.innerHTML += newParticle;
+        elem.innerHTML += newParticle; // Afegeix la partícula al contenidor
     }
 }
 
+// Funció per actualitzar les dades de les partícules
 function dataUpdate() {
-    if (particles.length < 25 && Math.random() < 0.1) { // Reduced particle count limit and spawn rate
-        addParticle();
+    // Limita el nombre màxim de partícules i ajusta la probabilitat d'aparició
+    if (particles.length < 25 && Math.random() < 0.1) {
+        addParticle(); // Afegeix una nova partícula
     }
 
     for (let i = 0; i < particles.length; i++) {
+        // Actualitza la posició de cada partícula
         particles[i].x += particles[i].xVel / 80;
         particles[i].y += particles[i].yVel / 80;
 
-        // Bounce on bottom or top edges
+        // Gestiona els rebots als límits inferior o superior
         if (particles[i].y * heroHeight > heroHeight - particles[i].size) {
-            particles[i].yVel = -Math.abs(particles[i].yVel); // Bounce up
+            particles[i].yVel = -Math.abs(particles[i].yVel); // Rebot cap amunt
         }
         if (particles[i].y * heroHeight < 0) {
-            particles[i].yVel = Math.abs(particles[i].yVel); // Bounce down
+            particles[i].yVel = Math.abs(particles[i].yVel); // Rebot cap avall
         }
 
-        // Bounce on left or right edges
+        // Gestiona els rebots als límits esquerre o dret
         if (particles[i].x * heroWidth > heroWidth - particles[i].size) {
-            particles[i].xVel = -Math.abs(particles[i].xVel); // Bounce left
+            particles[i].xVel = -Math.abs(particles[i].xVel); // Rebot cap a l'esquerra
         }
         if (particles[i].x * heroWidth < 0) {
-            particles[i].xVel = Math.abs(particles[i].xVel); // Bounce right
+            particles[i].xVel = Math.abs(particles[i].xVel); // Rebot cap a la dreta
         }
     }
 }
 
+// Funció per animar cada fotograma
 function frame() {
-    dataUpdate();
-    render();
-    window.requestAnimationFrame(frame);
+    dataUpdate(); // Actualitza les dades de les partícules
+    render(); // Renderitza les partícules
+    window.requestAnimationFrame(frame); // Solicita el següent fotograma
 }
 
+// Actualitza les dimensions de la secció Hero en redimensionar la finestra
 window.addEventListener('resize', () => {
     heroHeight = heroSection.offsetHeight;
     heroWidth = heroSection.offsetWidth;
 });
 
+// Inicia l'animació
 window.requestAnimationFrame(frame);
-
 // HERO SECTION JS PARTICLES FINISH
 
-
+// PREUS SECTION START
 document.addEventListener("DOMContentLoaded", function() {
-    // Select all buttons
+    // Selecciona tots els botons
     const buttons = document.querySelectorAll(".animated-btn");
 
     buttons.forEach(button => {
-        // Apply a smooth transition to the button
-        button.style.transition = "all 0.4s ease-in-out"; // Smoother and slightly slower transition
+        // Aplica una transició suau als botons
+        button.style.transition = "all 0.4s ease-in-out";
 
-        // On mouse enter
+        // Afegir efectes quan el ratolí entra al botó
         button.addEventListener("mouseenter", function() {
-            this.classList.add("bg-white", "text-white", "scale-105", "rotate-1"); // Softer scaling and rotation
+            this.classList.add("bg-white", "text-white", "scale-105", "rotate-1"); // Afegeix classes per estil i animació
         });
 
-        // On mouse leave
+        // Treure els efectes quan el ratolí surt del botó
         button.addEventListener("mouseleave", function() {
-            this.classList.remove("bg-white", "scale-105", "rotate-1");
+            this.classList.remove("bg-white", "scale-105", "rotate-1"); // Elimina les classes aplicades anteriorment
         });
     });
 });
 
-// JavaScript per fer l'animació d'entrada de les cartes
-document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.card');
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona totes les cartes
+    const cards = document.querySelectorAll(".card");
 
-    // Funció per verificar la visibilitat de les cartes
+    // Funció per verificar si les cartes són visibles
     function checkCardsVisibility() {
-        const triggerBottom = window.innerHeight * 0.9; // Ajusta la visibilitat
+        const triggerBottom = window.innerHeight * 0.9; // Defineix el punt de visibilitat (90% de l'alçada de la finestra)
+
         cards.forEach(card => {
-            const cardTop = card.getBoundingClientRect().top;
+            const cardTop = card.getBoundingClientRect().top; // Obtén la posició superior de la carta
             if (cardTop < triggerBottom) {
-                card.classList.add('visible');
+                card.classList.add("visible"); // Afegeix una classe per mostrar la carta
+                card.classList.remove("invisible", "opacity-0"); // Elimina classes d'invisibilitat
             }
         });
     }
 
-    // Comprova la visibilitat de les cartes un cop carregada la pàgina
+    // Comprova la visibilitat de les cartes quan es carrega la pàgina
     checkCardsVisibility();
 
-    // També comprova en cada desplaçament per assegurar que es mantenen visibles
-    window.addEventListener('scroll', checkCardsVisibility);
+    // També comprova la visibilitat durant el desplaçament de la pàgina
+    window.addEventListener("scroll", checkCardsVisibility);
 });
+// PREUS SECTION FINISH
 
+// CONTACTE/NEWSLETTER SECTION START
 document.addEventListener("DOMContentLoaded", function () {
     // Maneja los formularios por separado
     handleNewsletterForm();
@@ -221,8 +236,7 @@ function handleContactForm() {
     });
 }
 
-// Función para guardar datos en Google Sheets (Solo se usa para el Newsletter)
-function saveToGoogleSheets(data) {
+function saveToGoogleSheets(data) { // Función para guardar datos en Google Sheets (Solo se usa para el Newsletter)
     const url = "https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec"; // Reemplaza con tu URL
 
     console.log("Guardando en Google Sheets:", data); // Debugging: Verificar datos enviados
@@ -245,8 +259,9 @@ function saveToGoogleSheets(data) {
             }
         });
 }
+// CONTACTE/NEWSLETTER SECTION FINISH
 
-// TEAM SECTION
+// TEAM SECTION START
     // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
     const cardo = document.getElementById("cardo");
     const cardm = document.getElementById("cardm");
@@ -272,4 +287,4 @@ function saveToGoogleSheets(data) {
         // Afegir o eliminar la classe per girar la targeta
         cardmr.classList.toggle("rotate-180");
     });
-// TEAM SECTION
+// TEAM SECTION FINISH
