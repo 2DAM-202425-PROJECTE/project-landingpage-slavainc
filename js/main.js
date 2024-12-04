@@ -134,75 +134,131 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // CONTACTE/NEWSLETTER SECTION START
 document.addEventListener("DOMContentLoaded", function () {
-    // Inicialitza EmailJS amb la teva Public Key
-    emailjs.init("OBqXgrR0fs5ostHMu");
+    // Maneja los formularios por separado
+    handleNewsletterForm();
+    handleContactForm();
+});
 
-    // Selecciona el formulari i afegeix un gestor d'esdeveniments per a l'enviament
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault();  // Evita el comportament predeterminat d'enviament del formulari
+function handleNewsletterForm() {
+    const form = document.getElementById("contactForm");
+    if (!form) return; // Si el formulario no existe en esta página, salir
 
-        const userEmail = document.getElementById("email").value;  // Obtén l'email introduït per l'usuari
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        // Mostra un missatge d'estat per informar l'usuari
+        // Inicializa EmailJS con la clave correspondiente a la cuenta del newsletter
+        emailjs.init("OBqXgrR0fs5ostHMu");
+
+        const userEmail = document.getElementById("email").value;
+
         let statusMessage = document.getElementById("statusMessage");
         if (!statusMessage) {
-            statusMessage = document.createElement("p");  // Crea un element per mostrar l'estat si no existeix
+            statusMessage = document.createElement("p");
             statusMessage.id = "statusMessage";
-            document.getElementById("contactForm").appendChild(statusMessage);
+            form.appendChild(statusMessage);
         }
-        statusMessage.textContent = "Enviant subscripció...";  // Missatge inicial mentre s'envia
+        statusMessage.textContent = "Enviant subscripció...";
         statusMessage.style.color = "gray";
 
-        // Envia un correu de benvinguda a l'usuari
         emailjs.send("service_bfmkhjk", "template_wigev16", { user_email: userEmail })
             .then(
                 function (response) {
-                    statusMessage.textContent = "Subscripció exitosa!";  // Missatge de confirmació
+                    statusMessage.textContent = "Subscripció exitosa!";
                     statusMessage.style.color = "green";
 
-                    // Envia una notificació al correu de l'administrador
                     return emailjs.send("service_bfmkhjk", "template_k0siyva", { user_email: userEmail });
                 }
             )
-            .then(
-                function (response) {
-                    console.log("Notificació enviada a l'administrador:", response);  // Registre al terminal si és exitós
-                },
-                function (error) {
-                    console.error("Error al notificar l'administrador:", error);  // Registre en cas d'error
-                    statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";  // Missatge d'error
-                    statusMessage.style.color = "red";
-                }
-            )
             .then(() => {
-                // Desa el correu a Google Sheets
-                console.log("Desant el correu a Google Sheets...");
-                return fetch("https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec", {  // Reemplaça aquesta URL amb la del teu Web App
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    body: new URLSearchParams({ email: userEmail })  // Envia l'email com a paràmetre POST
-                });
+                // Guarda el correo en Google Sheets solo para Newsletter
+                return saveToGoogleSheets({ email: userEmail });
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    console.log("Correu desat a Google Sheets");  // Confirma si l'operació és exitosa
-                } else {
-                    console.error("Error al desar a Google Sheets:", data);  // Registre d'error si falla
-                }
+            .then(() => {
+                console.log("Correo guardado en Google Sheets");
             })
             .catch(function (error) {
-                console.error("Error en el procés:", error);  // Registre general d'errors
-                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";  // Mostra un missatge d'error a l'usuari
+                console.error("Error en el proceso:", error);
+                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
                 statusMessage.style.color = "red";
             });
 
-        // Neteja el camp de correu després de l'enviament
-        this.reset();
+        form.reset();
     });
-});
+}
+
+function handleContactForm() {
+    const form = document.getElementById("contactFormNew");
+    if (!form) return; // Si el formulario no existe en esta página, salir
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Inicializa EmailJS con la clave correspondiente a la cuenta del contacto
+        emailjs.init("D48mKGGhGAU6GU9oB");
+
+        const firstName = document.getElementById("contact_first_name").value;
+        const lastName = document.getElementById("contact_last_name").value;
+        const fullName = `${firstName} ${lastName}`;
+        const userEmail = document.getElementById("contact_email").value;
+        const phone = document.getElementById("contact_phone").value;
+        const message = document.getElementById("contact_message").value;
+
+        let statusMessage = document.getElementById("contactStatusMessage");
+        if (!statusMessage) {
+            statusMessage = document.createElement("p");
+            statusMessage.id = "contactStatusMessage";
+            form.appendChild(statusMessage);
+        }
+        statusMessage.textContent = "Enviant missatge...";
+        statusMessage.style.color = "gray";
+
+        emailjs.send("service_6v42f8t", "template_q2uwj6q", {
+            to_name: "Mr. Romero",
+            from_name: fullName,
+            user_email: userEmail,
+            user_phone: phone,
+            message: message
+        })
+            .then(
+                function (response) {
+                    statusMessage.textContent = "Missatge enviat amb èxit!";
+                    statusMessage.style.color = "green";
+                    console.log("Missatge enviat:", response);
+                }
+            )
+            .catch(function (error) {
+                console.error("Error en el procés:", error);
+                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                statusMessage.style.color = "red";
+            });
+
+        form.reset();
+    });
+}
+
+function saveToGoogleSheets(data) { // Función para guardar datos en Google Sheets (Solo se usa para el Newsletter)
+    const url = "https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec"; // Reemplaza con tu URL
+
+    console.log("Guardando en Google Sheets:", data); // Debugging: Verificar datos enviados
+    return fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(data)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al conectar con Google Sheets");
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.status !== "success") {
+                throw new Error("Error en la respuesta de Google Sheets");
+            }
+        });
+}
 // CONTACTE/NEWSLETTER SECTION FINISH
 
 // TEAM SECTION START
