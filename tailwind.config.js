@@ -2,6 +2,7 @@
 export default {
   content: ['./components//*.{html,js}',
     './pages/**/*.{html,js}',
+    './layouts/**/*.{html,js}',
     './index.html',],
   theme: {
     extend: {
