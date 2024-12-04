@@ -2,21 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scroll Bar */
-::-webkit-scrollbar {
-    width: 15px;
+/* CONFIG GENERAL START */
+::-webkit-scrollbar { /* Scroll Bar */
+    width: 15px; /* Amplada de la barra de desplaçament */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #227b7f;
-    border-radius: 10px;
+    background-color: #227b7f; /* Color de la part mòbil de la barra */
+    border-radius: 10px; /* Cantons arrodonits de la part mòbil */
 }
 
 ::-webkit-scrollbar-track {
-    opacity: 1;
-    background-color: transparent;
+    opacity: 1; /* Opacitat de la pista de la barra */
+    background-color: transparent; /* Fons transparent per a la pista */
 }
-/* Scroll Bar */
+
+.input-field-lo-reg input:focus ~ label, /* LOGIN I REGISTER */
+.input-field-lo-reg input:valid ~ label {
+    font-size: 0.8rem; /* Mida de la font quan l'input és enfocat o vàlid */
+    top: 10px; /* Desplaçament vertical */
+    transform: translateY(-120%); /* Desplaçament vertical de l'etiqueta */
+}
+
+.btn:hover { /* Botons animats */
+    transform: translateY(-4px); /* Desplaçament cap amunt en passar el ratolí */
+    background-color: #4a3c7d; /* Canvi de color de fons */
+}
+
+.animated-btn {
+    transition: all 0.4s ease-in-out; /* Transició suau per als canvis d'estils */
+}
+/* CONFIG GENERAL FINISH */
+
+/* LOGO CSS HEADER START */
+.custom-button {
+    margin: 0; /* Marges inicials */
+    height: auto; /* Alçada automàtica */
+    background: transparent; /* Fons transparent */
+    padding: 0; /* Sense espai intern */
+    border: none; /* Sense vora */
+    cursor: pointer; /* Cursor tipus botó */
+    display: inline-flex; /* Flexbox en línia */
+    align-items: center; /* Alinear elements verticalment */
+    --border-right: 6px; /* Amplada de la vora dreta */
+    --text-stroke-color: rgba(0, 0, 0, 1); /* Color del contorn de text */
+    --animation-color: #1f7275; /* Color de l'animació */
+    --fs-size: 2em; /* Mida de la font */
+    letter-spacing: 3px; /* Espai entre lletres */
+    text-decoration: none; /* Sense subratllat */
+    font-size: var(--fs-size); /* Mida del text */
+    position: relative; /* Posicionament relatiu */
+    text-transform: uppercase; /* Text en majúscules */
+    color: black; /* Color negre del text */
+    -webkit-text-stroke: 1px var(--text-stroke-color); /* Contorn de text */
+}
+
+.custom-hover-text {
+    position: absolute; /* Posicionament absolut */
+    box-sizing: border-box; /* Incloure marges i vora */
+    content: attr(data-text); /* Contingut basat en l'atribut */
+    color: var(--animation-color); /* Color del text */
+    width: 0%; /* Amplada inicial */
+    inset: 0; /* Posició dins del contenidor */
+    border-right: var(--border-right) solid var(--animation-color); /* Vora dreta */
+    overflow: hidden; /* Amagar desbordament */
+    transition: 0.5s; /* Transició suau */
+    -webkit-text-stroke: 1px var(--animation-color); /* Contorn del text */
+}
+
+.custom-button:hover .custom-hover-text {
+    width: 100%; /* Amplada completa en hover */
+    filter: drop-shadow(0 0 23px var(--animation-color)); /* Ombra de text */
+}
+
+.actual-text, .custom-hover-text {
+    white-space: nowrap; /* Evitar salts de línia */
+}
+/* LOGO CSS HEADER FINISH */
 
 /* HERO SECTION START */
 #container {
@@ -54,288 +116,15 @@
 }
 /* HERO SECTION FINISH */
 
-.card {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-}
-
-.card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.visible {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.card-shadow {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-}
-
-.btn {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-/* Botons animats */
-.btn:hover {
-    transform: translateY(-4px);
-    background-color: #4a3c7d;
-}
-
-.animated-btn {
-    transition: all 0.4s ease-in-out;
-}
-
-/* LOGO CSS START FOOTER */
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-/* Common styles for both buttons */
-.brutalist-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    color: #e5dede;
-    font-weight: bold;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* Styles for the first button */
-.button-1 {
-    background-color: #063525;
-    border: 3px solid #42c498;
-    border-radius: 12px;
-    box-shadow: 4px 4px 1px #000000;
-}
-
-.button-1:hover {
-    background-color: #1a5c46;
-    border-color: #030504;
-    transform: translate(-6px, -6px) rotate(1deg);
-    box-shadow: 10px 10px 0 #000000, 15px 15px 20px rgba(64, 164, 122, 0.2);
-}
-
-.button-1::before,
-.button-1::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.1),
-            transparent
-    );
-    transition: 0.6s;
-}
-
-.button-1::before {
-    left: -100%;
-}
-.button-1::after {
-    left: 100%;
-}
-
-.button-1:hover::before {
-    animation: swipeRight 1.5s infinite;
-}
-.button-1:hover::after {
-    animation: swipeLeft 1.5s infinite;
-}
-
-@keyframes swipeRight {
-    100% {
-        transform: translateX(200%) skew(-45deg);
-    }
-}
-
-@keyframes swipeLeft {
-    100% {
-        transform: translateX(-200%) skew(-45deg);
-    }
-}
-
-/* Hover effects */
-.brutalist-button:hover .openai-logo {
-    transform: translateY(-10px);
-}
-
-.brutalist-button:hover .openai-icon {
-    width: 40px;
-    height: 40px;
-}
-
-.bruta.brutalist-button:hover .openai-text {
-    opacity: 1;
-    max-height: 60px;
-    margin-top: 8px;
-}
-
-/* Styles for the OpenAI logo and text */
-.openai-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    z-index: 3;
-}
-
-.openai-icon {
-    width: 64px;
-    height: 64px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.openai-text {
-    font-size: 24px;
-    letter-spacing: 0.5px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.button-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.2;
-    text-align: center;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    z-index: 3;
-}
-
-
-
-.button-text span:last-child {
-    font-size: 13px;
-}
-
-/* Hover effects */
-.brutalist-button:hover .openai-logo {
-    transform: translateY(-10px);
-}
-
-.brutalist-button:hover .openai-icon {
-    width: 35px;
-    height: 35px;
-}
-
-.brutalist-button:hover .button-text,
-.brutalist-button:hover .openai-text {
-    opacity: 1;
-    max-height: 60px;
-}
-
-@keyframes spin-and-zoom {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.1);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
-}
-
-.brutalist-button:hover .openai-icon {
-    animation: spin-and-zoom 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
-}
-
-.brutalist-button:hover .openai-text {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.brutalist-button:active .openai-icon,
-.brutalist-button:active .openai-text,
-.brutalist-button:active .button-text {
-    transform: scale(0.95);
-}
-/* LOGO CSS FINISH FOOTER*/
-
-
-/* LOGO CSS HEADER START */
- .custom-button {
-     margin: 0;
-     height: auto;
-     background: transparent;
-     padding: 0;
-     border: none;
-     cursor: pointer;
-     display: inline-flex;
-     align-items: center;
-     --border-right: 6px;
-     --text-stroke-color: rgba(0, 0, 0, 1);
-     --animation-color: #1f7275;
-     --fs-size: 2em;
-     letter-spacing: 3px;
-     text-decoration: none;
-     font-size: var(--fs-size);
-     position: relative;
-     text-transform: uppercase;
-     color: black;
-     -webkit-text-stroke: 1px var(--text-stroke-color);
- }
-
-
-/* text displayed on hover */
-.custom-hover-text {
-    position: absolute;
-    box-sizing: border-box;
-    content: attr(data-text);
-    color: var(--animation-color);
-    width: 0%;
-    inset: 0;
-    border-right: var(--border-right) solid var(--animation-color);
-    overflow: hidden;
-    transition: 0.5s;
-    -webkit-text-stroke: 1px var(--animation-color);
-}
-
-/* hover effect */
-.custom-button:hover .custom-hover-text {
-    width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color));
-}
-
-/* Make sure the actual text does not overlap or get cut off */
-.actual-text, .custom-hover-text {
-    white-space: nowrap; /* Ensure no line breaks */
-}
-/* LOGO CSS HEADER FINISH */
-
 /* CTA SECTION CSS START */
-/* From Uiverse.io by kamehame-ha */
-.downloadsCTA .downloadCTA:hover {
+.downloadsCTA .downloadCTA:hover { /* From Uiverse.io by kamehame-ha */
     transform: scale(1.1, 1.1);
 }
-/* Difuminar els altres botons quan es passa per damunt d’un */
-.downloadsCTA .downloadCTA {
+.downloadsCTA .downloadCTA { /* Difuminar els altres botons quan es passa per damunt d’un */
     transition: transform 0.3s ease, filter 0.3s ease;
     display: inline-block;
 }
-/* Cuando un botón está en hover, se resalta */
-.downloadsCTA {
+.downloadsCTA { /* Cuando un botón está en hover, se resalta */
     display: flex;
     gap: 1rem;
 }
@@ -344,274 +133,422 @@
     display: inline-block;
     position: relative;
 }
-/* Cuando un botón está en hover, se resalta */
-.downloadsCTA .downloadCTA:hover {
+.downloadsCTA .downloadCTA:hover { /* Cuando un botón está en hover, se resalta */
     filter: brightness(0.85);
     transform: scale(1.05);
 }
-/* Difumina los otros botones cuando uno está en hover, pero solo los botones que no tienen hover */
 /* CTA SECTION CSS FINISH */
 
 /* PRICE SECTION START */
-/* General Card Styling */
-.card {
-    background-color: #1b1b1b; /* Dark background */
-    position: relative;
-    border-radius: 12px;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    width: 100%; /* Ensure cards take full width on small screens */
-    height: 100%; /* Allow cards to expand evenly */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensure equal height by spacing content */
-    align-items: center;
-    text-align: left;
-    transition: transform 0.3s ease-in-out;
-    margin: 0 0 20px 0; /* Reduce margin on small screens */
-    overflow: hidden;
+.card.visible { /* Estil general per a les targetes visibles */
+    opacity: 1; /* Es mostra */
+    transform: translateY(0); /* Torna a la posició original */
 }
 
-/* Ensure cards have equal height */
-#prices .card {
-    height: 100%;
+.card { /* Estils generals per a les targetes */
+    opacity: 0; /* Ocultem inicialment */
+    transform: translateY(20px); /* L'efecte d'entrada */
+    background-color: #1b1b1b; /* Fons fosc */
+    position: relative; /* Posicionament relatiu */
+    border-radius: 12px; /* Cantonades arrodonides */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2); /* Ombra suau */
+    padding: 20px; /* Espai intern */
+    width: 100%; /* Amplada completa en pantalles petites */
+    height: 100%; /* Alçada uniforme */
+    display: flex; /* Flexbox per organitzar contingut */
+    flex-direction: column; /* Organització vertical */
+    justify-content: space-between; /* Espai entre elements */
+    align-items: center; /* Centrar elements */
+    text-align: left; /* Text alineat a l'esquerra */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out; /* Transició suau */
+    margin: 0 0 20px 0; /* Marges inferiors */
+    overflow: hidden; /* Oculta desbordament */
 }
 
-/* Desktop-specific adjustments (for larger screens) */
-@media (min-width: 1024px) {
-    #prices .card {
-        max-width: 550px; /* Make cards wider */
-        padding: 40px; /* Add more padding */
+#prices .card { /* Assegurar que les targetes tinguin la mateixa alçada */
+    height: 100%; /* Alçada uniforme */
+}
+
+@media (min-width: 1024px) { /* Ajustaments específics per a escriptoris */
+    #prices .card { /* Targetes en pantalles grans */
+        max-width: 550px; /* Amplada màxima més gran */
+        padding: 40px; /* Més espai intern */
     }
 
-    /* Header and pricing text for larger screen */
-    .card-header h3 {
-        font-size: 32px; /* Larger font size */
+    .card-header h3 { /* Capçalera de targeta */
+        font-size: 32px; /* Tipografia més gran */
     }
 
-    .card-header p {
-        font-size: 40px; /* Larger price font */
+    .card-header p { /* Text de preus */
+        font-size: 40px; /* Tipografia més gran */
     }
 
-    /* Features Section for larger screen */
-    .card ul li {
-        font-size: 18px; /* Bigger text for features */
+    .card ul li { /* Text de característiques */
+        font-size: 18px; /* Text més gran */
     }
 
-    /* Button size */
-    .card .animated-btn {
-        font-size: 16px; /* Larger button text */
-        padding: 15px 25px; /* Increase button size */
+    .card .animated-btn { /* Botó animat */
+        font-size: 16px; /* Text més gran */
+        padding: 15px 25px; /* Augmenta la mida del botó */
     }
 }
 
-/* Container adjustments for consistent spacing */
-#prices {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 24px; /* Add spacing between cards in all views */
+#prices { /* Ajustaments del contenidor per mantenir espaiat consistent */
+    display: flex; /* Organització amb flexbox */
+    justify-content: center; /* Centrar contingut */
+    align-items: flex-start; /* Alinear a la part superior */
+    flex-wrap: wrap; /* Permet el salt de línia */
+    gap: 24px; /* Espai entre targetes */
 }
 
-.card-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
+.card-header { /* Capçalera de les targetes */
+    width: 100%; /* Amplada completa */
+    display: flex; /* Organització en fila */
+    justify-content: space-between; /* Distribuir elements */
+    align-items: flex-start; /* Alinear elements */
+    margin-bottom: 20px; /* Espai sota la capçalera */
 }
 
-.card-header h3 {
-    text-align: center;
-    font-size: 38px;
-    font-weight: 700;
-    color: #4fb7b3; /* Lighter teal for "Pla Basic" and "Pla Premium" */
+.card-header h3 { /* Títol de la capçalera */
+    text-align: center; /* Centrar text */
+    font-size: 38px; /* Mida gran del text */
+    font-weight: 700; /* Text en negreta */
+    color: #4fb7b3; /* Color blau clar */
 }
 
-.card-header p {
-    font-size: 25px;
-    font-weight: 600;
-    color: #4fb7b3; /* Lighter teal for price text */
-    position: absolute;
-    top: 10px;
-    right: 20px;
+.card-header p { /* Text del preu */
+    font-size: 25px; /* Mida del text */
+    font-weight: 600; /* Text en negreta */
+    color: #4fb7b3; /* Color blau clar */
+    position: absolute; /* Posicionament absolut */
+    top: 10px; /* Espai a la part superior */
+    right: 20px; /* Espai a la dreta */
 }
 
-.card-header p .text-lg {
-    color: #fff;
+.card-header p .text-lg { /* Text en preu */
+    color: #fff; /* Color blanc */
 }
 
-/* Features Section */
-.card ul {
-    padding-left: 20px;
-    width: 100%;
+.card ul { /* Secció de característiques */
+    padding-left: 20px; /* Espai a l'esquerra */
+    width: 100%; /* Amplada completa */
 }
 
-.card ul li {
-    margin: 8px 0;
-    font-size: 18px;
-    color: #fff;
+.card ul li { /* Elements de característiques */
+    margin: 8px 0; /* Espai entre elements */
+    font-size: 18px; /* Mida del text */
+    color: #fff; /* Color blanc */
 }
 
-/* Button */
-.card .animated-btn {
-    border: none;
-    font-size: 14px;
-    background: linear-gradient(45deg, transparent, #1f7275 40%, #1f7275, #1f7275 60%, transparent);
-    padding: 10px 20px;
-    color: #fff;
-    font-weight: bold;
-    background-size: 200%;
-    background-position: 0% 0%;
-    text-transform: uppercase;
-    border-radius: 30px;
-    transition: background-position 0.8s ease-in-out, transform 0.8s ease-in-out; /* Slower transition */
-    width: 100%;
-    text-align: center; /* Center text inside button */
+.card .animated-btn { /* Botó animat */
+    border: none; /* Sense vora */
+    font-size: 14px; /* Mida del text */
+    background: linear-gradient(45deg, transparent, #1f7275 40%, #1f7275, #1f7275 60%, transparent); /* Gradient */
+    padding: 10px 20px; /* Espai intern */
+    color: #fff; /* Text blanc */
+    font-weight: bold; /* Text en negreta */
+    background-size: 200%; /* Mida del fons */
+    background-position: 0% 0%; /* Posició inicial */
+    text-transform: uppercase; /* Majúscules */
+    border-radius: 30px; /* Cantonades arrodonides */
+    transition: background-position 0.8s ease-in-out, transform 0.8s ease-in-out; /* Transicions suaus */
+    width: 100%; /* Amplada completa */
+    text-align: center; /* Centrar text */
 }
 
-.card .animated-btn:hover {
-    background-position: 100% 0;
-    transform: translateY(-4px); /* Optional hover effect */
+.card .animated-btn:hover { /* Hover del botó */
+    background-position: 100% 0; /* Moviment del gradient */
+    transform: translateY(-4px); /* Lleuger moviment amunt */
 }
 
-/* Bubbles and Glow Effect */
-.card::before {
-    content: "";
-    position: absolute;
-    top: -15%; /* Adjusted for better placement */
-    left: 50%;
-    transform: translateX(-50%);
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    background-color: #1f7275;
-    filter: blur(60px);
-    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.4);
-    z-index: -1; /* Ensure it stays behind the card content */
-    transition: all 0.3s ease;
+.card::before { /* Bombolles i efecte de llum */
+    content: ""; /* Sense text */
+    position: absolute; /* Posicionament absolut */
+    top: -15%; /* Posició superior */
+    left: 50%; /* Centrar horitzontalment */
+    transform: translateX(-50%); /* Ajust de posició */
+    height: 120px; /* Alçada */
+    width: 120px; /* Amplada */
+    border-radius: 50%; /* Forma circular */
+    background-color: #1f7275; /* Color de fons */
+    filter: blur(60px); /* Efecte de difuminat */
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.4); /* Ombra difuminada */
+    z-index: -1; /* Sota el contingut */
+    transition: all 0.3s ease; /* Transició */
 }
 
-.card:hover::before {
-    transform: translateX(-50%) scale(1.6); /* Bubble scaling effect */
+.card:hover::before { /* Efecte hover per a bombolles */
+    transform: translateX(-50%) scale(1.6); /* Escalat */
 }
 
-/* Middle glow effect on hover */
-.card:hover {
-    transform: scale(1.05); /* Slight scaling on hover */
+.card:hover { /* Efecte hover a la targeta */
+    transform: scale(1.05); /* Escalat lleuger */
 }
 
-/* Glow animation */
-@keyframes glowing {
-    0% { opacity: 0.2; }
-    50% { opacity: 0.5; }
-    100% { opacity: 0.2; }
+@keyframes glowing { /* Animació de lluminositat */
+    0% { opacity: 0.2; } /* Opacitat mínima */
+    50% { opacity: 0.5; } /* Opacitat mitjana */
+    100% { opacity: 0.2; } /* Opacitat mínima */
 }
 /* PRICE SECTION FINISH */
 
 /* FAQ SECTION START */
 .faq-answer {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    overflow: hidden; /* Amaga el contingut excedent */
+    max-height: 0; /* Alçada inicial zero */
+    opacity: 0; /* Invisibilitat inicial */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transició suau */
 }
 
 .faq-answer.open {
-    max-height: 200px;
-    opacity: 1;
+    max-height: 200px; /* Expansió màxima */
+    opacity: 1; /* Contingut visible */
 }
 
-
-/* Estil per a l'animació del signe + i - */
-.toggle-icon {
-    transition: transform 0.3s ease;
-    transform-origin: center center; /* Per assegurar que la rotació sigui al voltant del centre */
+.toggle-icon { /* Estil per a l'animació del signe + i - */
+    transition: transform 0.3s ease; /* Transició suau per rotació */
+    transform-origin: center center; /* Rotació des del centre */
 }
 
 .toggle-icon.rotate {
-    transform: rotate(45deg);
+    transform: rotate(45deg); /* Rotació a 45 graus */
 }
 /* FAQ SECTION FINISH */
 
 /* TEAM SECTION */
 .card-team, .card-team-back {
-    width: 100%;
-    height: 100%;
-    background: #1f6266;
-    place-content: center;
-    place-items: center;
-    overflow: hidden;
-    border-radius: 20px;
+    width: 100%; /* Ample total */
+    height: 100%; /* Altura total */
+    background: #1f6266; /* Color de fons */
+    place-content: center; /* Centra el contingut */
+    place-items: center; /* Centra els elements dins */
+    overflow: hidden; /* Amaga l'excedent */
+    border-radius: 20px; /* Cantons arrodonits */
 }
 
 .card-team {
-    position: relative;
+    position: relative; /* Posicionament relatiu per a elements absoluts */
 }
 
 .card-team::before, .card-team-back::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: 25%;
-    width: 50%;
-    height: 200%;
-    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-    transform: translate(-50%, -50%) rotate(0deg);
-    animation: rotBGimg 10s linear infinite;
-    transition: all 0.2s linear;
-    z-index: 0;
+    content: ''; /* Sense contingut, només per a estil */
+    position: absolute; /* Posició absoluta */
+    top: -50%; /* Desplaçament vertical */
+    left: 25%; /* Desplaçament horitzontal */
+    width: 50%; /* Amplada de la imatge */
+    height: 200%; /* Alçada per cobrir tot l'espai */
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255)); /* Degradat de fons */
+    transform: translate(-50%, -50%) rotate(0deg); /* Col·locament i rotació */
+    animation: rotBGimg 10s linear infinite; /* Animació rotatòria */
+    transition: all 0.2s linear; /* Transició suau per efectes */
+    z-index: 0; /* Col·locat darrere */
 }
 
 .card-team::after, .card-team-back::after {
-    content: '';
-    position: absolute;
-    inset: 7px;
-    background: #2d9e9f;
-    border-radius: 15px;
-    z-index: 1;
+    content: ''; /* Sense contingut, només per a estil */
+    position: absolute; /* Posició absoluta */
+    inset: 7px; /* Desplaçament intern */
+    background: #2d9e9f; /* Color de fons de la capa interna */
+    border-radius: 15px; /* Cantons arrodonits */
+    z-index: 1; /* Col·locat davant del fons */
 }
 
 .card-team img {
-    position: relative;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: 2;
+    position: relative; /* Posicionament relatiu per a la imatge */
+    inset: 0; /* Col·loca la imatge a l'extrem */
+    height: 100%; /* Imatge ocupa tota l'altura */
+    width: 100%; /* Imatge ocupa tota l'amplada */
+    object-fit: cover; /* Assegura que la imatge cobreixi l'àrea */
+    z-index: 2; /* Col·loca la imatge per sobre de les capes anteriors */
 }
 
 .card-team-back {
-    background: #1f6266;
+    background: #1f6266; /* Fons uniforme per la part posterior */
 }
 
 .card-team-back * {
-    z-index: 2;
+    z-index: 2; /* Elements dins estaran per sobre de la capa anterior */
 }
 
 .card-team-back::after {
-    background: #248182;
+    background: #248182; /* Fons de la capa posterior */
 }
 
 @keyframes rotBGimg {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* Rotació inicial */
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Rotació final */
     }
 }
 
 .rotate-180 {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Rotació de 180 graus en l'eix Y */
 }
 /* TEAM SECTION */
 
-/* LOGIN I REGISTER */
-.input-field-lo-reg input:focus ~ label,
-.input-field-lo-reg input:valid ~ label {
-    font-size: 0.8rem;
-    top: 10px;
-    transform: translateY(-120%);
+/*LOGO CSS START FOOTER */
+.button-container {
+    display: flex; /* Contenidor flexible */
+    justify-content: center; /* Centrar botons */
+    gap: 20px; /* Espai entre botons */
 }
+
+.brutalist-button {
+    display: flex; /* Flexbox per al botó */
+    flex-direction: column; /* Columnes per contingut */
+    align-items: center; /* Centrar horitzontalment */
+    justify-content: center; /* Centrar verticalment */
+    width: 80px; /* Amplada del botó */
+    height: 80px; /* Alçada del botó */
+    color: #e5dede; /* Color del text */
+    font-weight: bold; /* Text en negreta */
+    text-decoration: none; /* Sense subratllat */
+    position: relative; /* Posicionament relatiu */
+    cursor: pointer; /* Cursor tipus botó */
+    overflow: hidden; /* Ocultar desbordament */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Suau transició */
+}
+
+.button-1 {
+    background-color: #063525; /* Fons del botó */
+    border: 3px solid #42c498; /* Vora amb color */
+    border-radius: 12px; /* Cantonades arrodonides */
+    box-shadow: 4px 4px 1px #000000; /* Ombra del botó */
+}
+
+.button-1:hover {
+    background-color: #1a5c46; /* Canvi de color en hover */
+    border-color: #030504; /* Color de la vora */
+    transform: translate(-6px, -6px) rotate(1deg); /* Moviment i rotació */
+    box-shadow: 10px 10px 0 #000000, 15px 15px 20px rgba(64, 164, 122, 0.2); /* Ombres animades */
+}
+
+.button-1::before,
+.button-1::after {
+    content: ""; /* Contingut buit per efectes */
+    position: absolute; /* Posicionament absolut */
+    top: 0; /* Alçada inicial */
+    width: 100%; /* Amplada completa */
+    height: 100%; /* Alçada completa */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent); /* Gradient */
+    transition: 0.6s; /* Transició */
+}
+
+.button-1::before {
+    left: -100%; /* Posició inicial fora de l'eix */
+}
+
+.button-1::after {
+    left: 100%; /* Posició inicial fora de l'eix */
+}
+
+.button-1:hover::before {
+    animation: swipeRight 1.5s infinite; /* Animació en hover */
+}
+
+.button-1:hover::after {
+    animation: swipeLeft 1.5s infinite; /* Animació en hover */
+}
+
+@keyframes swipeRight {
+    100% {
+        transform: translateX(200%) skew(-45deg); /* Efecte de desplaçament */
+    }
+}
+
+@keyframes swipeLeft {
+    100% {
+        transform: translateX(-200%) skew(-45deg); /* Efecte de desplaçament */
+    }
+}
+
+.brutalist-button:hover .openai-logo {
+    transform: translateY(-10px); /* Desplaçament vertical */
+}
+
+.brutalist-button:hover .openai-icon {
+    width: 40px; /* Augment de mida */
+    height: 40px; /* Augment de mida */
+}
+
+.bruta.brutalist-button:hover .openai-text {
+    opacity: 1; /* Text visible */
+    max-height: 60px; /* Alçada màxima */
+    margin-top: 8px; /* Marges */
+}
+
+.openai-logo {
+    display: flex; /* Flexbox per al logo */
+    flex-direction: column; /* Columnes */
+    align-items: center; /* Centrat horitzontal */
+    justify-content: center; /* Centrat vertical */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transició suau */
+    z-index: 3; /* Capes */
+}
+
+.openai-icon {
+    width: 64px; /* Amplada del logo */
+    height: 64px; /* Alçada del logo */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transició */
+}
+
+.openai-text {
+    font-size: 24px; /* Mida del text */
+    letter-spacing: 0.5px; /* Espaiat entre lletres */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transició */
+    opacity: 0; /* Invisibilitat inicial */
+    max-height: 0; /* Alçada zero inicial */
+    overflow: hidden; /* Ocultar desbordament */
+}
+
+.button-text {
+    display: flex; /* Flexbox per text */
+    flex-direction: column; /* Columnes */
+    align-items: center; /* Centrat horitzontal */
+    line-height: 1.2; /* Espaiat entre línies */
+    text-align: center; /* Text centrat */
+    opacity: 0; /* Invisibilitat inicial */
+    max-height: 0; /* Alçada zero inicial */
+    overflow: hidden; /* Ocultar desbordament */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transició */
+    z-index: 3; /* Capes */
+}
+
+.button-text span:last-child {
+    font-size: 13px; /* Mida més petita */
+}
+
+.brutalist-button:hover .button-text,
+.brutalist-button:hover .openai-text {
+    opacity: 1; /* Text visible */
+    max-height: 60px; /* Alçada màxima */
+}
+
+@keyframes spin-and-zoom {
+    0% {
+        transform: rotate(0deg) scale(1); /* Posició inicial */
+    }
+    50% {
+        transform: rotate(180deg) scale(1.1); /* Rotació i zoom */
+    }
+    100% {
+        transform: rotate(360deg) scale(1); /* Tornada a l'inici */
+    }
+}
+
+.brutalist-button:hover .openai-icon {
+    animation: spin-and-zoom 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite; /* Animació rotatòria */
+}
+
+.brutalist-button:hover .openai-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombra de text */
+}
+
+.brutalist-button:active .openai-icon,
+.brutalist-button:active .openai-text,
+.brutalist-button:active .button-text {
+    transform: scale(0.95); /* Efecte al fer clic */
+}
+/* LOGO CSS FINISH FOOTER */
