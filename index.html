@@ -15,10 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script type="module" src="js/cookies.js"></script>
+    <script src="js/include.js" defer></script>
+
 </head>
 
 <body>
-
 <!-- HEADER SECTION START -->
 <header class="bg-white lg:static fixed top-0 w-full z-30   " x-data="{menuOpen: false}">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -147,7 +148,7 @@
 <!-- HERO SECTION FINISH -->
 
 <!-- Features SECTION START -->
-<div id="features" class="relative py-24 sm:py-32">
+<div id="features" class="relative py-20 sm:py-4">
     <!-- Fondo con opacidad y degradado rápido -->
     <div class="absolute inset-0"></div>
 
@@ -306,7 +307,7 @@
         </div>
     </div>
 </section>
-<!-- Features SECTION FINISH -->
+<!-- CTA SECTION FINISH -->
 
 <!-- PREUS SECTION START -->
 <section id="prices" class="relative py-16 bg-white text-black overflow-hidden px-4 md:px-12 lg:px-24">
@@ -419,7 +420,7 @@
 <!-- FAQ SECTION FINISH -->
 
 <!-- FOOTER SECTION START -->
-<footer class="bg-gray-900" aria-labelledby="footer-heading">
+<footer class="bg-gray-900 mt-16" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
   <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
     <div class="xl:grid xl:grid-cols-4 xl:gap-8">
@@ -433,7 +434,6 @@
                 </div>
             </button>
         </div>
-
 
         <!-- Suport, Company, Legal -->
       <div class="col-span-2 mt-16 grid grid-cols-3 gap-8 xl:mt-0">
@@ -484,14 +484,12 @@
     </div>
   </div>
 </footer>
-<!-- FOOTER SECTION START -->
+<!-- FOOTER SECTION FINISH -->
 
 <!-- Cookie Section START -->
 <section id="cookie-banner" class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]" style="display: none;">
     <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
-
-    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor experiència al nostre lloc web. <a href="#" class="text-blue-500 hover:underline">Llegeix la política de cookies</a>.</p>
-
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor experiència al nostre lloc web. <a href="/project-landingpage-slavainc/pages/cookies.html" class="text-blue-500 hover:underline">Llegeix la política de cookies</a>.</p>
     <div class="flex items-center justify-stretch mt-4 gap-x-4 shrink-0">
         <button id="acceptar" class="text-xs bg-green-600 font-medium rounded-lg hover:bg-green-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
             Acceptar
