@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
     <script type="module" src="js/cookies.js"></script>
+    <script src="js/include.js" defer></script>
 
 </head>
 
@@ -48,12 +49,14 @@
             </div>
             <!-- Navigation links (desktop) -->
             <ul class="hidden lg:flex space-x-8 text-black font-bold">
-                <li><a href="#hero" class="hover:text-[#1f7275]">Inici</a></li>
-                <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
-                <li><a href="#cta" class="hover:text-[#1f7275]">Novetats</a></li>
+                <li><a href="/project-landingpage-slavainc/" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/serveis.html" class="hover:text-[#1f7275]">Serveis</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/preus.html" class="hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/novetats.html" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/equip.html" class="hover:text-[#1f7275]">Equip</a></li>
+                <li><a href="/project-landingpage-slavainc/#faq" class="hover:text-[#1f7275]">FAQ</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
+
             </ul>
             <!-- Buttons (desktop) -->
             <div class="hidden lg:flex space-x-2 font-bold">
@@ -94,11 +97,12 @@
                 </div>
             </div>
             <div class="mt-6 space-y-2">
-                <a href="#hero" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
-                <a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
-                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Novetats</a>
+                <a href="/project-landingpage-slavainc/" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
+                <a href="/project-landingpage-slavainc/pages/serveis.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
                 <a href="/project-landingpage-slavainc/pages/preus.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
-                <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
+                <a href="/project-landingpage-slavainc/pages/equip.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Equip</a>
+                <a href="/project-landingpage-slavainc/pages/novetats.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
+                <a href="/project-landingpage-slavainc/#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
                 <a href="/project-landingpage-slavainc/pages/contacte.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
             </div>
             <div class="mt-6 space-y-4">
@@ -189,7 +193,8 @@
             </div>
         </div>
     </div>
-</div><section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
+</div>
+<section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="text-center">
             <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
@@ -381,173 +386,53 @@
         <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Preguntes Frequents</h3>
         <div class="space-y-4">
             <!-- Pregunta 1 -->
-            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq1">
                     <h4 class="text-xl font-semibold mb-2">Quins serveis de neteja oferiu?</h4>
-                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
                 </div>
-                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
-                    Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.
-                </p>
+                <p class="faq-answer text-gray-700">Oferim una àmplia gamma de serveis de neteja, incloent neteja domèstica, neteja d'oficines, neteja post-construcció i neteja profunda.</p>
             </div>
 
             <!-- Pregunta 2 -->
-            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq2">
                     <h4 class="text-xl font-semibold mb-2">Quin és el preu dels vostres serveis?</h4>
-                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
                 </div>
-                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
-                    Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.
-                </p>
+                <p class="faq-answer text-gray-700">Els preus varien segons el tipus de servei i la mida de l'espai. Recomanem sol·licitar un pressupost gratuït per obtenir una estimació precisa.</p>
             </div>
 
             <!-- Pregunta 3 -->
-            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq3">
                     <h4 class="text-xl font-semibold mb-2">Com feu el seguiment de la qualitat del vostre servei?</h4>
-                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
                 </div>
-                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
-                    Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.
-                </p>
+                <p class="faq-answer text-gray-700">Realitzem inspeccions regulars i sol·licitem comentaris dels nostres clients per assegurar-nos que estem proporcionant un servei d'alta qualitat.</p>
             </div>
 
             <!-- Pregunta 4 -->
-            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq4">
                     <h4 class="text-xl font-semibold mb-2">Utilitzeu productes de neteja ecològics?</h4>
-                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
                 </div>
-                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
-                    Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.
-                </p>
+                <p class="faq-answer text-gray-700">Sí, ens comprometem amb el medi ambient i utilitzem productes de neteja ecològics que són segurs per a les persones i les mascotes.</p>
             </div>
 
             <!-- Pregunta 5 -->
-            <div x-data="{ open: false }" class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
-                <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
+                <div class="flex justify-between items-center cursor-pointer" data-toggle="faq5">
                     <h4 class="text-xl font-semibold mb-2">Quin és el temps aproximat per a la neteja d'un habitatge?</h4>
-                    <span :class="{ 'rotate-180': open }" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform">+</span>
+                    <span class="text-xl font-semibold mb-2 text-blue-600 toggle-icon">+</span>
                 </div>
-                <p :class="{ 'open': open }" class="faq-answer text-gray-700">
-                    El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.
-                </p>
+                <p class="faq-answer text-gray-700">El temps de neteja depèn de la mida i l'estat de l'habitatge. Generalment, una neteja domèstica pot durar entre 2 i 5 hores.</p>
             </div>
         </div>
     </div>
 </section>
 <!-- FAQ SECTION FINISH -->
-
-<!-- TEAM SECTION -->
-<section aria-labelledby="contact-heading">
-    <div class="bg-gray-100 px-24 py-24 sm:py-24">
-        <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900"
-                id="coneixements">
-                El nostre Equip
-            </h2>
-            <p class="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl leading-7 sm:leading-8 text-gray-600">
-                L'equip que ha fet aquest projecte possible.
-            </p>
-
-        </div>
-        <div class="mx-auto max-w-2xl sm:mt-20 lg:max-w-5xl lg:px-2">
-            <h2 class="sr-only" id="contact-heading2">Test</h2>
-            <div class="grid grid-cols-1 gap-y-10 sm:gap-y-12 md:gap-y-16 lg:grid-cols-2 lg:gap-x-8 lg:gap-y-24">
-                <!-- Cards -->
-                <div class="flex items-center justify-center bg-slate-100 p-4 sm:p-6 md:p-8">
-                    <div class="h-auto group w-full sm:w-96 md:w-80 lg:w-96 [perspective:1000px]">
-                        <div id="cardo"
-                             class="shadow-2xl relative h-full w-full rounded-3xl transition-all duration-500 [transform-style:preserve-3d] 2xl:group-hover:[transform:rotateY(180deg)]">
-                            <div class="absolute inset-0 card-team p-6 sm:p-10 md:p-10 rounded-3xl overflow-hidden [backface-visibility:hidden] [transform:rotateY(0deg)]">
-                                <img src="assets/Ratchet_&_Clank_poster.webp" alt="Descripción de la imagen"
-                                     class="h-full w-full object-cover rounded-2xl shadow-2xl shadow-black/50"/>
-                            </div>
-
-                            <!-- Darrere de la targeta amb informació textual -->
-                            <div class="absolute card-team-back inset-0 w-full h-full flex flex-col items-center justify-center rounded-3xl p-4 sm:p-8 bg-[#07182E] text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <h3 class="text-xs sm:text-2xl md:text-3xl lg:text-3 font-bold text-gray-900">Octavian
-                                    Mihalcea</h3>
-                                <p class="lg:p-4 sm:p-4 md:text-lg text-xs sm:text-lg lg:text-xl text-white">Programador
-                                    i desenvolupador expert en varios llenguatges. Persona sociable i amb ganes de
-                                    treballar.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center bg-slate-100 p-4 sm:p-6 md:p-8">
-                    <div class="h-auto group w-full sm:w-96 md:w-80 lg:w-96 [perspective:1000px]">
-                        <div id="cardm"
-                             class="shadow-2xl relative h-full w-full rounded-3xl transition-all duration-500 [transform-style:preserve-3d] 2xl:group-hover:[transform:rotateY(180deg)]">
-                            <div class="absolute inset-0 card-team p-6 sm:p-10 md:p-10 rounded-3xl overflow-hidden [backface-visibility:hidden] [transform:rotateY(0deg)]">
-                                <img src="assets/persona3.webp" alt="Descripción de la imagen"
-                                     class="h-full w-full object-cover rounded-2xl shadow-2xl shadow-black/50"/>
-                            </div>
-
-                            <!-- Darrere de la targeta amb informació textual -->
-                            <div class="absolute card-team-back inset-0 w-full h-full flex flex-col items-center justify-center rounded-3xl p-4 sm:p-8 bg-[#07182E] text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <h3 class="text-xs sm:text-2xl md:text-3xl lg:text-3 font-bold text-gray-900">Mihai
-                                    Sebastian Burghelea</h3>
-                                <p class="lg:p-4 sm:p-4 text-xs sm:text-lg md:text-lg lg:text-xl text-white">Mihai té
-                                    ulls grans, negres i tristos. El seu cabell es de color atzabeja.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center bg-slate-100 p-4 sm:p-6 md:p-8">
-                    <div class="h-auto group w-full sm:w-96 md:w-80 lg:w-96 [perspective:1000px]">
-                        <div id="cardh"
-                             class="shadow-2xl relative h-full w-full rounded-3xl transition-all duration-500 [transform-style:preserve-3d] 2xl:group-hover:[transform:rotateY(180deg)]">
-                            <div class="absolute inset-0 card-team p-6 sm:p-10 md:p-10 rounded-3xl overflow-hidden [backface-visibility:hidden] [transform:rotateY(0deg)]">
-                                <img src="assets/rick_grimes.webp" alt="Descripción de la imagen"
-                                     class="h-full w-full object-cover rounded-2xl shadow-2xl shadow-black/50"/>
-                            </div>
-
-                            <!-- Darrere de la targeta amb informació textual -->
-                            <div class="absolute card-team-back inset-0 w-full h-full flex flex-col items-center justify-center rounded-3xl bg-gray-600 p-4 sm:p-8 text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <h3 class="text-xs sm:text-2xl md:text-3xl lg:text-3 font-bold text-gray-900">Harvey
-                                    John Glover</h3>
-                                <p class="lg:p-4 sm:p-4 text-xs sm:text-lg md:text-lg lg:text-xl text-white">El
-                                    dissenyador de la pàgina. Gràcies a ell podem comptar amb una pàgina molt més neta i
-                                    més ordenada</p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-center bg-slate-100 p-4 sm:p-6 md:p-8">
-                    <div class="h-auto group w-full sm:w-96 md:w-80 lg:w-96 [perspective:1000px]">
-                        <div id="cardmr"
-                             class="shadow-2xl relative h-full w-full rounded-3xl transition-all duration-500 [transform-style:preserve-3d] 2xl:group-hover:[transform:rotateY(180deg)]">
-                            <div class="absolute inset-0 card-team p-6 sm:p-10 md:p-10 rounded-3xl overflow-hidden [backface-visibility:hidden] [transform:rotateY(0deg)]">
-                                <img src="assets/batman.webp" alt="Descripción de la imagen"
-                                     class="h-full w-full object-cover rounded-2xl shadow-2xl shadow-black/40"/>
-                            </div>
-
-                            <!-- Reverso de la tarjeta con la información textual -->
-                            <div class="absolute card-team-back inset-0 w-full h-full flex flex-col items-center justify-center rounded-3xl bg-gray-600 p-4 sm:p-8 text-center text-slate-200 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                                <h3 class="text-xs sm:text-2xl md:text-3xl lg:text-3 font-bold text-gray-900">Manuel
-                                    Steven Romero Vargas</h3>
-                                <p class="lg:p-4 sm:p-4 text-xs sm:text-lg md:text-lg lg:text-xl text-white">Es una
-                                    persona tranquila i treballadora. Programador senior de l'empresa
-                                    amb mes de 10 anys d'experiència.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-<!-- TEAM SECTION -->
-
 
 <!-- FOOTER SECTION START -->
 <footer class="bg-gray-900" aria-labelledby="footer-heading">
@@ -631,6 +516,11 @@
             </div>
         </div>
     </div>
+
+    <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+      <p class="text-xs leading-5 text-gray-400">&copy; 2024 Slava, Inc. Tots els drets reservats.</p>
+    </div>
+  </div>
 </footer>
 <!-- FOOTER SECTION FINISH -->
 
