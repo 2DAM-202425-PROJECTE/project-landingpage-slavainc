@@ -17,6 +17,9 @@ export default defineConfig({
                 login: resolve(__dirname, 'pages/login.html'),
                 register: resolve(__dirname, 'pages/register.html'),
                 preus: resolve(__dirname, 'pages/preus.html'),
+
+                header: resolve(__dirname, 'layouts/header.html'),
+                footer: resolve(__dirname, 'layouts/footer.html'),
             },
         },
     },
