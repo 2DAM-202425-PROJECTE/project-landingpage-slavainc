@@ -18,12 +18,12 @@
 <body>
 
 <!-- HEADER SECTION START -->
-<header class="bg-white lg:static fixed top-0 w-full z-30   " x-data="{menuOpen: false}">
+<header class="bg-white lg:static fixed top-0 w-full z-30" x-data="{menuOpen: false}">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex w-full justify-between items-center">
             <div class="flex items-center space-x-2">
-                <a href="#" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
-                    <img src="../assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
+                <a href="/index.html" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
+                    <img src="/assets/logo.webp" alt="Logo HD" class="h-12 w-12 rounded-lg">
                     <button class="custom-button" data-text="SLAVA Inc">
                         <span class="actual-text">&nbsp;SLAVA Inc&nbsp;</span>
                         <span aria-hidden="true" class="custom-hover-text">&nbsp;SLAVA Inc&nbsp;</span>
@@ -32,29 +32,35 @@
             </div>
             <!-- Mobile menu button -->
             <div class="lg:hidden ">
-                <button @click="menuOpen=true" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <button @click="menuOpen=true" type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                         aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
                     </svg>
                 </button>
             </div>
             <!-- Navigation links (desktop) -->
             <ul class="hidden lg:flex space-x-8 text-black font-bold">
-                <li><a href="../index.html" class="hover:text-[#1f7275]">Inici</a></li>
+                <li><a href="/index.html" class="hover:text-[#1f7275]">Inici</a></li>
                 <li><a href="#features" class="hover:text-[#1f7275]">Serveis</a></li>
-                <li><a href="#prices" class="hover:text-[#1f7275]">Preus</a></li>
-                <li><a href="#cta" class="hover:text-[#1f7275]">CTA</a></li>
+                <li><a href="#cta" class="hover:text-[#1f7275]">Novetats</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/preus.html" class="hover:text-[#1f7275]">Preus</a></li>
+                <li><a href="/project-landingpage-slavainc/pages/equip.html" class="hover:text-[#1f7275]">Equip</a></li>
                 <li><a href="#faq" class="hover:text-[#1f7275]">FAQ</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
-
             </ul>
             <!-- Buttons (desktop) -->
             <div class="hidden lg:flex space-x-2 font-bold">
-                <a href="/project-landingpage-slavainc/pages/login.html" class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
+                <a href="/project-landingpage-slavainc/pages/login.html"
+                   class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
                     Iniciar sesión
                 </a>
-                <a href="/project-landingpage-slavainc/pages/register.html" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-4 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+                <a href="/project-landingpage-slavainc/pages/register.html"
+                   class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 px-4 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">
+
                     Registrarse
                 </a>
             </div>
@@ -77,8 +83,9 @@
                 <div class="flex items-center justify-between">
                     <button @click="menuOpen=false" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Close menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                             aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
                         </svg>
                     </button>
                 </div>
@@ -86,8 +93,9 @@
             <div class="mt-6 space-y-2">
                 <a href="#hero" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Inici</a>
                 <a href="#features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Serveis</a>
+                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Novetats</a>
                 <a href="/project-landingpage-slavainc/pages/preus.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Preus</a>
-                <a href="#cta" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">CTA</a>
+                <a href="/project-landingpage-slavainc/pages/equip.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Equip</a>
                 <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">FAQ</a>
                 <a href="/project-landingpage-slavainc/pages/contacte.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contacte</a>
             </div>
@@ -219,7 +227,7 @@
 <!-- PREUS SECTION FINISH -->
 
 <!-- FOOTER SECTION START -->
-<footer class="bg-gray-900" aria-labelledby="footer-heading">
+<footer class="bg-gray-900 mt-16" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-16">
         <div class="flex display-flex pb-8">
@@ -241,10 +249,10 @@
                     <p class="mt-2 text-sm/6 text-gray-300">Subscriu-te per rebre les últimes novetats i ofertes!</p>
                 </div>
                 <form class="mt-6 sm:flex sm:max-w-md lg:mt-0" id="contactForm">
-                    <label for="email" class="sr-only">Email address</label>
-                    <input type="email" name="user_email" id="email" autocomplete="email" required class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Enter your email">
+                    <label for="email" class="sr-only">Correu electronic</label>
+                    <input type="email" name="user_email" id="email" autocomplete="email" required class="w-full p-3 border border-gray-700 bg-gray-800 rounded text-gray-300 focus:outline-none focus:ring focus:ring-purple-500" placeholder="Escriu el teu correu">
                     <div class="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
-                        <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Subscribe</button>
+                        <button type="submit" class="animated-btn text-white bg-gradient-to-r from-[#1f7275] to-[#01a0a6] py-2 md:py-3 px-4 md:px-8 rounded-full shadow-lg font-semibold transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#01a0a6] hover:to-[#1f7275]">Suscribeix-te</button>
                     </div>
                 </form>
             </div>
