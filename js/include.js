@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Cargar header y footer
-    loadHTML("header-placeholder", "/project-landingpage-slavainc/layouts/header.html");
-    loadHTML("footer-placeholder", "/project-landingpage-slavainc/layouts/footer.html");
+    loadHTML("header-placeholder", "layouts/header.html");
+    loadHTML("footer-placeholder", "layouts/footer.html");
 });
