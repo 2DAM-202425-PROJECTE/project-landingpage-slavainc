@@ -150,19 +150,17 @@ function handleNewsletterForm() {
                 function (response) {
                     statusMessage.textContent = "Subscripció exitosa!";
                     statusMessage.style.color = "green";
+
                     return emailjs.send("service_bfmkhjk", "template_k0siyva", { user_email: userEmail });
                 }
             )
-            .then(
-                function (response) {
-                    console.log("Notificación enviada al administrador:", response);
-                },
-                function (error) {
-                    console.error("Error al notificar al administrador:", error);
-                    statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
-                    statusMessage.style.color = "red";
-                }
-            )
+            .then(() => {
+                // Guarda el correo en Google Sheets solo para Newsletter
+                return saveToGoogleSheets({ email: userEmail });
+            })
+            .then(() => {
+                console.log("Correo guardado en Google Sheets");
+            })
             .catch(function (error) {
                 console.error("Error en el proceso:", error);
                 statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
@@ -181,7 +179,7 @@ function handleContactForm() {
         event.preventDefault();
 
         // Inicializa EmailJS con la clave correspondiente a la cuenta del contacto
-        emailjs.init("bIKPnY1CSSjaAi1Cg");
+        emailjs.init("D48mKGGhGAU6GU9oB");
 
         const firstName = document.getElementById("contact_first_name").value;
         const lastName = document.getElementById("contact_last_name").value;
@@ -199,7 +197,7 @@ function handleContactForm() {
         statusMessage.textContent = "Enviant missatge...";
         statusMessage.style.color = "gray";
 
-        emailjs.send("service_ooptksk", "template_1q05rkf", {
+        emailjs.send("service_6v42f8t", "template_q2uwj6q", {
             to_name: "Mr. Romero",
             from_name: fullName,
             user_email: userEmail,
@@ -211,16 +209,41 @@ function handleContactForm() {
                     statusMessage.textContent = "Missatge enviat amb èxit!";
                     statusMessage.style.color = "green";
                     console.log("Missatge enviat:", response);
-                },
-                function (error) {
-                    statusMessage.textContent = "Error al enviar el missatge. Torna-ho a intentar més tard.";
-                    statusMessage.style.color = "red";
-                    console.error("Error al enviar el missatge:", error);
                 }
-            );
+            )
+            .catch(function (error) {
+                console.error("Error en el procés:", error);
+                statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
+                statusMessage.style.color = "red";
+            });
 
         form.reset();
     });
+}
+
+// Función para guardar datos en Google Sheets (Solo se usa para el Newsletter)
+function saveToGoogleSheets(data) {
+    const url = "https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec"; // Reemplaza con tu URL
+
+    console.log("Guardando en Google Sheets:", data); // Debugging: Verificar datos enviados
+    return fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams(data)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error al conectar con Google Sheets");
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.status !== "success") {
+                throw new Error("Error en la respuesta de Google Sheets");
+            }
+        });
 }
 
 // TEAM SECTION
