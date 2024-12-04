@@ -119,33 +119,37 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Inicializa EmailJS con tu Public Key
-    emailjs.init("OBqXgrR0fs5ostHMu");
+    // Maneja los formularios por separado
+    handleNewsletterForm();
+    handleContactForm();
+});
 
-    // Selecciona el formulario y añade un manejador de eventos para el envío
-    document.getElementById("contactForm").addEventListener("submit", function (event) {
-        event.preventDefault();  // Evita el comportamiento predeterminado de envío del formulario
+function handleNewsletterForm() {
+    const form = document.getElementById("contactForm");
+    if (!form) return; // Si el formulario no existe en esta página, salir
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Inicializa EmailJS con la clave correspondiente a la cuenta del newsletter
+        emailjs.init("OBqXgrR0fs5ostHMu");
 
         const userEmail = document.getElementById("email").value;
 
-        // Muestra mensaje de estado
         let statusMessage = document.getElementById("statusMessage");
         if (!statusMessage) {
             statusMessage = document.createElement("p");
             statusMessage.id = "statusMessage";
-            document.getElementById("contactForm").appendChild(statusMessage);
+            form.appendChild(statusMessage);
         }
         statusMessage.textContent = "Enviant subscripció...";
         statusMessage.style.color = "gray";
 
-        // Envía el correo de bienvenida al usuario
         emailjs.send("service_bfmkhjk", "template_wigev16", { user_email: userEmail })
             .then(
                 function (response) {
                     statusMessage.textContent = "Subscripció exitosa!";
                     statusMessage.style.color = "green";
-
-                    // Envía el correo de notificación al administrador
                     return emailjs.send("service_bfmkhjk", "template_k0siyva", { user_email: userEmail });
                 }
             )
@@ -159,35 +163,65 @@ document.addEventListener("DOMContentLoaded", function () {
                     statusMessage.style.color = "red";
                 }
             )
-            .then(() => {
-                // Guarda el correo en Google Sheets
-                console.log("Guardando el correo en Google Sheets...");
-                return fetch("https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec", {  // Reemplaza "URL_DEL_WEB_APP" con la URL de tu Web App
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    body: new URLSearchParams({ email: userEmail })
-                });
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    console.log("Correo guardado en Google Sheets");
-                } else {
-                    console.error("Error al guardar en Google Sheets:", data);
-                }
-            })
             .catch(function (error) {
                 console.error("Error en el proceso:", error);
                 statusMessage.textContent = "Error de xarxa. Torna-ho a intentar més tard.";
                 statusMessage.style.color = "red";
             });
 
-        // Limpia el campo de entrada después del envío
-        this.reset();
+        form.reset();
     });
-});
+}
+
+function handleContactForm() {
+    const form = document.getElementById("contactFormNew");
+    if (!form) return; // Si el formulario no existe en esta página, salir
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Inicializa EmailJS con la clave correspondiente a la cuenta del contacto
+        emailjs.init("bIKPnY1CSSjaAi1Cg");
+
+        const firstName = document.getElementById("contact_first_name").value;
+        const lastName = document.getElementById("contact_last_name").value;
+        const fullName = `${firstName} ${lastName}`;
+        const userEmail = document.getElementById("contact_email").value;
+        const phone = document.getElementById("contact_phone").value;
+        const message = document.getElementById("contact_message").value;
+
+        let statusMessage = document.getElementById("contactStatusMessage");
+        if (!statusMessage) {
+            statusMessage = document.createElement("p");
+            statusMessage.id = "contactStatusMessage";
+            form.appendChild(statusMessage);
+        }
+        statusMessage.textContent = "Enviant missatge...";
+        statusMessage.style.color = "gray";
+
+        emailjs.send("service_ooptksk", "template_1q05rkf", {
+            to_name: "Mr. Romero",
+            from_name: fullName,
+            user_email: userEmail,
+            user_phone: phone,
+            message: message
+        })
+            .then(
+                function (response) {
+                    statusMessage.textContent = "Missatge enviat amb èxit!";
+                    statusMessage.style.color = "green";
+                    console.log("Missatge enviat:", response);
+                },
+                function (error) {
+                    statusMessage.textContent = "Error al enviar el missatge. Torna-ho a intentar més tard.";
+                    statusMessage.style.color = "red";
+                    console.error("Error al enviar el missatge:", error);
+                }
+            );
+
+        form.reset();
+    });
+}
 
 // TEAM SECTION
     // Afegir l'esdeveniment de clic per girar la targeta en dispositius tàctils
