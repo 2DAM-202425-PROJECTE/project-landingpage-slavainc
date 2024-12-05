@@ -4,6 +4,18 @@ window.Alpine = Alpine
 
 Alpine.start()
 
+fetch('/project-landingpage-slavainc/components/header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+    });
+
+fetch('/project-landingpage-slavainc/components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('footer').innerHTML = data;
+    });
+
 // HERO SECTION JS PARTICLES START
 // Array per emmagatzemar les partícules
 var particles = [];
