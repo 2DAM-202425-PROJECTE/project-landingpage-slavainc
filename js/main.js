@@ -14,12 +14,14 @@ fetch('/project-landingpage-slavainc/components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
+        handleNewsletterForm();
     });
 
 fetch('/project-landingpage-slavainc/components/footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer').innerHTML = data;
+        handleNewsletterForm();
     });
 
 // HERO SECTION JS PARTICLES START
@@ -155,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // CONTACTE/NEWSLETTER SECTION START
 document.addEventListener("DOMContentLoaded", function () {
     // Maneja los formularios por separado
-    handleNewsletterForm();
+    // handleNewsletterForm();
     handleContactForm();
 });
 
