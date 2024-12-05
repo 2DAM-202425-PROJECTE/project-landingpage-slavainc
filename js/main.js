@@ -1,8 +1,14 @@
-import Alpine from 'alpinejs'
+import Alpine from 'alpinejs';
+import collapse from '@alpinejs/collapse';
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.start()
+// Registra el plugin
+Alpine.plugin(collapse);
+
+// Inicia Alpine
+Alpine.start();
+
 
 fetch('/project-landingpage-slavainc/components/header.html')
     .then(response => response.text())

@@ -292,29 +292,6 @@
 }
 /* PRICE SECTION FINISH */
 
-/* FAQ SECTION START */
-.faq-answer {
-    overflow: hidden; /* Amaga el contingut excedent */
-    max-height: 0; /* Alçada inicial zero */
-    opacity: 0; /* Invisibilitat inicial */
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transició suau */
-}
-
-.faq-answer.open {
-    max-height: 200px; /* Expansió màxima */
-    opacity: 1; /* Contingut visible */
-}
-
-.toggle-icon { /* Estil per a l'animació del signe + i - */
-    transition: transform 0.3s ease; /* Transició suau per rotació */
-    transform-origin: center center; /* Rotació des del centre */
-}
-
-.toggle-icon.rotate {
-    transform: rotate(45deg); /* Rotació a 45 graus */
-}
-/* FAQ SECTION FINISH */
-
 /* TEAM SECTION */
 .card-team, .card-team-back {
     width: 100%; /* Ample total */
