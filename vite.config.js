@@ -12,14 +12,12 @@ export default defineConfig({
                 avis_legal: resolve(__dirname, 'pages/avis_legal.html'),
                 serveis: resolve(__dirname, 'pages/serveis.html'),
                 contacte: resolve(__dirname, 'pages/contacte.html'),
+                equip: resolve(__dirname, 'pages/equip.html'),
                 novetats: resolve(__dirname, 'pages/novetats.html'),
 
                 login: resolve(__dirname, 'pages/login.html'),
                 register: resolve(__dirname, 'pages/register.html'),
                 preus: resolve(__dirname, 'pages/preus.html'),
-
-                header: resolve(__dirname, 'layouts/header.html'),
-                footer: resolve(__dirname, 'layouts/footer.html'),
             },
         },
     },
