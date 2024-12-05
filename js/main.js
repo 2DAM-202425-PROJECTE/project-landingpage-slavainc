@@ -14,7 +14,6 @@ fetch('/project-landingpage-slavainc/components/header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
-        handleNewsletterForm();
     });
 
 fetch('/project-landingpage-slavainc/components/footer.html')
@@ -157,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // CONTACTE/NEWSLETTER SECTION START
 document.addEventListener("DOMContentLoaded", function () {
     // Maneja los formularios por separado
-    // handleNewsletterForm();
     handleContactForm();
 });
 
