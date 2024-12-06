@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ca">
+<html class="scroll-smooth focus:scroll-auto" lang="ca">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,15 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="../js/cookies.js"></script>
 </head>
 <body>
 <!-- HEADER SECTION START -->
 <div id="header"></div>
 <!-- HEADER SECTION FINISH -->
 
-<section id="cookie-policy" class="scroll-mt-20 py-20 bg-gray-50">
+<!-- INFO COOKIES START -->
+<section id="cookie-policy" class="py-28 sm:py-28 md:py-32 lg:py-12 xl:py-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="container mx-auto px-6 sm:px-8 md:px-10 lg:px-12">
-        <h3 class="text-3xl font-bold text-center mb-8 text-[#1f7275]">Política de Cookies</h3>
+        <h2 class="font-manrope text-4xl font-bold text-gray-900 text-center mb-16">Política de Cookies</h2>
 
         <div class="space-y-6">
             <!-- Introducció -->
@@ -36,6 +38,16 @@
                 <p class="text-gray-700">Una cookie és un petit fragment de text que els llocs web envien al navegador per recordar informació sobre la teva visita, com l'idioma preferit i altres opcions, facilitant així la navegació. Les cookies contribueixen a oferir una millor experiència per a l'usuari.</p>
             </div>
 
+            <!-- Cookies utilitzades -->
+            <div>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Cookies utilitzades en aquest lloc web</h4>
+                <p class="text-gray-700">Aquest lloc web utilitza dues cookies principals:</p>
+                <ul class="list-disc ml-6 text-gray-700">
+                    <li><strong><code>cookieConsent</code></strong>: Aquesta cookie indica si l'usuari ha acceptat o rebutjat la política de cookies. És pròpia i persistent.</li>
+                    <li><strong><code>sessionID</code></strong>: Aquesta cookie s'assigna per identificar la sessió de l'usuari i es genera de manera única a cada visita. És pròpia i de sessió.</li>
+                </ul>
+            </div>
+
             <!-- Tipus de cookies -->
             <div>
                 <h4 class="text-xl font-semibold mb-2 text-gray-800">Tipus de cookies</h4>
@@ -43,50 +55,20 @@
                 <p class="text-gray-700">Per més informació, pots consultar la <a href="https://www.aepd.es/" class="text-blue-600 hover:underline" target="_blank">Guia sobre l’ús de les cookies</a> de l'Agència Espanyola de Protecció de Dades.</p>
             </div>
 
-            <!-- Cookies utilitzades -->
+            <!-- Acceptació de la política de cookies -->
             <div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-800">Cookies utilitzades en aquest lloc web</h4>
-                <p class="text-gray-700">Aquest lloc web utilitza Google Analytics per analitzar la navegació, proporcionant dades com el nombre de visitants, les pàgines visitades, la freqüència, la durada, etc. Això ens ajuda a millorar el servei. Les cookies utilitzades són pròpies, de sessió i d'anàlisi.</p>
-                <p class="text-gray-700">Aquesta web també utilitza la cookie <code>cookieConsent</code>, que indica que l'usuari ha acceptat la política de cookies. Aquesta cookie és pròpia i persistent.</p>
+                <h4 class="text-xl font-semibold mb-2 text-gray-800">Acceptació de la Política de Cookies</h4>
+                <p class="text-gray-700">Aquest lloc web mostra informació sobre la seva Política de Cookies a la part inferior de qualsevol pàgina cada vegada que accedeix al portal, amb l'objectiu que estigui informat.</p>
+                <p class="text-gray-700">Davant aquesta informació, es poden dur a terme les accions següents:</p>
+                <ul class="list-disc ml-6 text-gray-700">
+                    <li><strong>Acceptar cookies:</strong> No es tornarà a visualitzar aquest avís al accedir a qualsevol pàgina del portal durant la sessió actual.</li>
+                </ul>
             </div>
-
-            <!-- Google Analytics -->
-            <div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-800">Google Analytics</h4>
-                <p class="text-gray-700">Aquest lloc web utilitza Google Analytics per recollir informació sobre com els usuaris interactuen amb la pàgina. Google Analytics utilitza cookies per analitzar el trànsit web i obtenir dades sobre el comportament dels usuaris, com el nombre de visites, les pàgines vistes, la durada de la visita, etc. Això ens ajuda a millorar l'experiència d'usuari i el rendiment del lloc web.</p>
-                <p class="text-gray-700">Les cookies de Google Analytics són cookies de tercers i persistents. Les cookies més comunes de Google Analytics són: <code>_ga</code>, <code>_gid</code>, i <code>_gat</code>.</p>
-            </div>
-
-            <!-- Anonimat -->
-            <div>
-                <h4 class="text-xl font-semibold mb-2 text-gray-800">Anonimat i dades</h4>
-                <p class="text-gray-700">Google Analytics anonimitza les adreces IP abans d'emmagatzemar-les per evitar l’associació amb dades personals. Per més detalls, pots consultar les condicions de servei de Google Analytics.</p>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-xl font-semibold mb-2 text-gray-800">Serveis de Tercers</h4>
-            <p class="text-gray-700">El lloc web també té presència en portals i serveis de tercers. Per conèixer les seves condicions de privacitat i ús de cookies, pots consultar les polítiques proporcionades pels mateixos:</p>
-            <ul class="list-disc ml-6 text-gray-700">
-                <li><a href="https://twitter.com/privacy" class="text-blue-600 hover:underline" target="_blank">Twitter: Política de Privacitat</a></li>
-                <li><a href="https://www.google.es/intl/es/policies/technologies/cookies/" class="text-blue-600 hover:underline" target="_blank">YouTube: Política de Cookies</a></li>
-            </ul>
-        </div>
-
-        <!-- Acceptació de la política de cookies -->
-        <div>
-            <h4 class="text-xl font-semibold mb-2 text-gray-800">Acceptació de la Política de Cookies</h4>
-            <p class="text-gray-700">Aquest lloc web mostra informació sobre la seva Política de Cookies a la part inferior de qualsevol pàgina cada vegada que accedeix al portal, amb l'objectiu que estigui informat.</p>
-            <p class="text-gray-700">Davant aquesta informació, es poden dur a terme les accions següents:</p>
-            <ul class="list-disc ml-6 text-gray-700">
-                <li><strong>Acceptar cookies:</strong> No es tornarà a visualitzar aquest avís al accedir a qualsevol pàgina del portal durant la sessió actual.</li>
-            </ul>
         </div>
     </div>
 </section>
 
-
-<!-- Terms and Conditions Section End -->
-
+<!-- INFO COOKIES FINISH -->
 
 <!-- FOOTER SECTION START -->
 <div id="footer"></div>
