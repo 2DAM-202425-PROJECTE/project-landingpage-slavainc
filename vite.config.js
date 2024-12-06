@@ -21,6 +21,7 @@ export default defineConfig({
                 preus: resolve(__dirname, 'pages/preus.html'),
                 header: resolve(__dirname, 'components/header.html'),
                 footer: resolve(__dirname, 'components/footer.html'),
+                cookiesjs: resolve(__dirname, 'js/cookies.js'),
             },
         },
     },
