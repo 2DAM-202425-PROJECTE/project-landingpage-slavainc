@@ -5,3 +5,6 @@ node_modules/.vite/deps/_metadata.json
 node_modules/.vite/deps/alpinejs.js
 node_modules/.vite/deps/alpinejs.js.map
 node_modules/.vite/deps/package.json
+
+/dist
+/.idea
