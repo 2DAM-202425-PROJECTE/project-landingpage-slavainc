@@ -155,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // CONTACTE/NEWSLETTER SECTION START
 document.addEventListener("DOMContentLoaded", function () {
-    // Maneja los formularios por separado
     handleContactForm();
 });
 
@@ -166,7 +165,6 @@ function handleNewsletterForm() {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Inicializa EmailJS con la clave correspondiente a la cuenta del newsletter
         emailjs.init("OBqXgrR0fs5ostHMu");
 
         const userEmail = document.getElementById("email").value;
@@ -190,7 +188,6 @@ function handleNewsletterForm() {
                 }
             )
             .then(() => {
-                // Guarda el correo en Google Sheets solo para Newsletter
                 return saveToGoogleSheets({ email: userEmail });
             })
             .then(() => {
@@ -213,7 +210,6 @@ function handleContactForm() {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Inicializa EmailJS con la clave correspondiente a la cuenta del contacto
         emailjs.init("D48mKGGhGAU6GU9oB");
 
         const firstName = document.getElementById("contact_first_name").value;
@@ -256,10 +252,10 @@ function handleContactForm() {
     });
 }
 
-function saveToGoogleSheets(data) { // Función para guardar datos en Google Sheets (Solo se usa para el Newsletter)
-    const url = "https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec"; // Reemplaza con tu URL
+function saveToGoogleSheets(data) {
+    const url = "https://script.google.com/macros/s/AKfycbyHnZDjMvWh-SMo5jpnW2rXMqo32OGaKP8gRX54CIUDOVmnDasnzyv88qJAcBje1gz5/exec";
 
-    console.log("Guardando en Google Sheets:", data); // Debugging: Verificar datos enviados
+    console.log("Guardando en Google Sheets:", data);
     return fetch(url, {
         method: "POST",
         headers: {

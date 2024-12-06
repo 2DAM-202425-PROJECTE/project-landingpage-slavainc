@@ -88,14 +88,14 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 1; /* Ensures particles stay below content */
+    z-index: 1;  /* Assegura que les partícules es mantinguin per sota del contingut */
 }
 
 .blob {
     border-radius: 999px;
     position: absolute;
-    pointer-events: none; /* Prevents blobs from blocking interactions */
-    animation: float 10s ease-in-out infinite; /* Particle floating animation */
+    pointer-events: none; /* Impedeix que les partícules bloquegin les interaccions */
+    animation: float 10s ease-in-out infinite; /* Animació de flotació de les partícules */
 }
 
 @keyframes float {
@@ -111,13 +111,13 @@
 }
 
 .glow iframe {
-    border-radius: 16px; /* Optional styling for iframe */
+    border-radius: 16px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 /* HERO SECTION FINISH */
 
 /* CTA SECTION CSS START */
-.downloadsCTA .downloadCTA:hover { /* From Uiverse.io by kamehame-ha */
+.downloadsCTA .downloadCTA:hover {
     transform: scale(1.1, 1.1);
 }
 .downloadsCTA .downloadCTA { /* Difuminar els altres botons quan es passa per damunt d’un */
