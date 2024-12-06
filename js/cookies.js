@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // El codi va aquí
     const cookieBanner = document.getElementById("cookie-banner");
 
     if (cookieBanner) {
