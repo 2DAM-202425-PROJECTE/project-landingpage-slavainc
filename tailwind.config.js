@@ -9,7 +9,7 @@ export default {
         'custom-footer': '#242148',
       },
       screens: {
-        'lgm': '1000px', // Nom del punt de trencament personalitzat
+        'lgm': '1000px',
       },
     },
   },
