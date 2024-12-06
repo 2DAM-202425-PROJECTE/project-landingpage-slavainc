@@ -97,7 +97,8 @@
     <div class="relative overflow-hidden pt-16">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <img src="assets/featuresimg.webp"
-                 alt="Imatge promocional de la app de SlavaInc" class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432"
+                 alt="Imatge promocional de la app de SlavaInc"
+                 class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" width="2432"
                  height="1442">
             <div class="relative" aria-hidden="true">
                 <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white to-transparent h-20"></div>
@@ -320,16 +321,18 @@
     <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-14 drop-shadow-lg text-center">Preguntes Freqüents</h2>
         <div class="space-y-4">
-            
+
             <!-- Pregunta 1 -->
             <div x-data="{ open: false }"
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
                     <h4 class="text-xl font-semibold mb-2">Puc crear més d'un usuari per compte?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    Sí, l'aplicació permet crear múltiples usuaris associats a un únic compte, especialment útil per empreses amb diversos administradors.
+                    Sí, l'aplicació permet crear múltiples usuaris associats a un únic compte, especialment útil per
+                    empreses amb diversos administradors.
                 </p>
             </div>
 
@@ -337,11 +340,14 @@
             <div x-data="{ open: false }"
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
-                    <h4 class="text-xl font-semibold mb-2">Es pot accedir al mateix compte des de diversos dispositius alhora?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <h4 class="text-xl font-semibold mb-2">Es pot accedir al mateix compte des de diversos dispositius
+                        alhora?</h4>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    Sí, permetem accés simultani des de diversos dispositius, però recomanem evitar canvis conflictius al mateix temps.
+                    Sí, permetem accés simultani des de diversos dispositius, però recomanem evitar canvis conflictius
+                    al mateix temps.
                 </p>
             </div>
 
@@ -350,10 +356,12 @@
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
                     <h4 class="text-xl font-semibold mb-2">Hi ha una aplicació mòbil disponible?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    Sí, l'aplicació està disponible tant per a Android com per a iOS. Pots descarregar-la des de Google Play o l'App Store.
+                    Sí, l'aplicació està disponible tant per a Android com per a iOS. Pots descarregar-la des de Google
+                    Play o l'App Store.
                 </p>
             </div>
 
@@ -362,10 +370,12 @@
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
                     <h4 class="text-xl font-semibold mb-2">Com puc restablir la meva contrasenya?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    Pots restablir la contrasenya a través de l'opció "He oblidat la meva contrasenya" a la pàgina d'inici de sessió. Rebràs un correu amb instruccions.
+                    Pots restablir la contrasenya a través de l'opció "He oblidat la meva contrasenya" a la pàgina
+                    d'inici de sessió. Rebràs un correu amb instruccions.
                 </p>
             </div>
 
@@ -374,22 +384,27 @@
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
                     <h4 class="text-xl font-semibold mb-2">Es pot programar serveis des de l'aplicació?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    Sí, pots programar serveis de neteja directament des de l'aplicació, seleccionant data, hora i tipus de servei.
+                    Sí, pots programar serveis de neteja directament des de l'aplicació, seleccionant data, hora i tipus
+                    de servei.
                 </p>
             </div>
-            
+
             <!-- Pregunta 6 -->
             <div x-data="{ open: false }"
                  class="bg-white rounded-lg shadow-lg transition-transform duration-300 hover:shadow-xl p-6">
                 <div @click="open = !open" class="flex justify-between items-center cursor-pointer">
-                    <h4 class="text-xl font-semibold mb-2">Es necessiten permisos especials per utilitzar l'aplicació?</h4>
-                    <span x-text="open ? '-' : '+'" class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
+                    <h4 class="text-xl font-semibold mb-2">Es necessiten permisos especials per utilitzar
+                        l'aplicació?</h4>
+                    <span x-text="open ? '-' : '+'"
+                          class="text-xl font-semibold mb-2 text-blue-600 transform transition-transform"></span>
                 </div>
                 <p x-show="open" x-collapse class="faq-answer text-gray-700">
-                    No, només cal una connexió a internet i un dispositiu compatible. Alguns serveis addicionals poden requerir permisos, com accés al calendari per programar cites.
+                    No, només cal una connexió a internet i un dispositiu compatible. Alguns serveis addicionals poden
+                    requerir permisos, com accés al calendari per programar cites.
                 </p>
             </div>
         </div>

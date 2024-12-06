@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/project-landingpage-slavainc/', // Reemplaza con el nombre de tu repositorio
+    base: '/project-landingpage-slavainc/',
     build: {
         rollupOptions: {
             input: {
