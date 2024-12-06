@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="scroll-smooth focus:scroll-auto" lang="ca">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contacte</title>
+    <link rel="icon" href="/assets/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="../js/cookies.js"></script>
+</head>
+<body>
+<!-- HEADER SECTION START -->
+<div id="header"></div>
+<!-- HEADER SECTION FINISH -->
+
+<section id="contact" class="py-28 sm:py-28 md:py-32 lg:py-12 xl:py-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-6 sm:px-8 md:px-10 lg:px-12">
+        <h3 class="text-4xl font-bold text-gray-900 text-center mb-16">Contacta amb nosaltres</h3>
+        <p class="text-center text-gray-700 mb-8">Som aquí per garantir que els teus espais brillin sempre. Contacta amb nosaltres per a serveis de neteja fiables i professionals.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Formulari de Contact -->
+            <div class="md:col-span-2 bg-white p-8 rounded-lg shadow-lg">
+                <form id="contactFormNew" class="space-y-6">
+                    <!-- Noms -->
+                    <div>
+                        <label for="contact_first_name" class="block text-lg font-semibold mb-2 text-gray-800">Noms</label>
+                        <input type="text" id="contact_first_name" name="contact_first_name"
+                               class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#1f7275] focus:outline-none"
+                               required>
+                    </div>
+
+                    <!-- Cognoms -->
+                    <div>
+                        <label for="contact_last_name" class="block text-lg font-semibold mb-2 text-gray-800">Cognoms</label>
+                        <input type="text" id="contact_last_name" name="contact_last_name"
+                               class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#1f7275] focus:outline-none"
+                               required>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="contact_email" class="block text-lg font-semibold mb-2 text-gray-800">Correu</label>
+                        <input type="email" id="contact_email" name="contact_user_email"
+                               class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#1f7275] focus:outline-none"
+                               required>
+                    </div>
+
+                    <!-- Telefon -->
+                    <div>
+                        <label for="contact_phone" class="block text-lg font-semibold mb-2 text-gray-800">Número de teléfon</label>
+                        <input type="tel" id="contact_phone" name="contact_phone"
+                               class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#1f7275] focus:outline-none"
+                               required>
+                    </div>
+
+                    <!-- Missatge -->
+                    <div>
+                        <label for="contact_message" class="block text-lg font-semibold mb-2 text-gray-800">Missatge</label>
+                        <textarea id="contact_message" name="contact_message" rows="4"
+                                  class="w-full p-3 border border-gray-300 rounded-lg bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#1f7275] focus:outline-none"
+                                  required></textarea>
+                    </div>
+
+                    <!-- Botò d'enviament -->
+                    <div class="text-center">
+                        <button type="submit"
+                                class="bg-[#1f7275] text-white font-bold py-2 px-6 rounded-full hover:bg-[#145a5b] transition duration-300">
+                            Envia
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Company Information -->
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <i class="fas fa-building text-[#1f7275] text-xl mr-4"></i>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">Informació de la compañia</h4>
+                        <p class="text-gray-700">Connecta amb empreses de neteja professionals que ofereixen serveis de qualitat, adaptats a les teves necessitats.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-map-marker-alt text-[#1f7275] text-xl mr-4"></i>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">Adreça</h4>
+                        <p class="text-gray-700">Tortosa, Tarragona, Espanya<br>Av. de Cristòfol Colom, 34, 42<br>Codi Postal: 43500</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-phone text-[#1f7275] text-xl mr-4"></i>
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">Truca</h4>
+                        <p class="text-gray-700">+34 632478474</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION START -->
+<div id="footer"></div>
+<!-- FOOTER SECTION FINISH -->
+
+<!-- Cookie Section START -->
+<section id="cookie-banner"
+         class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]"
+         style="display: none;">
+    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
+
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor
+        experiència al nostre lloc web. <a href="/project-landingpage-slavainc/pages/cookies.html" class="text-blue-500 hover:underline">Llegeix la política de
+            cookies</a>.</p>
+
+    <div class="flex items-center justify-stretch mt-4 gap-x-4 shrink-0">
+        <button id="acceptar"
+                class="text-xs bg-green-600 font-medium rounded-lg hover:bg-green-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Acceptar
+        </button>
+
+        <button id="rebutjar"
+                class="text-xs bg-red-600 font-medium rounded-lg hover:bg-red-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Rebutjar
+        </button>
+
+        <button id="tancar"
+                class="text-xs border border-gray-300 text-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Tancar
+        </button>
+    </div>
+</section>
+<!-- Cookie Section FINISH -->
+</body>
+</html>

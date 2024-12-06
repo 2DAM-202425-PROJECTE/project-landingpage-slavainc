@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="scroll-smooth focus:scroll-auto" lang="ca">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Slava Inc.</title>
+    <link rel="icon" href="/assets/logo.webp" type="image/x-icon"> <!-- Favicon link -->
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="module" src="../js/cookies.js"></script>
+</head>
+<body>
+
+<!-- HEADER SECTION START -->
+<div id="header"></div>
+<!-- HEADER SECTION FINISH -->
+
+<!-- PREUS SECTION START -->
+<section id="prices" class="py-28 sm:py-28 md:py-32 lg:py-12 xl:py-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="relative z-10 container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-900 text-center mb-16">Flexibilitat i Valor: Descobreix Els Nostres Preus</h2>
+        <p class="text-lg md:text-xl text-gray-500 mb-12">
+            Trieu el pla que millor s’adapta a les vostres necessitats. Tant si sou un negoci petit com una empresa consolidada, tenim opcions per a vosaltres.
+        </p>
+        <div class="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-12">
+            <!-- Pla Basic -->
+            <div class="card bg-white p-8 lg:p-12 w-full lg:w-1/2 max-w-lg rounded-lg shadow-xl hover:scale-105 transition-transform duration-300">
+                <div class="card-header text-center">
+                    <h3 class="text-3xl font-semibold mb-4">Pla Bàsic</h3>
+                    <p class="text-5xl font-bold text-black mb-6">20€<span class="text-lg text-gray-400"> / mes</span></p>
+                </div>
+                <ul class="space-y-6">
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-users-cog text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Registre d'Empreses i Gestió de Treballadors</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Permet als usuaris registrar les seves empreses i gestionar els treballadors dins de la plataforma, fent-la més organitzada.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-comments text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Perfil de Netejador amb Xat en Temps Real</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Crea perfils per als netejadors amb la possibilitat de comunicar-se en temps real amb els clients a través d’un xat integrat.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-credit-card text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Sistema de Contractació i Pagaments Integrats</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">El sistema permet contractar serveis i realitzar pagaments de manera segura i eficaç dins de la plataforma.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-calendar-alt text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Calendari i Gestió de Cites</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Organitza i gestiona les cites amb el calendari interactiu, facilitant la coordinació entre treballadors i clients.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4 text-red-500">
+                            <i class="fas fa-times-circle text-red-500 text-3xl"></i>
+                            <span class="font-semibold">Valoracions i Comentaris</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Funcionalitat no disponible en aquest pla.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4 text-red-500">
+                            <i class="fas fa-times-circle text-red-500 text-3xl"></i>
+                            <span class="font-semibold">Informe i Anàlisi</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Funcionalitat no disponible en aquest pla.</p>
+                    </li>
+                </ul>
+                <p class="text-sm text-gray-300 mt-6">Ideal per a empreses que comencen o que necessiten una solució bàsica.</p>
+            </div>
+            <!-- Pla Premium -->
+            <div class="card bg-blue-700 p-8 lg:p-12 w-full lg:w-1/2 max-w-lg rounded-lg shadow-xl hover:scale-105 transition-transform duration-300">
+                <div class="card-header text-center">
+                    <h3 class="text-3xl font-semibold mb-4">Pla Premium</h3>
+                    <p class="text-5xl font-bold text-white mb-6">50€<span class="text-lg text-gray-300"> / mes</span></p>
+                </div>
+                <ul class="space-y-6">
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-users-cog text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Registre d'Empreses i Gestió de Treballadors</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Permet als usuaris registrar les seves empreses i gestionar els treballadors dins de la plataforma, fent-la més organitzada.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-comments text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Perfil de Netejador amb Xat en Temps Real</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Crea perfils per als netejadors amb la possibilitat de comunicar-se en temps real amb els clients a través d’un xat integrat.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-credit-card text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Sistema de Contractació i Pagaments Integrats</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">El sistema permet contractar serveis i realitzar pagaments de manera segura i eficaç dins de la plataforma.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-calendar-alt text-teal-400 text-3xl"></i>
+                            <span class="font-semibold">Calendari i Gestió de Cites</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Organitza i gestiona les cites amb el calendari interactiu, facilitant la coordinació entre treballadors i clients.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-star text-teal-400 text-3xl"></i> <!-- Icona millorada per valoracions -->
+                            <span class="font-semibold text-white">Valoracions i Comentaris</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Els clients poden deixar valoracions i comentaris sobre els serveis, millorant la transparència i confiança.</p>
+                    </li>
+                    <li class="flex flex-col items-start space-y-2">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-chart-bar text-teal-400 text-3xl"></i> <!-- Icona millorada per informes -->
+                            <span class="font-semibold text-white">Informe i Anàlisi</span>
+                        </div>
+                        <p class="text-gray-500 text-sm">Genera informes i anàlisis detallades sobre l’activitat de la plataforma per a un millor seguiment del rendiment.</p>
+                    </li>
+                </ul>
+                <p class="text-sm text-gray-300 mt-6">Dissenyat per a empreses que volen maximitzar la seva eficiència amb funcionalitats avançades.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- PREUS SECTION FINISH -->
+
+<!-- FOOTER SECTION START -->
+<div id="footer"></div>
+<!-- FOOTER SECTION START -->
+
+<!-- Cookie Section START -->
+<section id="cookie-banner"
+         class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-1/2 transform -translate-x-1/2 bottom-16 dark:border-gray-700 rounded-2xl z-[9999]"
+         style="display: none;">
+    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Avis de cookies</h2>
+
+    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">Utilitzem cookies per assegurar-nos que t'oferim la millor
+        experiència al nostre lloc web. <a href="/project-landingpage-slavainc/pages/cookies.html" class="text-blue-500 hover:underline">Llegeix la política de
+            cookies</a>.</p>
+
+    <div class="flex items-center justify-stretch mt-4 gap-x-4 shrink-0">
+        <button id="acceptar"
+                class="text-xs bg-green-600 font-medium rounded-lg hover:bg-green-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Acceptar
+        </button>
+
+        <button id="rebutjar"
+                class="text-xs bg-red-600 font-medium rounded-lg hover:bg-red-500 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Rebutjar
+        </button>
+
+        <button id="tancar"
+                class="text-xs border border-gray-300 text-gray-800 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 font-medium rounded-lg px-4 py-2.5 duration-300 transition-colors focus:outline-none">
+            Tancar
+        </button>
+    </div>
+</section>
+<!-- Cookie Section FINISH -->
+</body>
+</html>
