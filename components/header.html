@@ -1,5 +1,5 @@
-<header class="fixed bg-white lg:static top-0 w-full z-30" x-data="{menuOpen: false}">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+<header class="fixed bg-white xl:static top-0 w-full z-30" x-data="{menuOpen: false}">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 xl:px-8" aria-label="Global">
         <div class="flex w-full justify-between items-center">
             <div class="flex items-center space-x-2">
                 <a href="/project-landingpage-slavainc/" class="flex items-center space-x-2 text-sm/6 font-semibold text-gray-900">
@@ -11,7 +11,7 @@
                 </a>
             </div>
             <!-- Mobile menu button -->
-            <div class="lg:hidden ">
+            <div class="xl:hidden ">
                 <button @click="menuOpen=true" type="button"
                         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                     <span class="sr-only">Open main menu</span>
@@ -23,7 +23,7 @@
                 </button>
             </div>
             <!-- Navigation links (desktop) -->
-            <ul class="hidden lg:flex space-x-8 text-black font-bold">
+            <ul class="hidden xl:flex space-x-8 text-black font-bold">
                 <li><a href="/project-landingpage-slavainc/" class="hover:text-[#1f7275]">Inici</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/serveis.html" class="hover:text-[#1f7275]">Serveis</a></li>
                 <li><a href="/project-landingpage-slavainc/pages/novetats.html" class="hover:text-[#1f7275]">Novetats</a></li>
@@ -32,7 +32,7 @@
                 <li><a href="/project-landingpage-slavainc/pages/contacte.html" class="hover:text-[#1f7275]">Contacte</a></li>
             </ul>
             <!-- Buttons (desktop) -->
-            <div class="hidden lg:flex space-x-2 font-bold">
+            <div class="hidden xl:flex space-x-2 font-bold">
                 <a href="/project-landingpage-slavainc/pages/login.html"
                    class="inline-flex items-center justify-center px-4 py-2 text-black bg-gray-200 rounded-full hover:bg-gray-300 transition duration-200">
                     Iniciar sesión
@@ -46,7 +46,7 @@
     </nav>
 
     <!-- Mobile menu, show/hide based on menuOpen state -->
-    <div x-show="menuOpen" @click.away="menuOpen=false" class="lg:hidden" role="dialog" aria-modal="true">
+    <div x-show="menuOpen" @click.away="menuOpen=false" class="xl:hidden" role="dialog" aria-modal="true">
         <!-- Background backdrop -->
         <div class="fixed inset-0 z-10 bg-black opacity-50"></div>
         <div class="fixed inset-y-0 left-0 z-20 w-full bg-white px-6 py-6">
